@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <main>
-      <h1>BioStats Salud Pro</h1>
+      <h1>BioEstadística para Sanitarios</h1>
     </main>
   );
 }

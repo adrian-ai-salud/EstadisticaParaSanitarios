@@ -1,6 +1,6 @@
-# BioStats Salud Pro
+# BioEstadística para Sanitarios
 
-¡Bienvenido a BioStats Salud Pro! Esta aplicación está diseñada para capacitar a profesionales y estudiantes de ciencias de la salud en la comprensión, aplicación e interpretación de herramientas bioestadísticas esenciales.
+¡Bienvenido a BioEstadística para Sanitarios! Esta aplicación está diseñada para capacitar a profesionales y estudiantes de ciencias de la salud en la comprensión, aplicación e interpretación de herramientas bioestadísticas esenciales.
 
 ## Estructura del Proyecto
 

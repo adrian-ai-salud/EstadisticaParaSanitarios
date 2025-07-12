@@ -5,7 +5,7 @@ import Sidebar from '@/components/Sidebar';
 import Toolbar from '@mui/material/Toolbar';
 
 export const metadata = {
-  title: 'BioStats Salud Pro',
+  title: 'BioEstadística para Sanitarios',
   description: 'Una aplicación para aprender bioestadística aplicada a la salud.',
 };
 
