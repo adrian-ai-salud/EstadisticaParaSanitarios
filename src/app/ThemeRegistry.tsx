@@ -8,13 +8,13 @@ const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#00796b', // Un tono teal/verde azulado
+      main: '#1976D2', // Azul profundo y confiable
     },
     secondary: {
-      main: '#f9a825', // Un tono ámbar/naranja para acentos
+      main: '#4CAF50', // Verde fresco y vital para acentos
     },
     background: {
-      default: '#f5f5f5', // Un gris muy claro para el fondo
+      default: '#F8F9FA', // Blanco roto muy sutil
     },
   },
   typography: {
