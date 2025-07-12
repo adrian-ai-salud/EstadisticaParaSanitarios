@@ -10,6 +10,7 @@ import Alert from '@mui/material/Alert';
 import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import ScienceIcon from '@mui/icons-material/Science';
 
+
 export default function DistribucionesDiscretasPage() {
   return (
     <Box>

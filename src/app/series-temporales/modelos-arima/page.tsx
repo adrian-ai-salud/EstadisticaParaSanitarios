@@ -80,7 +80,7 @@ export default function ModelosArimaPage() {
               </ListItemIcon>
               <ListItemText 
                 primary="p (AutoRegresivo):" 
-                secondary="El número de observaciones pasadas que se utilizan para predecir el valor actual. Cuántos 'retrasos' de la propia serie se incluyen."
+                secondary="El número de observaciones pasadas que se utilizan para predecir el valor actual. Cuántos &apos;retrasos&apos; de la propia serie se incluyen."
               />
             </ListItem>
             <ListItem>

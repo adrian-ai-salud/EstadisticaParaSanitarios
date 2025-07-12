@@ -38,7 +38,7 @@ export default function MuestreoInferenciaPage() {
             <ul>
               <li><strong>Aleatorio Simple:</strong> Como un sorteo. A cada persona se le asigna un número y se eligen al azar.</li>
               <li><strong>Estratificado:</strong> Divides la población en grupos relevantes (ej. por edad, sexo) y luego haces un muestreo aleatorio en cada grupo. Asegura la representación de todos los estratos.</li>
-              <li><strong>Sistemático:</strong> Eliges un punto de partida al azar y luego seleccionas cada 'k-ésimo' individuo de una lista.</li>
+              <li><strong>Sistemático:</strong> Eliges un punto de partida al azar y luego seleccionas cada &apos;k-ésimo&apos; individuo de una lista.</li>
               <li><strong>Por Conglomerados:</strong> Divides la población en grupos (ej. ciudades, hospitales) y seleccionas grupos enteros al azar para estudiarlos.</li>
             </ul>
           </Typography>

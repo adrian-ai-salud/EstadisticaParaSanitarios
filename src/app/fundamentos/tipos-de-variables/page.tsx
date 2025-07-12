@@ -53,7 +53,7 @@ export default function TiposDeVariablesPage() {
         <CardContent>
           <Typography variant="h6">a) Discretas</Typography>
           <Typography variant="body1" paragraph>
-            Son números enteros que provienen de un conteo. No puedes tener '2.5 hijos'.
+            Son números enteros que provienen de un conteo. No puedes tener &apos;2.5 hijos&apos;.
           </Typography>
           <Typography variant="body2" color="text.secondary">
             <strong>Ejemplos en tu estudio:</strong> Número de ingresos hospitalarios previos, Número de hijos, Días de estancia hospitalaria.

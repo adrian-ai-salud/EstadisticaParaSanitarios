@@ -5,7 +5,7 @@ import { useServerInsertedHTML } from 'next/navigation';
 import { CacheProvider as DefaultCacheProvider } from '@emotion/react';
 
 interface EmotionCacheProviderProps {
-  options: any;
+  options: { key: string; };
   CacheProvider?: React.ElementType;
   children: React.ReactNode;
 }

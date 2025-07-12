@@ -7,6 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
+import { List, ListItem } from '@mui/material';
 import ScatterPlotExample from '@/components/ScatterPlotExample';
 
 export default function AnalisisBivariantePage() {
@@ -35,6 +36,7 @@ export default function AnalisisBivariantePage() {
           <Typography variant="body1" paragraph>
             Viendo la nube de puntos, podemos intuir si hay una relación: si los puntos tienden a subir juntos (relación positiva), si uno sube mientras el otro baja (relación negativa), o si no hay un patrón claro (no hay relación).
           </Typography>
+          <ScatterPlotExample />
           <Typography variant="h6" sx={{ mt: 2 }}>Coeficiente de Correlación de Pearson (r)</Typography>
           <Typography variant="body1" paragraph>
             Este coeficiente nos da un número exacto para medir la **fuerza y dirección de una relación lineal**.

@@ -62,7 +62,7 @@ export default function PruebasNoParametricasPage() {
             </ListItem>
           </List>
           <Alert severity="info" sx={{ mt: 2 }}>
-            Aunque son más flexibles, las pruebas no paramétricas suelen tener menos 'potencia' que sus equivalentes paramétricas. Esto significa que necesitan una diferencia mayor para detectarla como estadísticamente significativa.
+            Aunque son más flexibles, las pruebas no paramétricas suelen tener menos &apos;potencia&apos; que sus equivalentes paramétricas. Esto significa que necesitan una diferencia mayor para detectarla como estadísticamente significativa.
           </Alert>
         </CardContent>
       </Card>
