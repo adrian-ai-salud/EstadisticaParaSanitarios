@@ -29,7 +29,7 @@ export default function ContrasteDeHipotesisPage() {
         </CardContent>
       </Card>
 
-      <Card sx={{ mb: 3}>
+      <Card sx={{ mb: 3 }}>
         <CardHeader title="Hipótesis Nula (H₀) y Alternativa (H₁)" />
         <CardContent>
           <Typography variant="body1" paragraph>
