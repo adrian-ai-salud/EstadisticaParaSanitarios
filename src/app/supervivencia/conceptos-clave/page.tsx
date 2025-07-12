@@ -69,7 +69,7 @@ export default function ConceptosClaveSupervivenciaPage() {
             </ul>
           </Typography>
           <Alert severity="info" sx={{ mt: 2 }}>
-            Manejar la censura correctamente es crucial. Si simplemente ignoramos a los pacientes censurados, subestimaríamos el tiempo de supervivencia.
+                        Manejar la censura correctamente es crucial. Si simplemente ignoramos los pacientes censurados, subestimaríamos el tiempo de supervivencia.
           </Alert>
         </CardContent>
       </Card>

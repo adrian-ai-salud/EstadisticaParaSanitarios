@@ -21,7 +21,7 @@ export default function TiposDeVariablesPage() {
             Imagina que estás en una consulta de atención primaria y quieres entender mejor los factores asociados a la diabetes tipo 2 en tus pacientes. Decides recoger algunos datos para analizarlos. Esta información que recoges son tus **variables**.
           </Typography>
           <Typography variant="body1">
-            Entender qué tipo de variable tienes es el primer paso para saber qué análisis puedes hacer. No puedes calcular la 'media' del grupo sanguíneo, ¿verdad? ¡Vamos a clasificarlas!
+            Entender qué tipo de variable tienes es el primer paso para saber qué análisis puedes hacer. No puedes calcular la &apos;media&apos; del grupo sanguíneo, ¿verdad? ¡Vamos a clasificarlas!
           </Typography>
         </CardContent>
       </Card>
@@ -53,7 +53,7 @@ export default function TiposDeVariablesPage() {
         <CardContent>
           <Typography variant="h6">a) Discretas</Typography>
           <Typography variant="body1" paragraph>
-            Son números enteros que provienen de un conteo. No puedes tener &apos;2.5 hijos&apos;.
+                        Son números enteros que provienen de un conteo. No puedes tener &apos;2.5 hijos&apos;.
           </Typography>
           <Typography variant="body2" color="text.secondary">
             <strong>Ejemplos en tu estudio:</strong> Número de ingresos hospitalarios previos, Número de hijos, Días de estancia hospitalaria.

@@ -24,7 +24,7 @@ export default function PruebasNoParametricasPage() {
             Imagina que estás estudiando el efecto de un nuevo analgésico en el dolor, medido en una escala de 1 a 10. O quizás, tienes datos de un estudio piloto con muy pocos pacientes, y la distribución de tus variables no es normal. En estos casos, las pruebas paramétricas que acabamos de ver (Test t, ANOVA) no son adecuadas porque sus supuestos no se cumplen.
           </Typography>
           <Typography variant="body1">
-            Las **pruebas no paramétricas** son la alternativa. Son más 'flexibles' porque no requieren que los datos sigan una distribución específica (como la normal) y son robustas frente a valores atípicos. A menudo, trabajan con rangos o medianas en lugar de medias.
+            Las **pruebas no paramétricas** son la alternativa. Son más &apos;flexibles&apos; porque no requieren que los datos sigan una distribución específica (como la normal) y son robustas frente a valores atípicos. A menudo, trabajan con rangos o medianas en lugar de medias.
           </Typography>
         </CardContent>
       </Card>

@@ -62,7 +62,7 @@ export default function IntervalosDeConfianzaPage() {
         <CardHeader title="Interpretación en la Práctica Clínica" />
         <CardContent>
           <Typography variant="body1" paragraph>
-            Si un estudio reporta que un nuevo fármaco reduce la tensión arterial en 10 mmHg (IC 95%: 8-12 mmHg), significa que estamos 95% seguros de que la verdadera reducción en la población está entre 8 y 12 mmHg. Esto es mucho más informativo que solo decir '10 mmHg'.
+                                                                                                Si un estudio reporta que un nuevo fármaco reduce la tensión arterial en 10 mmHg (IC 95%: 8-12 mmHg), significa que estamos 95% seguros de que la verdadera reducción en la población está entre 8 y 12 mmHg. Esto es mucho más informativo que solo decir &apos;10 mmHg&apos;.
           </Typography>
           <Alert severity="info" sx={{ mt: 2 }}>
             Los Intervalos de Confianza son más informativos que solo el p-valor, ya que nos dan una idea de la magnitud del efecto y su precisión. Si un IC para una diferencia incluye el cero, significa que no hay una diferencia estadísticamente significativa.

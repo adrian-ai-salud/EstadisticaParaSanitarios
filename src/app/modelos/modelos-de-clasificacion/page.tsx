@@ -103,7 +103,7 @@ export default function ModelosDeClasificacionPage() {
         <CardContent>
           <Typography variant="h6">3. Random Forest</Typography>
           <Typography variant="body1" paragraph>
-                        Es un algoritmo de &apos;ensamble&apos; que combina múltiples árboles de decisión para mejorar la precisión y reducir el overfitting. Es muy robusto y funciona bien con muchos tipos de datos.
+                                                Es un algoritmo de &apos;ensamble&apos; que combina múltiples árboles de decisión para mejorar la precisión y reducir el overfitting. Es muy robusto y funciona bien con muchos tipos de datos.
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
             <strong>Ejemplo:</strong> Predecir el riesgo de reingreso hospitalario basándose en un gran número de variables clínicas y demográficas.
