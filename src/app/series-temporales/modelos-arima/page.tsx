@@ -5,6 +5,7 @@ import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
 import { MdScience, MdWarningAmber } from 'react-icons/md';
+import TimeSeriesDecompositionVisualizer from '@/components/TimeSeriesDecompositionVisualizer';
 
 export default function ModelosArimaPage() {
   return (
@@ -81,6 +82,13 @@ export default function ModelosArimaPage() {
             Identificar los parámetros (p, d, q) correctos para un modelo ARIMA es un proceso que a menudo implica el análisis de gráficos de autocorrelación y autocorrelación parcial, y la comparación de diferentes modelos.
           </p>
         </AlertBox>
+      </ContentCard>
+
+      <ContentCard title="Visualizador de Descomposición de Series Temporales">
+        <TimeSeriesDecompositionVisualizer />
+        <p className="text-sm text-gray-600 mt-4">
+          Este gráfico ilustra cómo una serie temporal (línea morada) puede descomponerse en sus componentes principales: la tendencia (línea verde), la estacionalidad (línea amarilla) y el residuo (línea naranja). Observa cómo la combinación de estos componentes reconstruye la serie original.
+        </p>
       </ContentCard>
     </div>
   );
