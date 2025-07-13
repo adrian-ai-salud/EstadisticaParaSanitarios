@@ -1,18 +1,9 @@
+
 'use client';
 
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import Drawer from '@mui/material/Drawer';
-import Toolbar from '@mui/material/Toolbar';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
-import MuiLink from '@mui/material/Link';
-import Typography from '@mui/material/Typography';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
 import NextLink from 'next/link';
+import { MdExpandMore, MdExpandLess } from 'react-icons/md';
 
 const drawerWidth = 280;
 
@@ -86,54 +77,46 @@ export default function Sidebar() {
   };
 
   return (
-    <Drawer
-      variant="permanent"
-      sx={{
-        width: drawerWidth,
-        flexShrink: 0,
-        [`& .MuiDrawer-paper`]: {
-          width: drawerWidth,
-          boxSizing: 'border-box',
-          display: 'flex',
-          flexDirection: 'column',
-        },
-      }}
-    >
-      <Toolbar />
-      <Box sx={{ overflowY: 'auto', overflowX: 'hidden', flexGrow: 1 }}>
-        <List component="nav">
+    <aside className="w-[280px] flex-shrink-0 bg-sidebar-bg text-sidebar-text h-screen flex flex-col">
+      <div className="p-4 border-b border-gray-700">
+        <h1 className="text-xl font-bold text-white">Estadística de Salud</h1>
+      </div>
+      <nav className="flex-grow overflow-y-auto p-2">
+        <ul>
           {modules.map((module) => (
-            <React.Fragment key={module.title}>
-              <ListItemButton onClick={() => handleClick(module.title)}>
-                <ListItemText primary={module.title} />
-                {open[module.title] ? <ExpandLess /> : <ExpandMore />}
-              </ListItemButton>
-              <Collapse in={open[module.title]} timeout="auto" unmountOnExit>
-                <List component="div" disablePadding>
+            <li key={module.title} className="mb-1">
+              <button 
+                onClick={() => handleClick(module.title)} 
+                className="w-full flex justify-between items-center p-2 rounded-md hover:bg-gray-700 transition-colors duration-200 text-left"
+              >
+                <span className="font-semibold">{module.title}</span>
+                {open[module.title] ? <MdExpandLess size={20} /> : <MdExpandMore size={20} />}
+              </button>
+              {open[module.title] && (
+                <ul className="pl-4 mt-1">
                   {module.subtopics.map((subtopic) => (
-                    <ListItemButton 
-                      key={subtopic.title} 
-                      component={NextLink}
-                      href={module.basePath + subtopic.path}
-                      sx={{ pl: 4 }}
-                    >
-                      <ListItemText primary={subtopic.title} />
-                    </ListItemButton>
+                    <li key={subtopic.title}>
+                      <NextLink href={module.basePath + subtopic.path} passHref>
+                        <div className="block p-2 rounded-md hover:bg-gray-700 transition-colors duration-200">
+                          {subtopic.title}
+                        </div>
+                      </NextLink>
+                    </li>
                   ))}
-                </List>
-              </Collapse>
-            </React.Fragment>
+                </ul>
+              )}
+            </li>
           ))}
-        </List>
-      </Box>
-      <Box sx={{ p: 2, mt: 'auto' }}>
-        <Typography variant="body2" color="text.secondary" align="center">
+        </ul>
+      </nav>
+      <div className="p-4 mt-auto border-t border-gray-700">
+        <p className="text-xs text-center text-gray-400">
           Creado por{' '}
-          <MuiLink href="https://www.linkedin.com/in/adri%C3%A1n-vences-garrido-513872324/" target="_blank" rel="noopener">
+          <a href="https://www.linkedin.com/in/adri%C3%A1n-vences-garrido-513872324/" target="_blank" rel="noopener" className="underline hover:text-white">
             Adrián Vences Garrido
-          </MuiLink>
-        </Typography>
-      </Box>
-    </Drawer>
+          </a>
+        </p>
+      </div>
+    </aside>
   );
 }

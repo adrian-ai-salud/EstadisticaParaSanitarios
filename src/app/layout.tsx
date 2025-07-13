@@ -1,10 +1,12 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import ThemeRegistry from './ThemeRegistry';
-import Sidebar from '@/components/Sidebar';
-import Toolbar from '@mui/material/Toolbar';
 
-export const metadata = {
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import Sidebar from '@/components/Sidebar';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
   title: 'BioEstadística para Sanitarios',
   description: 'Una aplicación para aprender bioestadística aplicada a la salud.',
 };
@@ -12,19 +14,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body>
-        <ThemeRegistry>
-          <Box sx={{ display: 'flex' }}>
-            <Sidebar />
-            <Box
-              component="main"
-              sx={{ flexGrow: 1, bgcolor: 'background.default', p: 3 }}
-            >
-              <Toolbar />
-              {children}
-            </Box>
-          </Box>
-        </ThemeRegistry>
+      <body className={`${inter.className} bg-background text-text-main`}>
+        <div className="flex">
+          <Sidebar />
+          <main className="flex-grow p-8">
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );
