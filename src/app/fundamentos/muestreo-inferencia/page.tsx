@@ -22,7 +22,7 @@ export default function MuestreoInferenciaPage() {
             Quieres saber la prevalencia de la hipertensión en todos los adultos de tu país (la **población**). Es imposible medirlos a todos. ¿Qué haces? Seleccionas un grupo más pequeño y manejable (la **muestra**) y los mides a ellos.
           </Typography>
           <Typography variant="body1">
-            La **inferencia estadística** es el arte y la ciencia de usar los resultados de tu muestra para hacer afirmaciones (inferencias) sobre la población total. Pero para que esto funcione, ¡la muestra debe ser representativa!
+            La <strong>inferencia estadística</strong> es el arte y la ciencia de usar los resultados de tu muestra para hacer afirmaciones (inferencias) sobre la población total. Pero para que esto funcione, ¡la muestra debe ser representativa!
           </Typography>
         </CardContent>
       </Card>
