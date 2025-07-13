@@ -5,7 +5,7 @@ import * as React from 'react';
 import NextLink from 'next/link';
 import { MdExpandMore, MdExpandLess } from 'react-icons/md';
 
-const drawerWidth = 280;
+
 
 const modules = [
   {
