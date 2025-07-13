@@ -72,11 +72,11 @@ const HazardRatioVisualizer: React.FC = () => {
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <ReferenceLine x={1} stroke="#dc2626" strokeDasharray="3 3" label="HR = 1 (No efecto)" />
         <Scatter data={data} fill="#2563eb" />
-        {data.map((entry) => (
+        {data.map((entry, index) => (
           <Customized
             key={entry.name}
             component={CustomIntervalLine}
-            y={entry.y}
+            y={index * 50 + 20} // Calcular la posición y manualmente para pasarla
             lowerCI={entry.lowerCI}
             upperCI={entry.upperCI}
             hr={entry.hr}
