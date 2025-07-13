@@ -43,7 +43,7 @@ export default function MuestreoInferenciaPage() {
 
       <ContentCard title="Cálculo Muestral: ¿Cuántos Necesito?">
         <p>
-          Una de las preguntas más frecuentes al diseñar un estudio es: "¿Cuántos pacientes necesito incluir?". El <strong>cálculo del tamaño muestral</strong> es crucial por varias razones:
+          Una de las preguntas más frecuentes al diseñar un estudio es: &quot;¿Cuántos pacientes necesito incluir?&quot;. El <strong>cálculo del tamaño muestral</strong> es crucial por varias razones:
         </p>
         <ul className="list-disc list-inside space-y-1 mt-2 mb-4">
           <li><strong>Precisión:</strong> Una muestra demasiado pequeña puede no ser representativa y dar resultados imprecisos.</li>
