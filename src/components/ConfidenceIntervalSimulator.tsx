@@ -128,19 +128,14 @@ const ConfidenceIntervalSimulator: React.FC<ConfidenceIntervalSimulatorProps> = 
           <Tooltip />
           <ReferenceLine x={populationMean} stroke="red" strokeDasharray="3 3" label="Media Poblacional" />
           {data.map((entry) => (
-            <Line
+            <ReferenceLine
               key={entry.id}
-              dataKey="sampleMean"
+              x1={entry.lowerBound}
+              x2={entry.upperBound}
+              y={entry.id}
               stroke={entry.containsPopulationMean ? "#2563eb" : "#dc2626"} // Azul si contiene la media, rojo si no
               strokeWidth={2}
-              dot={{ r: 4, fill: entry.containsPopulationMean ? "#2563eb" : "#dc2626" }}
-              activeDot={{ r: 6 }}
-              points={[
-                { x: entry.lowerBound, y: entry.id },
-                { x: entry.upperBound, y: entry.id },
-              ]}
-              type="linear"
-              isAnimationActive={false}
+              isFront={true} // Para asegurar que la línea esté por encima de la cuadrícula
             />
           ))}
         </LineChart>
