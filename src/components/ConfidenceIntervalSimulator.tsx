@@ -135,7 +135,6 @@ const ConfidenceIntervalSimulator: React.FC<ConfidenceIntervalSimulatorProps> = 
               y={entry.id}
               stroke={entry.containsPopulationMean ? "#2563eb" : "#dc2626"} // Azul si contiene la media, rojo si no
               strokeWidth={2}
-              isFront={true} // Para asegurar que la línea esté por encima de la cuadrícula
             />
           ))}
         </LineChart>
