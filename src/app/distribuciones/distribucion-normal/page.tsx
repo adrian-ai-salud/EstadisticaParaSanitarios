@@ -54,9 +54,9 @@ export default function DistribucionNormalPage() {
         <p className="text-sm text-gray-600 mt-2">
           Una puntuación Z de 0 significa que el valor es exactamente la media. Una Z de +1 significa que está una desviación típica por encima de la media, y -2 significa que está dos desviaciones típicas por debajo.
         </p>
-        <AlertBox icon={MdInfoOutline} title="Punto Clave">
+        <AlertBox icon={MdInfoOutline} title="Punto Clave" type="info">
           <p>
-            El HR es una medida relativa. Siempre debe interpretarse junto con su intervalo de confianza. Si el IC del HR incluye el 1, el efecto no es estadísticamente significativo.
+            La puntuación Z es la base para entender los percentiles y para realizar muchas pruebas estadísticas. Nos permite transformar cualquier distribución normal en una <strong>Normal Estándar</strong> (media 0, desviación típica 1), facilitando los cálculos de probabilidad.
           </p>
         </AlertBox>
       </ContentCard>

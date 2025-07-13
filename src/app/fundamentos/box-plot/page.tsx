@@ -6,6 +6,7 @@ import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
 import { MdInfoOutline, MdScience } from 'react-icons/md';
+import BoxPlotVisualizer from '@/components/BoxPlotVisualizer';
 
 export default function BoxPlotPage() {
   return (
@@ -52,6 +53,13 @@ export default function BoxPlotPage() {
             </div>
           </li>
         </ul>
+      </ContentCard>
+
+      <ContentCard title="Visualizador de Box Plot">
+        <BoxPlotVisualizer />
+        <p className="text-sm text-gray-600 mt-4">
+          Este gráfico ilustra las partes clave de un Box Plot. Observa cómo la caja central representa el 50% de los datos, la línea roja es la mediana, y los bigotes se extienden para mostrar la dispersión. Los puntos fuera de los bigotes son los valores atípicos.
+        </p>
       </ContentCard>
 
       <ContentCard title="¿Por qué es Útil el Box Plot?">

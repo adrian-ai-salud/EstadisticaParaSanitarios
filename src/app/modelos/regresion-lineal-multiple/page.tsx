@@ -18,6 +18,11 @@ export default function RegresionLinealMultiplePage() {
         <p>
           Es una extensión de la regresión lineal simple, pero mucho más potente, ya que considera la influencia combinada de múltiples factores.
         </p>
+        <AlertBox icon={MdInfoOutline} title="Recuerda" type="info">
+          <p>
+            Si aún no lo has hecho, te recomendamos revisar la sección de <strong>Regresión Lineal Simple</strong> para comprender los fundamentos antes de adentrarte en este modelo más complejo.
+          </p>
+        </AlertBox>
       </ContentCard>
 
       <ContentCard title="El Modelo: La Ecuación de Predicción" variant="highlight">

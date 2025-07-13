@@ -37,7 +37,7 @@ export default function ModeloDeCoxPage() {
             <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />
             <div>
               <h4 className="font-semibold">Riesgos Proporcionales:</h4>
-              <p>El supuesto clave del modelo es que el efecto de las covariables sobre el riesgo es constante a lo largo del tiempo. Es decir, si un factor duplica el riesgo al inicio, lo duplica en cualquier momento posterior.</p>
+              <p>El supuesto clave del modelo es que el efecto de las covariables sobre el riesgo es constante a lo largo del tiempo. Es decir, si un factor duplica el riesgo al inicio, lo duplica en cualquier momento posterior. Este supuesto debe ser verificado (ej. con gráficos de residuos de Schoenfeld o pruebas estadísticas) para asegurar la validez del modelo.</p>
             </div>
           </li>
         </ul>

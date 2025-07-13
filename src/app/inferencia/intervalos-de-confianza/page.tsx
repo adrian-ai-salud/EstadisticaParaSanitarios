@@ -43,9 +43,27 @@ export default function IntervalosDeConfianzaPage() {
         <p>
           Si un estudio reporta que un nuevo fármaco reduce la tensión arterial en 10 mmHg (IC 95%: 8-12 mmHg), significa que estamos 95% seguros de que la verdadera reducción en la población está entre 8 y 12 mmHg. Esto es mucho más informativo que solo decir &apos;10 mmHg&apos;.
         </p>
-        <AlertBox icon={MdInfoOutline} title="Punto Clave">
+        <AlertBox icon={MdInfoOutline} title="Punto Clave" type="info">
           <p>
             Los Intervalos de Confianza son más informativos que solo el p-valor, ya que nos dan una idea de la magnitud del efecto y su precisión. Si un IC para una diferencia incluye el cero, significa que no hay una diferencia estadísticamente significativa.
+          </p>
+        </AlertBox>
+      </ContentCard>
+
+      <ContentCard title="Intervalos de Confianza Anchos: ¿Qué Significan?" variant="highlight">
+        <p>
+          Un intervalo de confianza muy amplio (ej. IC 95%: -5 a +25 mmHg para la reducción de tensión arterial) nos indica que nuestro estimado es poco preciso. Esto puede deberse a:
+        </p>
+        <ul className="list-disc list-inside space-y-1 mt-2 mb-4">
+          <li><strong>Tamaño de Muestra Pequeño:</strong> Cuanto menor sea la muestra, mayor será la incertidumbre y, por tanto, más amplio el intervalo.</li>
+          <li><strong>Gran Variabilidad en los Datos:</strong> Si los datos son muy dispersos, el intervalo será más ancho.</li>
+        </ul>
+        <p>
+          Un intervalo ancho significa que no podemos estar muy seguros del verdadero valor poblacional. En la práctica clínica, un IC demasiado amplio puede hacer que los resultados de un estudio sean poco útiles para tomar decisiones, incluso si el p-valor es significativo.
+        </p>
+        <AlertBox icon={MdInfoOutline} title="Punto Clave" type="info">
+          <p>
+            Siempre buscamos intervalos de confianza estrechos, ya que nos proporcionan estimaciones más precisas y fiables del efecto real en la población.
           </p>
         </AlertBox>
       </ContentCard>

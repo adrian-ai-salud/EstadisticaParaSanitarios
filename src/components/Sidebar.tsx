@@ -54,6 +54,7 @@ const modules = [
     basePath: '/modelos',
     subtopics: [
       { title: 'Modelos de Clasificación', path: '/modelos-de-clasificacion' },
+      { title: 'Regresión Lineal Simple', path: '/regresion-lineal-simple' },
       { title: 'Regresión Lineal Múltiple', path: '/regresion-lineal-multiple' },
     ],
   },
