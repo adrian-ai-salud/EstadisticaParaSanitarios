@@ -144,6 +144,28 @@ export default function PruebasParametricasPage() {
           Utiliza este visualizador para entender los supuestos de normalidad y homocedasticidad. Observa cómo se ven los datos cuando cumplen o no estos supuestos, lo cual es crucial para elegir la prueba estadística adecuada.
         </p>
       </ContentCard>
+
+      <ContentCard title="Pruebas de Normalidad: ¿Son tus Datos una Campana?">
+        <p>
+          Antes de aplicar muchas pruebas paramétricas, es fundamental verificar si tus datos siguen una distribución normal. Aquí te presentamos las formas más comunes de hacerlo:
+        </p>
+        <h4 className="text-lg font-semibold text-title-dark mt-4 mb-2">1. Métodos Visuales:</h4>
+        <ul className="list-disc list-inside space-y-1 mb-4">
+          <li><strong>Histogramas:</strong> Busca una forma de campana simétrica.</li>
+          <li><strong>Gráficos Q-Q (Quantile-Quantile):</strong> Los puntos deben seguir aproximadamente una línea recta diagonal.</li>
+        </ul>
+
+        <h4 className="text-lg font-semibold text-title-dark mt-4 mb-2">2. Pruebas Estadísticas:</h4>
+        <ul className="list-disc list-inside space-y-1 mb-4">
+          <li><strong>Prueba de Shapiro-Wilk:</strong> Recomendada para muestras pequeñas (n &lt; 50). Si el p-valor es &lt; 0.05, se rechaza la hipótesis de normalidad.</li>
+          <li><strong>Prueba de Kolmogorov-Smirnov (con corrección de Lilliefors):</strong> Para muestras más grandes (n &ge; 50). Si el p-valor es &lt; 0.05, se rechaza la hipótesis de normalidad.</li>
+        </ul>
+        <AlertBox icon={MdInfoOutline} title="Punto Clave">
+          <p>
+            Un p-valor significativo en estas pruebas indica que los datos <strong>no</strong> son normales. Si tus datos no cumplen el supuesto de normalidad, considera transformarlos o utilizar pruebas no paramétricas.
+          </p>
+        </AlertBox>
+      </ContentCard>
     </div>
   );
 }
