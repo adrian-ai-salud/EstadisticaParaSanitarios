@@ -81,7 +81,7 @@ export default function PruebasNoParametricasPage() {
       <ContentCard title="Visualizador de Comparación de Medianas">
         <MedianComparisonVisualizer />
         <p className="text-sm text-gray-600 mt-4">
-          Este gráfico de barras compara los valores promedio y las medianas de dos grupos. En las pruebas no paramétricas, a menudo nos centramos en las medianas o en la distribución de los rangos, ya que no asumimos una distribución normal de los datos. Observa cómo la mediana puede ser una medida más robusta que la media cuando hay valores atípicos o distribuciones asimétricas.
+          Este gráfico compara la <strong>media</strong> y la <strong>mediana</strong> de dos grupos. Observa cómo en el &apos;Grupo Con Atípico&apos;, la media se ve arrastrada por un valor extremo, mientras que la mediana permanece más estable. Esto demuestra la robustez de la mediana frente a valores atípicos, haciéndola una medida de tendencia central más adecuada en distribuciones asimétricas o con datos extremos.
         </p>
       </ContentCard>
     </div>

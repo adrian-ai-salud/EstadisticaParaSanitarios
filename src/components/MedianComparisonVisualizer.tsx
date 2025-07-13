@@ -5,8 +5,8 @@ import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 
 const data = [
-  { name: 'Grupo A', value: 30, median: 28 },
-  { name: 'Grupo B', value: 45, median: 40 },
+  { name: 'Grupo Sin Atípico', mean: 25, median: 25 },
+  { name: 'Grupo Con Atípico', mean: 50, median: 26 }, // Media afectada por un valor atípico grande
 ];
 
 const MedianComparisonVisualizer: React.FC = () => {
@@ -26,7 +26,7 @@ const MedianComparisonVisualizer: React.FC = () => {
         <YAxis label={{ value: 'Valor', angle: -90, position: 'insideLeft' }} />
         <Tooltip />
         <Legend />
-        <Bar dataKey="value" fill="#2563eb" name="Valor Promedio" />
+        <Bar dataKey="mean" fill="#2563eb" name="Media" />
         <Bar dataKey="median" fill="#dc2626" name="Mediana" />
       </BarChart>
     </ResponsiveContainer>
