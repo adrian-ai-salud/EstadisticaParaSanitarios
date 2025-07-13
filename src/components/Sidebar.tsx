@@ -77,8 +77,8 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-[280px] flex-shrink-0 bg-sidebar-bg text-sidebar-text h-screen flex flex-col">
-      <div className="p-4 border-b border-gray-700">
+    <aside className="w-[280px] flex-shrink-0 bg-gradient-to-b from-slate-900 to-slate-700 text-slate-100 h-screen flex flex-col">
+      <div className="p-4 border-b border-slate-700">
         <h1 className="text-xl font-bold text-white">Estadística de Salud</h1>
       </div>
       <nav className="flex-grow overflow-y-auto p-2">
@@ -87,7 +87,7 @@ export default function Sidebar() {
             <li key={module.title} className="mb-1">
               <button 
                 onClick={() => handleClick(module.title)} 
-                className="w-full flex justify-between items-center p-2 rounded-md hover:bg-gray-700 transition-colors duration-200 text-left"
+                className="w-full flex justify-between items-center p-2 rounded-md hover:bg-slate-700 transition-colors duration-200 text-left"
               >
                 <span className="font-semibold" style={{ color: `var(--module-color-${index + 1})` }}>{module.title}</span>
                 {open[module.title] ? <MdExpandLess size={20} /> : <MdExpandMore size={20} />}
@@ -99,7 +99,7 @@ export default function Sidebar() {
                     return (
                       <li key={subtopic.title}>
                         <NextLink href={module.basePath + subtopic.path} passHref>
-                          <div className={`block p-2 rounded-md transition-colors duration-200 ${isActive ? 'bg-button-primary text-white' : 'hover:bg-gray-700 text-gray-300'}`}>
+                          <div className={`block p-2 rounded-md transition-colors duration-200 ${isActive ? 'bg-slate-700 text-slate-100' : 'hover:bg-slate-700 text-slate-300'}`}>
                             {subtopic.title}
                           </div>
                         </NextLink>
@@ -112,8 +112,8 @@ export default function Sidebar() {
           ))}
         </ul>
       </nav>
-      <div className="p-4 mt-auto border-t border-gray-700">
-        <p className="text-xs text-center text-gray-400">
+      <div className="p-4 mt-auto border-t border-slate-700">
+        <p className="text-xs text-center text-slate-400">
           Creado por{' '}
           <a href="https://www.linkedin.com/in/adri%C3%A1n-vences-garrido-513872324/" target="_blank" rel="noopener" className="underline hover:text-white">
             Adrián Vences Garrido

@@ -16,8 +16,12 @@ const config: Config = {
         'highlight': '#e6f0ff',
         'icon-blue': '#2563eb',
         'button-primary': '#0e7490',
-        'sidebar-bg': '#1e293b',
-        'sidebar-text': '#f1f5f9',
+        // Nuevos colores para la barra lateral y subcategorías
+        'slate-900': '#0F172A',
+        'slate-700': '#334155',
+        'slate-300': '#CBD5E1',
+        'slate-200': '#E2E8F0',
+        'slate-100': '#F1F5F9',
       },
       boxShadow: {
         'soft': '0 4px 12px rgba(0, 0, 0, 0.05)',
