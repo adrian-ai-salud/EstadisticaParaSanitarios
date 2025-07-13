@@ -5,6 +5,8 @@ import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
 import { MdScience, MdInfoOutline } from 'react-icons/md';
+import MedianComparisonVisualizer from '@/components/MedianComparisonVisualizer';
+import MedianComparisonVisualizer from '@/components/MedianComparisonVisualizer';
 
 export default function PruebasNoParametricasPage() {
   return (
@@ -74,6 +76,13 @@ export default function PruebasNoParametricasPage() {
         </p>
         <p className="text-sm text-gray-600 mt-2">
           <strong>Ejemplo:</strong> Relacionar el nivel de estrés percibido (escala ordinal) con el número de horas de sueño (cuantitativa no normal).
+        </p>
+      </ContentCard>
+
+      <ContentCard title="Visualizador de Comparación de Medianas">
+        <MedianComparisonVisualizer />
+        <p className="text-sm text-gray-600 mt-4">
+          Este gráfico de barras compara los valores promedio y las medianas de dos grupos. En las pruebas no paramétricas, a menudo nos centramos en las medianas o en la distribución de los rangos, ya que no asumimos una distribución normal de los datos. Observa cómo la mediana puede ser una medida más robusta que la media cuando hay valores atípicos o distribuciones asimétricas.
         </p>
       </ContentCard>
     </div>
