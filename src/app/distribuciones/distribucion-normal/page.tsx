@@ -64,6 +64,19 @@ export default function DistribucionNormalPage() {
       <ContentCard title="Visualizador de Curva Normal">
         <NormalDistributionCurveVisualizer />
       </ContentCard>
+
+      <ContentCard title="Interpretando el Visualizador de Curva Normal">
+        <p>
+          Este gráfico interactivo te permite visualizar cómo la <strong>media (μ)</strong> y la <strong>desviación típica (σ)</strong> afectan la forma de la curva de distribución normal:
+        </p>
+        <ul className="list-disc list-inside space-y-2 mt-2">
+          <li>La <strong>media (μ)</strong> desplaza la curva horizontalmente. Un cambio en la media mueve toda la campana a la izquierda o a la derecha.</li>
+          <li>La <strong>desviación típica (σ)</strong> controla la &apos;anchura&apos; o dispersión de la curva. Una desviación típica pequeña resulta en una campana alta y estrecha (datos muy agrupados alrededor de la media), mientras que una grande produce una campana baja y ancha (datos más dispersos).</li>
+        </ul>
+        <p className="mt-4">
+          Observa cómo la mayoría de los datos se concentran alrededor de la media, y la frecuencia disminuye a medida que te alejas de ella. Esta es la esencia de la distribución normal, fundamental para entender muchos fenómenos biológicos y para la inferencia estadística.
+        </p>
+      </ContentCard>
     </div>
   );
 }

@@ -59,6 +59,10 @@ export default function DistribucionesDiscretasPage() {
           </p>
         </AlertBox>
       </ContentCard>
+
+      <ContentCard title="Simulador de Distribución Binomial">
+        <BinomialDistributionSimulator />
+      </ContentCard>
     </div>
   );
 }
