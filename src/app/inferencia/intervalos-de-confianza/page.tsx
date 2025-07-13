@@ -5,6 +5,7 @@ import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
 import { MdScience, MdInfoOutline } from 'react-icons/md';
+import ConfidenceIntervalSimulator from '@/components/ConfidenceIntervalSimulator';
 
 export default function IntervalosDeConfianzaPage() {
   return (
@@ -48,6 +49,10 @@ export default function IntervalosDeConfianzaPage() {
             Los Intervalos de Confianza son más informativos que solo el p-valor, ya que nos dan una idea de la magnitud del efecto y su precisión. Si un IC para una diferencia incluye el cero, significa que no hay una diferencia estadísticamente significativa.
           </p>
         </AlertBox>
+      </ContentCard>
+
+      <ContentCard title="Simulador de Intervalos de Confianza">
+        <ConfidenceIntervalSimulator />
       </ContentCard>
     </div>
   );
