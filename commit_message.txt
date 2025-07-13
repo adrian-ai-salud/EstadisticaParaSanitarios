@@ -1,1 +1,0 @@
-fix(build): Actualizar todas las dependencias de Tailwind CSS y PostCSS a las últimas versiones estables
