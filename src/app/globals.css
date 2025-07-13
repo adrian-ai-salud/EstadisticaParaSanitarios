@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --module-color-1: #6366F1; /* indigo-500 */
-  --module-color-2: #8B5CF6; /* violet-500 */
-  --module-color-3: #38BDF8; /* sky-400 */
-  --module-color-4: #6366F1; /* Repetir o ajustar según el número de módulos */
-  --module-color-5: #8B5CF6;
-  --module-color-6: #38BDF8;
-  --module-color-7: #6366F1;
+  --module-color-1: #DC2626; /* Rojo intenso */
+  --module-color-2: #EA580C; /* Naranja quemado */
+  --module-color-3: #F59E0B; /* Ámbar */
+  --module-color-4: #FBBF24; /* Amarillo anaranjado */
+  --module-color-5: #FCD34D; /* Amarillo dorado */
+  --module-color-6: #FDE047; /* Amarillo brillante */
+  --module-color-7: #FEF08A; /* Amarillo pálido */
 }
