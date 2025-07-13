@@ -11,30 +11,7 @@ interface HazardRatioData {
   upperCI: number;
 }
 
-// Componente personalizado para dibujar las líneas de los intervalos de confianza
-interface CustomIntervalLineProps {
-  y: number;
-  lowerCI: number;
-  upperCI: number;
-  hr: number;
-  color: string;
-}
 
-const CustomIntervalLine = (props: CustomIntervalLineProps) => {
-  const { y, lowerCI, upperCI, hr, color } = props;
-
-  return (
-    <g>
-      {/* Línea horizontal del intervalo de confianza */}
-      <line x1={lowerCI} y1={y} x2={upperCI} y2={y} stroke={color} strokeWidth={2} />
-      {/* Marcas en los extremos del intervalo */}
-      <line x1={lowerCI} y1={y - 5} x2={lowerCI} y2={y + 5} stroke={color} strokeWidth={2} />
-      <line x1={upperCI} y1={y - 5} x2={upperCI} y2={y + 5} stroke={color} strokeWidth={2} />
-      {/* Punto del Hazard Ratio */}
-      <circle cx={hr} cy={y} r={4} fill={color} />
-    </g>
-  );
-};
 
 const HazardRatioVisualizer: React.FC = () => {
   const data: HazardRatioData[] = [
@@ -71,17 +48,22 @@ const HazardRatioVisualizer: React.FC = () => {
         />
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <ReferenceLine x={1} stroke="#dc2626" strokeDasharray="3 3" label="HR = 1 (No efecto)" />
-        <Scatter data={data} fill="#2563eb" />
-        {data.map((entry, index) => (
-          <Customized
-            key={entry.name}
-            component={CustomIntervalLine}
-            y={index * 50 + 20} // Calcular la posición y manualmente para pasarla
-            lowerCI={entry.lowerCI}
-            upperCI={entry.upperCI}
-            hr={entry.hr}
-            color={entry.lowerCI <= 1 && entry.upperCI >= 1 ? "#6b7280" : "#2563eb"} // Gris si cruza 1, azul si no
-          />
+        {data.map((entry) => (
+          <React.Fragment key={entry.name}>
+            <ReferenceLine
+              x1={entry.lowerCI}
+              x2={entry.upperCI}
+              y={entry.name}
+              stroke={entry.lowerCI <= 1 && entry.upperCI >= 1 ? "#6b7280" : "#2563eb"} // Gris si cruza 1, azul si no
+              strokeWidth={2}
+            />
+            <Scatter
+              data={[{ x: entry.hr, y: entry.name }]}
+              fill={entry.lowerCI <= 1 && entry.upperCI >= 1 ? "#6b7280" : "#2563eb"} // Gris si cruza 1, azul si no
+              shape="circle"
+              r={4}
+            />
+          </React.Fragment>
         ))}
       </ScatterChart>
     </ResponsiveContainer>
