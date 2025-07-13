@@ -1,102 +1,81 @@
 'use client';
 
-import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardHeader from '@mui/material/CardHeader';
-import Box from '@mui/material/Box';
-import Alert from '@mui/material/Alert';
-import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-import ScienceIcon from '@mui/icons-material/Science';
+import React from 'react';
+import PageTitle from '@/components/PageTitle';
+import ContentCard from '@/components/ContentCard';
+import AlertBox from '@/components/AlertBox';
+import { MdScience, MdInfoOutline } from 'react-icons/md';
 
 export default function PruebasNoParametricasPage() {
   return (
-    <Box>
-      <Typography variant="h4" sx={{ mb: 2 }}>
-        Pruebas No Paramétricas: Cuando tus Datos Rompen la Norma
-      </Typography>
+    <div>
+      <PageTitle title="Pruebas No Paramétricas: Cuando tus Datos Rompen la Norma" />
 
-      <Card sx={{ mb: 3 }}>
-        <CardHeader title="El Caso Clínico: Datos Atípicos o Escalas Ordinales" />
-        <CardContent>
-          <Typography variant="body1" paragraph>
-            Imagina que estás estudiando el efecto de un nuevo analgésico en el dolor, medido en una escala de 1 a 10. O quizás, tienes datos de un estudio piloto con muy pocos pacientes, y la distribución de tus variables no es normal. En estos casos, las pruebas paramétricas que acabamos de ver (Test t, ANOVA) no son adecuadas porque sus supuestos no se cumplen.
-          </Typography>
-          <Typography variant="body1">
-            Las **pruebas no paramétricas** son la alternativa. Son más &apos;flexibles&apos; porque no requieren que los datos sigan una distribución específica (como la normal) y son robustas frente a valores atípicos. A menudo, trabajan con rangos o medianas en lugar de medias.
-          </Typography>
-        </CardContent>
-      </Card>
+      <ContentCard title="El Caso Clínico: Datos Atípicos o Escalas Ordinales">
+        <p>
+          Imagina que estás estudiando el efecto de un nuevo analgésico en el dolor, medido en una escala de 1 a 10. O quizás, tienes datos de un estudio piloto con muy pocos pacientes, y la distribución de tus variables no es normal. En estos casos, las pruebas paramétricas que acabamos de ver (Test t, ANOVA) no son adecuadas porque sus supuestos no se cumplen.
+        </p>
+        <p>
+          Las <strong>pruebas no paramétricas</strong> son la alternativa. Son más &apos;flexibles&apos; porque no requieren que los datos sigan una distribución específica (como la normal) y son robustas frente a valores atípicos. A menudo, trabajan con rangos o medianas en lugar de medias.
+        </p>
+      </ContentCard>
 
-      <Card sx={{ mb: 3 }}>
-        <CardHeader title="¿Cuándo Usar Pruebas No Paramétricas?" />
-        <CardContent>
-          <List>
-            <ListItem>
-              <ListItemIcon>
-                <ScienceIcon color="primary" />
-              </ListItemIcon>
-              <ListItemText 
-                primary="Datos no normales:" 
-                secondary="Cuando la variable dependiente no sigue una distribución normal y el tamaño de la muestra es pequeño (con muestras grandes, las pruebas paramétricas son más robustas incluso con desviaciones de la normalidad)."
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ScienceIcon color="primary" />
-              </ListItemIcon>
-              <ListItemText 
-                primary="Variables ordinales:" 
-                secondary="Cuando la variable dependiente es de tipo ordinal (ej. nivel de satisfacción, grado de mejoría)."
-              />
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
-                <ScienceIcon color="primary" />
-              </ListItemIcon>
-              <ListItemText 
-                primary="Valores atípicos extremos:" 
-                secondary="Cuando hay valores extremos que distorsionan la media y la desviación típica."
-              />
-            </ListItem>
-          </List>
-          <Alert severity="info" sx={{ mt: 2 }}>
+      <ContentCard title="¿Cuándo Usar Pruebas No Paramétricas?">
+        <ul className="space-y-4 mt-4">
+          <li className="flex items-start">
+            <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />
+            <div>
+              <h4 className="font-semibold">Datos no normales:</h4>
+              <p>Cuando la variable dependiente no sigue una distribución normal y el tamaño de la muestra es pequeño (con muestras grandes, las pruebas paramétricas son más robustas incluso con desviaciones de la normalidad).</p>
+            </div>
+          </li>
+          <li className="flex items-start">
+            <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />
+            <div>
+              <h4 className="font-semibold">Variables ordinales:</h4>
+              <p>Cuando la variable dependiente es de tipo ordinal (ej. nivel de satisfacción, grado de mejoría).</p>
+            </div>
+          </li>
+          <li className="flex items-start">
+            <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />
+            <div>
+              <h4 className="font-semibold">Valores atípicos extremos:</h4>
+              <p>Cuando hay valores extremos que distorsionan la media y la desviación típica.</p>
+            </div>
+          </li>
+        </ul>
+        <AlertBox icon={MdInfoOutline} title="Punto Clave">
+          <p>
             Aunque son más flexibles, las pruebas no paramétricas suelen tener menos &apos;potencia&apos; que sus equivalentes paramétricas. Esto significa que necesitan una diferencia mayor para detectarla como estadísticamente significativa.
-          </Alert>
-        </CardContent>
-      </Card>
+          </p>
+        </AlertBox>
+      </ContentCard>
 
-      <Card>
-        <CardHeader title="Pruebas No Paramétricas Comunes" />
-        <CardContent>
-          <Typography variant="h6">1. Prueba U de Mann-Whitney</Typography>
-          <Typography variant="body1" paragraph>
-            Es la alternativa no paramétrica al **Test t de Student para muestras independientes**. Se usa para comparar dos grupos independientes cuando la variable dependiente es ordinal o cuantitativa no normal. Compara las medianas o las distribuciones de los rangos.
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-            <strong>Ejemplo:</strong> Comparar el nivel de dolor (escala 1-10) entre pacientes que recibieron un placebo y los que recibieron un nuevo analgésico.
-          </Typography>
-        </CardContent>
-        <CardContent>
-          <Typography variant="h6">2. Prueba de Wilcoxon (para muestras pareadas)</Typography>
-          <Typography variant="body1" paragraph>
-            Es la alternativa no paramétrica al **Test t de Student para muestras pareadas**. Se usa cuando tienes dos mediciones del mismo sujeto (antes/después) y los datos no cumplen los supuestos de normalidad. Compara las medianas de las diferencias.
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-            <strong>Ejemplo:</strong> Evaluar la mejoría en la movilidad (escala ordinal) de pacientes antes y después de una fisioterapia.
-          </Typography>
-        </CardContent>
-        <CardContent>
-          <Typography variant="h6">3. Coeficiente de Correlación de Spearman</Typography>
-          <Typography variant="body1" paragraph>
-            Es la alternativa no paramétrica al **Coeficiente de Correlación de Pearson**. Se usa para medir la fuerza y dirección de la relación entre dos variables ordinales o cuantitativas no normales. Se basa en los rangos de los datos, no en los valores brutos.
-          </Typography>
-          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
-            <strong>Ejemplo:</strong> Relacionar el nivel de estrés percibido (escala ordinal) con el número de horas de sueño (cuantitativa no normal).
-          </Typography>
-        </CardContent>
-      </Card>
-    </Box>
+      <ContentCard title="Pruebas No Paramétricas Comunes">
+        <h4 className="text-lg font-semibold text-title-dark mb-2">1. Prueba U de Mann-Whitney</h4>
+        <p>
+          Es la alternativa no paramétrica al <strong>Test t de Student para muestras independientes</strong>. Se usa para comparar dos grupos independientes cuando la variable dependiente es ordinal o cuantitativa no normal. Compara las medianas o las distribuciones de los rangos.
+        </p>
+        <p className="text-sm text-gray-600 mt-2">
+          <strong>Ejemplo:</strong> Comparar el nivel de dolor (escala 1-10) entre pacientes que recibieron un placebo y los que recibieron un nuevo analgésico.
+        </p>
+
+        <h4 className="text-lg font-semibold text-title-dark mt-4 mb-2">2. Prueba de Wilcoxon (para muestras pareadas)</h4>
+        <p>
+          Es la alternativa no paramétrica al <strong>Test t de Student para muestras pareadas</strong>. Se usa cuando tienes dos mediciones del mismo sujeto (antes/después) y los datos no cumplen los supuestos de normalidad. Compara las medianas de las diferencias.
+        </p>
+        <p className="text-sm text-gray-600 mt-2">
+          <strong>Ejemplo:</strong> Evaluar la mejoría en la movilidad (escala ordinal) de pacientes antes y después de una fisioterapia.
+        </p>
+
+        <h4 className="text-lg font-semibold text-title-dark mt-4 mb-2">3. Coeficiente de Correlación de Spearman</h4>
+        <p>
+          Es la alternativa no paramétrica al <strong>Coeficiente de Correlación de Pearson</strong>. Se usa para medir la fuerza y dirección de la relación entre dos variables ordinales o cuantitativas no normales. Se basa en los rangos de los datos, no en los valores brutos.
+        </p>
+        <p className="text-sm text-gray-600 mt-2">
+          <strong>Ejemplo:</strong> Relacionar el nivel de estrés percibido (escala ordinal) con el número de horas de sueño (cuantitativa no normal).
+        </p>
+      </ContentCard>
+    </div>
   );
 }
