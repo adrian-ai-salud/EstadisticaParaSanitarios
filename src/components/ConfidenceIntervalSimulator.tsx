@@ -11,13 +11,21 @@ interface ConfidenceIntervalSimulatorProps {
   numSamples?: number;
 }
 
+interface SampleData {
+  id: number;
+  sampleMean: number;
+  lowerBound: number;
+  upperBound: number;
+  containsPopulationMean: boolean;
+}
+
 const ConfidenceIntervalSimulator: React.FC<ConfidenceIntervalSimulatorProps> = ({
   populationMean = 100,
   populationStdDev = 15,
   sampleSize = 30,
   numSamples = 50,
 }) => {
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<SampleData[]>([]);
 
   useEffect(() => {
     const generateData = () => {
