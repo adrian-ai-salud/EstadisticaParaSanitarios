@@ -47,7 +47,7 @@ export default function MuestreoInferenciaPage() {
         </p>
         <ul className="list-disc list-inside space-y-1 mt-2 mb-4">
           <li><strong>Precisión:</strong> Una muestra demasiado pequeña puede no ser representativa y dar resultados imprecisos.</li>
-          <li><strong>Poder Estadístico:</strong> Una muestra adecuada asegura que el estudio tenga suficiente "poder" para detectar un efecto si realmente existe.</li>
+          <li><strong>Poder Estadístico:</strong> Una muestra adecuada asegura que el estudio tenga suficiente &quot;poder&quot; para detectar un efecto si realmente existe.</li>
           <li><strong>Ética y Recursos:</strong> Incluir más participantes de los necesarios es poco ético (exponer a más personas a un riesgo) y un desperdicio de recursos.</li>
         </ul>
 
