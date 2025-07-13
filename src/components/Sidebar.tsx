@@ -83,7 +83,7 @@ export default function Sidebar() {
       </div>
       <nav className="flex-grow overflow-y-auto p-2">
         <ul>
-          {modules.map((module) => (
+          {modules.map((module, index) => (
             <li key={module.title} className="mb-1">
               <button 
                 onClick={() => handleClick(module.title)} 
