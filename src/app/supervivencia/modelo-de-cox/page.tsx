@@ -5,6 +5,7 @@ import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
 import { MdScience, MdInfoOutline } from 'react-icons/md';
+import HazardRatioVisualizer from '@/components/HazardRatioVisualizer';
 
 export default function ModeloDeCoxPage() {
   return (
@@ -75,6 +76,13 @@ export default function ModeloDeCoxPage() {
             El HR es una medida relativa. Siempre debe interpretarse junto con su intervalo de confianza. Si el IC del HR incluye el 1, el efecto no es estadísticamente significativo.
           </p>
         </AlertBox>
+      </ContentCard>
+
+      <ContentCard title="Visualizador Simple de Hazard Ratio">
+        <HazardRatioVisualizer />
+        <p className="text-sm text-gray-600 mt-4">
+          Este gráfico muestra ejemplos de Hazard Ratios (HR) y sus intervalos de confianza (líneas verticales). La línea discontinua roja en HR=1 indica &apos;no efecto&apos;. Observa cómo un HR mayor que 1 indica mayor riesgo, y menor que 1 indica menor riesgo. Si el intervalo de confianza cruza la línea de 1, el efecto no es estadísticamente significativo.
+        </p>
       </ContentCard>
     </div>
   );
