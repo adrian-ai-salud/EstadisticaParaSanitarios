@@ -76,6 +76,7 @@ const HazardRatioVisualizer: React.FC = () => {
           <Customized
             key={entry.name}
             component={CustomIntervalLine}
+            y={entry.y}
             lowerCI={entry.lowerCI}
             upperCI={entry.upperCI}
             hr={entry.hr}
