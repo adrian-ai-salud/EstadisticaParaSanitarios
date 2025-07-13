@@ -4,6 +4,7 @@ import React from 'react';
 import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import { MdCheckCircleOutline } from 'react-icons/md';
+import ProbabilitySimulator from '@/components/ProbabilitySimulator';
 
 export default function IntroProbabilidadPage() {
   return (
@@ -54,6 +55,13 @@ export default function IntroProbabilidadPage() {
         </p>
         <p className="text-sm text-gray-600 mt-2">
           No es tan simple como parece, porque los tests no son perfectos (pueden dar falsos positivos). El Teorema de Bayes combina la información previa (la prevalencia de la enfermedad) con el resultado del test para darnos una probabilidad mucho más precisa. Lo exploraremos a fondo en la sección de pruebas diagnósticas.
+        </p>
+      </ContentCard>
+
+      <ContentCard title="Simulador de Probabilidad: Lanzamiento de Moneda">
+        <ProbabilitySimulator />
+        <p className="text-sm text-gray-600 mt-4">
+          Utiliza el control deslizante para aumentar el número de lanzamientos de moneda y observa cómo las probabilidades de caras y cruces se acercan al 50%. Esto demuestra la <strong>Ley de los Grandes Números</strong>, un principio fundamental que explica por qué las frecuencias observadas se aproximan a las probabilidades teóricas a medida que aumenta el número de ensayos.
         </p>
       </ContentCard>
     </div>
