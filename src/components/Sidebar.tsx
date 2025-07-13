@@ -13,16 +13,15 @@ const modules = [
     subtopics: [],
   },
   {
-    title: '1. Fundamentos',
+    title: '1. Fundamentos de Bioestadística',
     basePath: '/fundamentos',
     subtopics: [
       { title: 'Definiciones Básicas', path: '/definiciones-basicas' },
+      { title: 'Tipos de Variables', path: '/tipos-de-variables' },
       { title: 'Box Plot', path: '/box-plot' },
+      { title: 'Introducción a la Probabilidad', path: '/introduccion-probabilidad' },
       { title: 'Tipos de Estudios Epidemiológicos', path: '/tipos-estudios-epidemiologicos' },
       { title: 'Sesgos en Investigación', path: '/sesgos-investigacion' },
-      { title: 'Introducción a la Probabilidad', path: '/introduccion-probabilidad' },
-      { title: 'Tipos de Variables', path: '/tipos-de-variables' },
-      { title: 'Análisis Bivariante', path: '/analisis-bivariante' },
       { title: 'Muestreo e Inferencia', path: '/muestreo-inferencia' },
     ],
   },
@@ -51,7 +50,7 @@ const modules = [
     ],
   },
   {
-    title: '5. Modelos Avanzados',
+    title: '5. Modelos Predictivos',
     basePath: '/modelos',
     subtopics: [
       { title: 'Modelos de Clasificación', path: '/modelos-de-clasificacion' },
