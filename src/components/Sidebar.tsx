@@ -79,7 +79,7 @@ export default function Sidebar() {
   return (
     <aside className="w-[280px] flex-shrink-0 bg-gradient-to-b from-slate-900 to-slate-700 text-slate-100 h-screen flex flex-col">
       <div className="p-4 border-b border-slate-700">
-        <h1 className="text-xl font-bold text-white">Estadística de Salud</h1>
+        <h1 className="text-xl font-bold text-white">Estadística Para Sanitarios</h1>
       </div>
       <nav className="flex-grow overflow-y-auto p-2">
         <ul>
