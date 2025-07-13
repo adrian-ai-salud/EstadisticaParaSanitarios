@@ -90,14 +90,22 @@ export default function Sidebar() {
         <ul>
           {modules.map((module, index) => (
             <li key={module.title} className="mb-1">
-              <button 
-                onClick={() => handleClick(module.title)} 
-                className="w-full flex justify-between items-center p-2 rounded-md hover:bg-slate-700 transition-colors duration-200 text-left"
-              >
-                <span className="font-semibold" style={{ color: `var(--module-color-${index + 1})` }}>{module.title}</span>
-                {open[module.title] ? <MdExpandLess size={20} /> : <MdExpandMore size={20} />}
-              </button>
-              {open[module.title] && (
+              {module.basePath === '/' ? (
+                <NextLink href={module.basePath} passHref>
+                  <div className={`block p-2 rounded-md transition-colors duration-200 ${pathname === module.basePath ? 'bg-slate-700 text-slate-100' : 'hover:bg-slate-700 text-slate-300'}`}>
+                    <span className="font-semibold" style={{ color: `var(--module-color-${index + 1})` }}>{module.title}</span>
+                  </div>
+                </NextLink>
+              ) : (
+                <button 
+                  onClick={() => handleClick(module.title)} 
+                  className="w-full flex justify-between items-center p-2 rounded-md hover:bg-slate-700 transition-colors duration-200 text-left"
+                >
+                  <span className="font-semibold" style={{ color: `var(--module-color-${index + 1})` }}>{module.title}</span>
+                  {open[module.title] ? <MdExpandLess size={20} /> : <MdExpandMore size={20} />}
+                </button>
+              )}
+              {module.subtopics.length > 0 && open[module.title] && (
                 <ul className="pl-4 mt-1">
                   {module.subtopics.map((subtopic) => {
                     const isActive = pathname === (module.basePath + subtopic.path);
