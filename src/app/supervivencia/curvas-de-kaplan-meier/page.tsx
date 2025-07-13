@@ -6,6 +6,7 @@ import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
 import { MdScience, MdInfoOutline, MdWarningAmber } from 'react-icons/md';
+import KaplanMeierCurveGenerator from '@/components/KaplanMeierCurveGenerator';
 
 export default function CurvasKaplanMeierPage() {
   return (
@@ -67,6 +68,13 @@ export default function CurvasKaplanMeierPage() {
             El test de Log-Rank es sensible a las diferencias en la parte final de las curvas. Si las diferencias ocurren al principio, otras pruebas pueden ser más adecuadas. Además, no nos dice la magnitud del efecto, solo si hay una diferencia.
           </p>
         </AlertBox>
+      </ContentCard>
+
+      <ContentCard title="Generador Interactivo de Curvas de Kaplan-Meier">
+        <KaplanMeierCurveGenerator />
+        <p className="text-sm text-gray-600 mt-4">
+          Este gráfico muestra ejemplos de curvas de Kaplan-Meier para dos grupos. Observa cómo la probabilidad de supervivencia disminuye con el tiempo y cómo los &apos;escalones&apos; indican los momentos en que ocurren eventos. Puedes comparar visualmente la supervivencia entre los grupos.
+        </p>
       </ContentCard>
     </div>
   );
