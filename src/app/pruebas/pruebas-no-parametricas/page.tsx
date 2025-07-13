@@ -6,7 +6,6 @@ import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
 import { MdScience, MdInfoOutline } from 'react-icons/md';
 import MedianComparisonVisualizer from '@/components/MedianComparisonVisualizer';
-import MedianComparisonVisualizer from '@/components/MedianComparisonVisualizer';
 
 export default function PruebasNoParametricasPage() {
   return (
