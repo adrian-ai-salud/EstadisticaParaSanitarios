@@ -54,13 +54,7 @@ export default function ModeloDeCoxPage() {
               <p>No hay diferencia en el riesgo entre los grupos o por el cambio en la variable.</p>
             </div>
           </li>
-          <li className="flex items-start">
-            <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0"></MdScience>
-            <div>
-              <h4 className="font-semibold">HR > 1:</h4>
-              <p>Mayor riesgo de que ocurra el evento en el grupo expuesto o por cada unidad de aumento en la variable (ej. HR de 1.5 significa un 50% más de riesgo).</p>
-            </div>
-          </li>
+          
           <li className="flex items-start">
             <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />
             
