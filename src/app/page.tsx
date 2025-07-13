@@ -38,9 +38,9 @@ export default function Home() {
           Nuestro objetivo es desmitificar la estadística, convirtiéndola en una herramienta poderosa y comprensible para todos los sanitarios. ¡Empieza a explorar y fortalece tus habilidades analíticas!
         </p>
         <div className="flex justify-center mt-6">
-          <Image 
-            src="/images/imagen-app.png" 
-            alt="Gráfico estadístico" 
+          <img 
+            src="/test-image.png" 
+            alt="Imagen de prueba" 
             width={500} 
             height={300} 
             className="rounded-lg shadow-md"
