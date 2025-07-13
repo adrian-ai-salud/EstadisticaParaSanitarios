@@ -12,9 +12,18 @@ interface HazardRatioData {
 }
 
 // Componente personalizado para dibujar las líneas de los intervalos de confianza
-const CustomIntervalLine = (props: any) => {
+interface CustomIntervalLineProps {
+  x: number;
+  y: number;
+  width: number;
+  lowerCI: number;
+  upperCI: number;
+  hr: number;
+  color: string;
+}
+
+const CustomIntervalLine = (props: CustomIntervalLineProps) => {
   const { x, y, width, lowerCI, upperCI, hr, color } = props;
-  const hrX = x + width / 2; // Centro del punto HR
 
   return (
     <g>
@@ -65,7 +74,7 @@ const HazardRatioVisualizer: React.FC = () => {
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <ReferenceLine x={1} stroke="#dc2626" strokeDasharray="3 3" label="HR = 1 (No efecto)" />
         <Scatter data={data} fill="#2563eb" />
-        {data.map((entry, index) => (
+        {data.map((entry) => (
           <Customized
             key={entry.name}
             component={CustomIntervalLine}
