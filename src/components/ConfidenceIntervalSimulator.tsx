@@ -145,7 +145,6 @@ const ConfidenceIntervalSimulator: React.FC<ConfidenceIntervalSimulatorProps> = 
         Observa cuántos de los intervalos de confianza (líneas horizontales) contienen la media poblacional (línea roja vertical). Idealmente, el {((1 - 0.05) * 100).toFixed(0)}% de los intervalos deberían contenerla.
       </p>
     </div>
-  
-};
+
 
 export default ConfidenceIntervalSimulator;
