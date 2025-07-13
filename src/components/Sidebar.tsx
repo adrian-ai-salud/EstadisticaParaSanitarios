@@ -16,6 +16,8 @@ const modules = [
     title: '1. Fundamentos',
     basePath: '/fundamentos',
     subtopics: [
+      { title: 'Definiciones Básicas', path: '/definiciones-basicas' },
+      { title: 'Box Plot', path: '/box-plot' },
       { title: 'Introducción a la Probabilidad', path: '/introduccion-probabilidad' },
       { title: 'Tipos de Variables', path: '/tipos-de-variables' },
       { title: 'Análisis Bivariante', path: '/analisis-bivariante' },
