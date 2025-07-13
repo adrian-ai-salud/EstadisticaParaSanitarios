@@ -1,1 +1,0 @@
-fix(build): Instalar versiones estables de Tailwind CSS v3 y sus dependencias (sin @tailwindcss/postcss)

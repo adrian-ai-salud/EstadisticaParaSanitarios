@@ -4,8 +4,7 @@
 import * as React from 'react';
 import NextLink from 'next/link';
 import { MdExpandMore, MdExpandLess } from 'react-icons/md';
-
-
+import { usePathname } from 'next/navigation';
 
 const modules = [
   {
@@ -71,6 +70,7 @@ const modules = [
 
 export default function Sidebar() {
   const [open, setOpen] = React.useState<{ [key: string]: boolean }>({ '1. Fundamentos': true });
+  const pathname = usePathname();
 
   const handleClick = (title: string) => {
     setOpen((prevOpen) => ({ ...prevOpen, [title]: !prevOpen[title] }));
@@ -89,20 +89,23 @@ export default function Sidebar() {
                 onClick={() => handleClick(module.title)} 
                 className="w-full flex justify-between items-center p-2 rounded-md hover:bg-gray-700 transition-colors duration-200 text-left"
               >
-                <span className="font-semibold">{module.title}</span>
+                <span className="font-semibold text-white">{module.title}</span>
                 {open[module.title] ? <MdExpandLess size={20} /> : <MdExpandMore size={20} />}
               </button>
               {open[module.title] && (
                 <ul className="pl-4 mt-1">
-                  {module.subtopics.map((subtopic) => (
-                    <li key={subtopic.title}>
-                      <NextLink href={module.basePath + subtopic.path} passHref>
-                        <div className="block p-2 rounded-md hover:bg-gray-700 transition-colors duration-200">
-                          {subtopic.title}
-                        </div>
-                      </NextLink>
-                    </li>
-                  ))}
+                  {module.subtopics.map((subtopic) => {
+                    const isActive = pathname === (module.basePath + subtopic.path);
+                    return (
+                      <li key={subtopic.title}>
+                        <NextLink href={module.basePath + subtopic.path} passHref>
+                          <div className={`block p-2 rounded-md transition-colors duration-200 ${isActive ? 'bg-button-primary text-white' : 'hover:bg-gray-700 text-gray-300'}`}>
+                            {subtopic.title}
+                          </div>
+                        </NextLink>
+                      </li>
+                    );
+                  })}
                 </ul>
               )}
             </li>
