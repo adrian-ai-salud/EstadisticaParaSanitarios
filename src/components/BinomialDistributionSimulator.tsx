@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
 interface BinomialDistributionSimulatorProps {
   n?: number; // Número de ensayos
@@ -66,7 +66,11 @@ const BinomialDistributionSimulator: React.FC<BinomialDistributionSimulatorProps
           <XAxis dataKey="k" label={{ value: 'Número de Éxitos (k)', position: 'insideBottom', offset: -5 }} />
           <YAxis label={{ value: 'Probabilidad', angle: -90, position: 'insideLeft' }} />
           <Tooltip />
-          <Bar dataKey="probability" fill="#2563eb" />
+          <Bar dataKey="probability" fill="#2563eb" >
+            {data.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={['#2563eb', '#dc2626', '#facc15', '#10b981', '#6366f1', '#ef4444', '#f97316', '#8b5cf6', '#06b6d4', '#ec4899'][index % 10]} />
+            ))}
+          </Bar>
         </BarChart>
       </ResponsiveContainer>
     </div>

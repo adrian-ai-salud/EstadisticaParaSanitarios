@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, Cell } from 'recharts';
 
 interface DataTypeExample {
   name: string;
@@ -63,7 +63,11 @@ const DataTypesVisualizer: React.FC = () => {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Bar dataKey="value" fill="#2563eb" />
+          <Bar dataKey="value" fill="#2563eb" >
+            {currentData.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={['#2563eb', '#dc2626', '#facc15', '#10b981', '#6366f1', '#ef4444', '#f97316', '#8b5cf6', '#06b6d4', '#ec4899'][index % 10]} />
+            ))}
+          </Bar>
         </BarChart>
       </ResponsiveContainer>
       <p className="text-sm text-gray-600 mt-4">
