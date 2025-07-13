@@ -1,7 +1,7 @@
 
 import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
-import Image from 'next/image';
+
 
 export default function Home() {
   return (
