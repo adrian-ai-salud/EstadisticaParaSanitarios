@@ -7,8 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
-import { List, ListItem, ListItemIcon, ListItemText } from '@mui/material';
-import ScienceIcon from '@mui/icons-material/Science';
+
 
 
 export default function DistribucionesDiscretasPage() {

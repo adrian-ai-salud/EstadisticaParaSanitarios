@@ -58,7 +58,7 @@ export default function AnalisisBivariantePage() {
         <CardContent>
           <Typography variant="h6">Tablas de Contingencia</Typography>
           <Typography variant="body1" paragraph>
-            Para variables como 'Fumador' (Sí/No) y 'Enfermedad Pulmonar' (Sí/No), usamos tablas de contingencia para ver las frecuencias. Contamos cuántos pacientes caen en cada combinación de categorías (ej. fumadores con enfermedad, fumadores sin enfermedad, etc.).
+            Para variables como &apos;Fumador&apos; (Sí/No) y &apos;Enfermedad Pulmonar&apos; (Sí/No), usamos tablas de contingencia para ver las frecuencias. Contamos cuántos pacientes caen en cada combinación de categorías (ej. fumadores con enfermedad, fumadores sin enfermedad, etc.).
           </Typography>
           <Typography variant="h6" sx={{ mt: 2 }}>Prueba de Chi-Cuadrado (χ²)</Typography>
           <Typography variant="body1" paragraph>
