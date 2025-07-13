@@ -1,7 +1,7 @@
 
 'use client';
 
-import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
+
 
 interface HazardRatioData {
   name: string;
