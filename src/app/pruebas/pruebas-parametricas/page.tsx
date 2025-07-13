@@ -5,6 +5,7 @@ import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
 import { MdScience, MdInfoOutline } from 'react-icons/md';
+import ParametricAssumptionsVisualizer from '@/components/ParametricAssumptionsVisualizer';
 
 export default function PruebasParametricasPage() {
   return (
@@ -134,6 +135,13 @@ export default function PruebasParametricasPage() {
         <h4 className="text-lg font-semibold text-title-dark mt-4 mb-2">Tamaño del Efecto (Eta-cuadrado η²):</h4>
         <p>
           Además del p-valor, es crucial saber la magnitud de la diferencia. Eta-cuadrado nos dice qué proporción de la variabilidad de la variable dependiente es explicada por la variable independiente. Un p-valor significativo con un efecto pequeño puede no ser clínicamente relevante.
+        </p>
+      </ContentCard>
+
+      <ContentCard title="Visualizador de Supuestos Paramétricos">
+        <ParametricAssumptionsVisualizer />
+        <p className="text-sm text-gray-600 mt-4">
+          Utiliza este visualizador para entender los supuestos de normalidad y homocedasticidad. Observa cómo se ven los datos cuando cumplen o no estos supuestos, lo cual es crucial para elegir la prueba estadística adecuada.
         </p>
       </ContentCard>
     </div>
