@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line, ScatterChart, Scatter } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ScatterChart, Scatter } from 'recharts';
 
 const normalData = [
   { value: 10 }, { value: 12 }, { value: 15 }, { value: 18 }, { value: 20 },
@@ -11,10 +11,7 @@ const normalData = [
   { value: 40 }, { value: 42 }, { value: 45 }, { value: 48 }, { value: 50 },
 ];
 
-const nonNormalData = [
-  { value: 5 }, { value: 5 }, { value: 5 }, { value: 10 }, { value: 10 },
-  { value: 20 }, { value: 30 }, { value: 40 }, { value: 50 }, { value: 100 },
-];
+
 
 const homoscedasticData = [
   { x: 1, y: 10 }, { x: 2, y: 12 }, { x: 3, y: 11 }, { x: 4, y: 13 }, { x: 5, y: 10 },
