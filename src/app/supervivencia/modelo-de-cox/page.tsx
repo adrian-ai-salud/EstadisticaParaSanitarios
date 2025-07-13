@@ -57,7 +57,17 @@ export default function ModeloDeCoxPage() {
           
           <li className="flex items-start">
             <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />
-            
+            <div>
+              <h4 className="font-semibold">HR &gt; 1:</h4>
+              <p>Mayor riesgo de que ocurra el evento en el grupo expuesto o por cada unidad de aumento en la variable (ej. HR de 1.5 significa un 50% más de riesgo).</p>
+            </div>
+          </li>
+          <li className="flex items-start">
+            <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />
+            <div>
+              <h4 className="font-semibold">HR &lt; 1:</h4>
+              <p>Menor riesgo de que ocurra el evento (efecto protector).</p>
+            </div>
           </li>
         </ul>
         <AlertBox icon={MdInfoOutline} title="Punto Clave">
