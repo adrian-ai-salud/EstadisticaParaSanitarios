@@ -21,7 +21,7 @@ export default function Home() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Explora nuestros módulos:">
+      <ContentCard title="Explora nuestros módulos:" variant="highlight">
         <ul className="list-disc list-inside space-y-2">
           <li><strong>Fundamentos:</strong> Desde la introducción a la probabilidad hasta los tipos de variables y el análisis bivariante.</li>
           <li><strong>Distribuciones de Probabilidad:</strong> Comprende la distribución normal y las distribuciones discretas.</li>

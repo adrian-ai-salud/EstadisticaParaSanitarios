@@ -21,7 +21,7 @@ export default function ModelosArimaPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Estacionariedad: La Clave para Modelar">
+      <ContentCard title="Estacionariedad: La Clave para Modelar" variant="highlight">
         <p>
           Para que muchos modelos de series temporales funcionen bien, la serie debe ser <strong>estacionaria</strong>. Esto significa que sus propiedades estadísticas (media, varianza, autocorrelación) no cambian con el tiempo.
         </p>
@@ -84,7 +84,7 @@ export default function ModelosArimaPage() {
         </AlertBox>
       </ContentCard>
 
-      <ContentCard title="Visualizador de Descomposición de Series Temporales">
+      <ContentCard title="Visualizador de Descomposición de Series Temporales" variant="highlight">
         <TimeSeriesDecompositionVisualizer />
         <p className="text-sm text-gray-600 mt-4">
           Este gráfico ilustra cómo una serie temporal (línea morada) puede descomponerse en sus componentes principales: la tendencia (línea verde), la estacionalidad (línea amarilla) y el residuo (línea naranja). Observa cómo la combinación de estos componentes reconstruye la serie original.

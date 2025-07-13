@@ -20,7 +20,7 @@ export default function IntervalosDeConfianzaPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="¿Qué es un Intervalo de Confianza?">
+      <ContentCard title="¿Qué es un Intervalo de Confianza?" variant="highlight">
         <ul className="space-y-4">
           <li className="flex items-start">
             <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />

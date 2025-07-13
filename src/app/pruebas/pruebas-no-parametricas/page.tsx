@@ -21,7 +21,7 @@ export default function PruebasNoParametricasPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="¿Cuándo Usar Pruebas No Paramétricas?">
+      <ContentCard title="¿Cuándo Usar Pruebas No Paramétricas?" variant="highlight">
         <ul className="space-y-4 mt-4">
           <li className="flex items-start">
             <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />
@@ -96,7 +96,7 @@ export default function PruebasNoParametricasPage() {
         <strong>Ejemplo:</strong> Evaluar la mejoría en la movilidad (escala ordinal) de pacientes en tres momentos diferentes después de una fisioterapia.
       </p>
 
-      <ContentCard title="Visualizador de Comparación de Medianas">
+      <ContentCard title="Visualizador de Comparación de Medianas" variant="highlight">
         <MedianComparisonVisualizer />
         <p className="text-sm text-gray-600 mt-4">
           Este gráfico compara la <strong>media</strong> y la <strong>mediana</strong> de dos grupos. Observa cómo en el &apos;Grupo Con Atípico&apos;, la media se ve arrastrada por un valor extremo, mientras que la mediana permanece más estable. Esto demuestra la robustez de la mediana frente a valores atípicos, haciéndola una medida de tendencia central más adecuada en distribuciones asimétricas o con datos extremos.

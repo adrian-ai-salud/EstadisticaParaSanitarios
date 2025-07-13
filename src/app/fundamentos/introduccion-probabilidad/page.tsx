@@ -20,7 +20,7 @@ export default function IntroProbabilidadPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Conceptos Fundamentales">
+      <ContentCard title="Conceptos Fundamentales" variant="highlight">
         <ul className="space-y-4 mt-4">
           <li className="flex items-start">
             <MdCheckCircleOutline className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />
@@ -58,7 +58,7 @@ export default function IntroProbabilidadPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Simulador de Probabilidad: Lanzamiento de Moneda">
+      <ContentCard title="Simulador de Probabilidad: Lanzamiento de Moneda" variant="highlight">
         <ProbabilitySimulator />
         <p className="text-sm text-gray-600 mt-4">
           Utiliza el control deslizante para aumentar el número de lanzamientos de moneda y observa cómo las probabilidades de caras y cruces se acercan al 50%. Esto demuestra la <strong>Ley de los Grandes Números</strong>, un principio fundamental que explica por qué las frecuencias observadas se aproximan a las probabilidades teóricas a medida que aumenta el número de ensayos.

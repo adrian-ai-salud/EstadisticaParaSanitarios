@@ -20,7 +20,7 @@ export default function RegresionLinealMultiplePage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="El Modelo: La Ecuación de Predicción">
+      <ContentCard title="El Modelo: La Ecuación de Predicción" variant="highlight">
         <p>
           El corazón de la regresión lineal múltiple es una ecuación que se parece a:
         </p>
@@ -109,7 +109,7 @@ export default function RegresionLinealMultiplePage() {
         </ul>
       </ContentCard>
 
-      <ContentCard title="Bondad de Ajuste: ¿Qué tan Bien Predice el Modelo?">
+      <ContentCard title="Bondad de Ajuste: ¿Qué tan Bien Predice el Modelo?" variant="highlight">
         <h4 className="text-lg font-semibold text-title-dark mb-2">R² (R-cuadrado)</h4>
         <p>
           Indica la proporción de la variabilidad de la variable dependiente que es explicada por el modelo. Un R² de 0.70 significa que el 70% de la variación en el peso al nacer es explicada por las variables que incluiste en tu modelo.

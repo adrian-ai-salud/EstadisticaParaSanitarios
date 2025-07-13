@@ -18,7 +18,7 @@ export default function AnalisisBivariantePage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Relación entre Dos Variables Cuantitativas">
+      <ContentCard title="Relación entre Dos Variables Cuantitativas" variant="highlight">
         <h4 className="text-lg font-semibold text-title-dark mb-2">Diagrama de Dispersión (Scatter Plot)</h4>
         <p className="mb-4">
           Es la mejor herramienta visual para empezar. Se coloca una variable en el eje X (ej. Edad) y la otra en el eje Y (ej. Tensión Arterial Sistólica). Cada paciente es un punto en el gráfico.

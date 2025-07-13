@@ -21,7 +21,7 @@ export default function ComponentesSeriesTemporalesPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Componentes de una Serie Temporal">
+      <ContentCard title="Componentes de una Serie Temporal" variant="highlight">
         <p>
           Una serie temporal se puede descomponer en varios componentes que nos ayudan a entender su comportamiento:
         </p>

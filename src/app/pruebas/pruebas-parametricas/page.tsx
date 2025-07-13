@@ -21,7 +21,7 @@ export default function PruebasParametricasPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="1. Test t de Student: Comparando Dos Medias">
+      <ContentCard title="1. Test t de Student: Comparando Dos Medias" variant="highlight">
         <p>
           Es la prueba más común para comparar las medias de dos grupos. Por ejemplo, ¿es la tensión arterial media diferente entre hombres y mujeres? ¿Hay diferencia en la glucosa media antes y después de un tratamiento?
         </p>
@@ -138,7 +138,7 @@ export default function PruebasParametricasPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Visualizador de Supuestos Paramétricos">
+      <ContentCard title="Visualizador de Supuestos Paramétricos" variant="highlight">
         <ParametricAssumptionsVisualizer />
         <p className="text-sm text-gray-600 mt-4">
           Utiliza este visualizador para entender los supuestos de normalidad y homocedasticidad. Observa cómo se ven los datos cuando cumplen o no estos supuestos, lo cual es crucial para elegir la prueba estadística adecuada.

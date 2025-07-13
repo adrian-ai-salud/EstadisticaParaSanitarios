@@ -21,7 +21,7 @@ export default function BoxPlotPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Componentes Clave de un Box Plot">
+      <ContentCard title="Componentes Clave de un Box Plot" variant="highlight">
         <ul className="space-y-4 mt-4">
           <li className="flex items-start">
             <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />

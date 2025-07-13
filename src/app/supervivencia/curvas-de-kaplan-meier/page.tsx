@@ -22,7 +22,7 @@ export default function CurvasKaplanMeierPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="¿Cómo se Construye una Curva de Kaplan-Meier?">
+      <ContentCard title="¿Cómo se Construye una Curva de Kaplan-Meier?" variant="highlight">
         <p>
           La curva de Kaplan-Meier es una función escalonada que disminuye cada vez que ocurre un evento. La probabilidad de supervivencia se calcula multiplicando las probabilidades de supervivencia en cada punto de tiempo donde ocurre un evento.
         </p>
@@ -70,7 +70,7 @@ export default function CurvasKaplanMeierPage() {
         </AlertBox>
       </ContentCard>
 
-      <ContentCard title="Generador Interactivo de Curvas de Kaplan-Meier">
+      <ContentCard title="Generador Interactivo de Curvas de Kaplan-Meier" variant="highlight">
         <KaplanMeierCurveGenerator />
         <p className="text-sm text-gray-600 mt-4">
           Este gráfico muestra ejemplos de curvas de Kaplan-Meier para dos grupos. Observa cómo la probabilidad de supervivencia disminuye con el tiempo y cómo los &apos;escalones&apos; indican los momentos en que ocurren eventos. Puedes comparar visualmente la supervivencia entre los grupos.

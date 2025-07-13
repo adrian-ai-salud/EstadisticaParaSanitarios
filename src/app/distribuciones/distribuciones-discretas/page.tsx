@@ -21,7 +21,7 @@ export default function DistribucionesDiscretasPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="1. Distribución Binomial: Éxito o Fracaso">
+      <ContentCard title="1. Distribución Binomial: Éxito o Fracaso" variant="highlight">
         <p>
           Piensa en un ensayo clínico donde cada paciente, de forma independiente, o bien se cura (éxito) o no se cura (fracaso). La distribución binomial nos dice la probabilidad de obtener un número determinado de éxitos en un número fijo de intentos.
         </p>
@@ -61,7 +61,7 @@ export default function DistribucionesDiscretasPage() {
         </AlertBox>
       </ContentCard>
 
-      <ContentCard title="Simulador de Distribución Binomial">
+      <ContentCard title="Simulador de Distribución Binomial" variant="highlight">
         <BinomialDistributionSimulator />
       </ContentCard>
 

@@ -21,7 +21,7 @@ export default function TiposEstudiosEpidemiologicosPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="1. Estudios Observacionales">
+      <ContentCard title="1. Estudios Observacionales" variant="highlight">
         <p>
           En estos estudios, el investigador <strong>observa</strong> lo que ocurre sin intervenir. Son útiles para generar hipótesis y explorar asociaciones.
         </p>

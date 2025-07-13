@@ -21,7 +21,7 @@ export default function ContrasteDeHipotesisPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Hipótesis Nula (H₀) y Alternativa (H₁)">
+      <ContentCard title="Hipótesis Nula (H₀) y Alternativa (H₁)" variant="highlight">
         <p>
           Todo contraste de hipótesis comienza con dos afirmaciones opuestas:
         </p>
@@ -63,7 +63,7 @@ export default function ContrasteDeHipotesisPage() {
         </AlertBox>
       </ContentCard>
 
-      <ContentCard title="Tipos de Errores: El Riesgo de Equivocarse">
+      <ContentCard title="Tipos de Errores: El Riesgo de Equivocarse" variant="highlight">
         <p>
           Al tomar una decisión basada en el p-valor, siempre existe la posibilidad de cometer un error:
         </p>

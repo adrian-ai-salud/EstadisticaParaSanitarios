@@ -3,13 +3,16 @@ import React from 'react';
 
 interface ContentCardProps {
   title?: string;
-  children: React.ReactNode; // Revertido a React.ReactNode
+  children: React.ReactNode;
   className?: string;
+  variant?: 'default' | 'highlight';
 }
 
-const ContentCard: React.FC<ContentCardProps> = ({ title, children, className }) => {
+const ContentCard: React.FC<ContentCardProps> = ({ title, children, className, variant = 'default' }) => {
+  const bgColor = variant === 'highlight' ? 'bg-highlight' : 'bg-white';
+
   return (
-    <div className={`bg-white rounded-lg shadow-soft p-6 mb-6 ${className}`}>
+    <div className={`${bgColor} rounded-lg shadow-soft p-6 mb-6 ${className}`}>
       {title && (
         <h2 className="text-2xl font-semibold text-title-dark mb-4">
           {title}
@@ -23,3 +26,4 @@ const ContentCard: React.FC<ContentCardProps> = ({ title, children, className })
 };
 
 export default ContentCard;
+

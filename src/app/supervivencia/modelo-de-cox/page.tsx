@@ -21,7 +21,7 @@ export default function ModeloDeCoxPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="¿Cómo Funciona el Modelo de Cox?">
+      <ContentCard title="¿Cómo Funciona el Modelo de Cox?" variant="highlight">
         <p>
           A diferencia de las curvas de Kaplan-Meier que solo comparan grupos, el modelo de Cox nos permite evaluar el efecto de múltiples variables (edad, sexo, estadio de la enfermedad, tipo de tratamiento) sobre el riesgo de que ocurra el evento, controlando por las demás.
         </p>
@@ -78,7 +78,7 @@ export default function ModeloDeCoxPage() {
         </AlertBox>
       </ContentCard>
 
-      <ContentCard title="Visualizador Simple de Hazard Ratio">
+      <ContentCard title="Visualizador Simple de Hazard Ratio" variant="highlight">
         <HazardRatioVisualizer />
         <p className="text-sm text-gray-600 mt-4">
           Este gráfico muestra ejemplos de Hazard Ratios (HR) y sus intervalos de confianza (líneas verticales). La línea discontinua roja en HR=1 indica &apos;no efecto&apos;. Observa cómo un HR mayor que 1 indica mayor riesgo, y menor que 1 indica menor riesgo. Si el intervalo de confianza cruza la línea de 1, el efecto no es estadísticamente significativo.

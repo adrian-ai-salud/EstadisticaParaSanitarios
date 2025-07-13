@@ -21,7 +21,7 @@ export default function DistribucionNormalPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Características Clave">
+      <ContentCard title="Características Clave" variant="highlight">
         <ul className="space-y-4">
           <li className="flex items-start">
             <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />
@@ -61,7 +61,7 @@ export default function DistribucionNormalPage() {
         </AlertBox>
       </ContentCard>
 
-      <ContentCard title="Visualizador de Curva Normal">
+      <ContentCard title="Visualizador de Curva Normal" variant="highlight">
         <NormalDistributionCurveVisualizer />
       </ContentCard>
 

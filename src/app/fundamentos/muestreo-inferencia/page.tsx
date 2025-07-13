@@ -20,7 +20,7 @@ export default function MuestreoInferenciaPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Técnicas de Muestreo: ¿Cómo elegir?">
+      <ContentCard title="Técnicas de Muestreo: ¿Cómo elegir?" variant="highlight">
         <h4 className="text-lg font-semibold text-title-dark mb-2">Muestreo Probabilístico</h4>
         <p className="mb-4">
           Es el estándar de oro en investigación. Cada individuo de la población tiene una probabilidad conocida (y no nula) de ser seleccionado. Esto reduce el sesgo.
@@ -41,7 +41,7 @@ export default function MuestreoInferenciaPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Cálculo Muestral: ¿Cuántos Necesito?">
+      <ContentCard title="Cálculo Muestral: ¿Cuántos Necesito?" variant="highlight">
         <p>
           Una de las preguntas más frecuentes al diseñar un estudio es: &quot;¿Cuántos pacientes necesito incluir?&quot;. El <strong>cálculo del tamaño muestral</strong> es crucial por varias razones:
         </p>

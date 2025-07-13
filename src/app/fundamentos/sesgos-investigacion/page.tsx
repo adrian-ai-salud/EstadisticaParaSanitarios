@@ -21,7 +21,7 @@ export default function SesgosInvestigacionPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Tipos Comunes de Sesgos">
+      <ContentCard title="Tipos Comunes de Sesgos" variant="highlight">
         <h4 className="text-lg font-semibold text-title-dark mb-2">1. Sesgo de Selección</h4>
         <p className="mb-4">
           Ocurre cuando la forma en que se seleccionan los participantes para el estudio (o cómo se pierden durante el seguimiento) lleva a que los grupos no sean comparables.

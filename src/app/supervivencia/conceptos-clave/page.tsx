@@ -21,7 +21,7 @@ export default function ConceptosClaveSupervivenciaPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="Conceptos Fundamentales">
+      <ContentCard title="Conceptos Fundamentales" variant="highlight">
         <ul className="space-y-4">
           <li className="flex items-start">
             <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />
