@@ -63,10 +63,7 @@ export default function ModeloDeCoxPage() {
           </li>
           <li className="flex items-start">
             <MdScience className="h-6 w-6 text-icon-blue mr-3 flex-shrink-0" />
-            <div>
-              <h4 className="font-semibold">HR &lt; 1:</h4>
-              <p>Menor riesgo de que ocurra el evento (efecto protector).</p>
-            </div>
+            
           </li>
         </ul>
         <AlertBox icon={MdInfoOutline} title="Punto Clave">

@@ -1,1 +1,0 @@
-fix(syntax): Escapar caracter '<' en modelo-de-cox/page.tsx
