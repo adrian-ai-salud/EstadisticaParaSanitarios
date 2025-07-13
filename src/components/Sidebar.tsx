@@ -19,6 +19,7 @@ const modules = [
       { title: 'Definiciones Básicas', path: '/definiciones-basicas' },
       { title: 'Box Plot', path: '/box-plot' },
       { title: 'Tipos de Estudios Epidemiológicos', path: '/tipos-estudios-epidemiologicos' },
+      { title: 'Sesgos en Investigación', path: '/sesgos-investigacion' },
       { title: 'Introducción a la Probabilidad', path: '/introduccion-probabilidad' },
       { title: 'Tipos de Variables', path: '/tipos-de-variables' },
       { title: 'Análisis Bivariante', path: '/analisis-bivariante' },
