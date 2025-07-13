@@ -39,7 +39,7 @@ export default function Home() {
         </p>
         <div className="flex justify-center mt-6">
           <Image 
-            src="/images/Imagen app.png" 
+            src="/images/imagen-app.png" 
             alt="Gráfico estadístico" 
             width={500} 
             height={300} 

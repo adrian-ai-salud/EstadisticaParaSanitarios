@@ -8,6 +8,11 @@ import { usePathname } from 'next/navigation';
 
 const modules = [
   {
+    title: '0. Portada',
+    basePath: '/',
+    subtopics: [],
+  },
+  {
     title: '1. Fundamentos',
     basePath: '/fundamentos',
     subtopics: [
