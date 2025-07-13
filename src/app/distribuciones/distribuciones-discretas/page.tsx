@@ -5,6 +5,7 @@ import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
 import { MdInfoOutline } from 'react-icons/md';
+import BinomialDistributionSimulator from '@/components/BinomialDistributionSimulator';
 
 export default function DistribucionesDiscretasPage() {
   return (
