@@ -128,13 +128,15 @@ const ConfidenceIntervalSimulator: React.FC<ConfidenceIntervalSimulatorProps> = 
           <Tooltip />
           <ReferenceLine x={populationMean} stroke="red" strokeDasharray="3 3" label="Media Poblacional" />
           {data.map((entry) => (
-            <ReferenceLine
+            <Line
               key={entry.id}
-              x1={entry.lowerBound}
-              x2={entry.upperBound}
-              y={entry.id}
+              dataKey="sampleMean"
               stroke={entry.containsPopulationMean ? "#2563eb" : "#dc2626"} // Azul si contiene la media, rojo si no
               strokeWidth={2}
+              dot={{ r: 4, fill: entry.containsPopulationMean ? "#2563eb" : "#dc2626" }}
+              activeDot={{ r: 6 }}
+              type="monotone"
+              isAnimationActive={false}
             />
           ))}
         </LineChart>
@@ -143,6 +145,8 @@ const ConfidenceIntervalSimulator: React.FC<ConfidenceIntervalSimulatorProps> = 
         Observa cuántos de los intervalos de confianza (líneas horizontales) contienen la media poblacional (línea roja vertical). Idealmente, el {((1 - 0.05) * 100).toFixed(0)}% de los intervalos deberían contenerla.
       </p>
     </div>
+  );
+}
   );
 };
 
