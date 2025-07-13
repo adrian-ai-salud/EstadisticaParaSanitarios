@@ -3,6 +3,11 @@
 
 
 
+
+'use client';
+
+import React from 'react';
+
 interface HazardRatioData {
   name: string;
   hr: number;
@@ -20,61 +25,65 @@ const HazardRatioVisualizer: React.FC = () => {
     { name: 'Factor F', hr: 3.0, lowerCI: 2.5, upperCI: 3.5 },
   ];
 
-  // Función para mapear valores de HR a posiciones X en el SVG
-  const hrToX = (hr: number, width: number) => {
-    // Asumiendo un rango de HR de 0 a 4 para el gráfico
-    const minHr = 0;
-    const maxHr = 4;
-    return ((hr - minHr) / (maxHr - minHr)) * width;
-  };
-
-  // Función para mapear nombres de factores a posiciones Y en el SVG
-  const nameToY = (index: number, height: number, totalItems: number) => {
-    const itemHeight = height / totalItems;
-    return itemHeight * (index + 0.5); // Centrar en la mitad del espacio
-  };
+  const chartWidth = 600; // Ancho del área del gráfico en píxeles
+  const chartHeight = data.length * 40; // Altura dinámica basada en el número de factores
+  const hrScale = (hr: number) => (hr - 0) / (4 - 0) * chartWidth; // Escala HR a píxeles (asumiendo HR de 0 a 4)
 
   return (
-    <ResponsiveContainer width="100%" height={data.length * 50 + 50}>
-      <svg>
-        <rect x="0" y="0" width="100%" height="100%" fill="white" />
-        {/* Eje X y Y (simulados o con componentes de recharts si es posible) */}
-        {/* Línea de referencia HR = 1 */}
-        <line x1={hrToX(1, 600)} y1="0" x2={hrToX(1, 600)} y2="100%" stroke="#dc2626" strokeDasharray="3 3" />
+    <div className="w-full overflow-x-auto">
+      <div className="relative" style={{ width: chartWidth + 100, height: chartHeight + 50 }}>
+        {/* Eje X (HR) */}
+        <div className="absolute bottom-0 left-[100px] right-0 h-px bg-gray-300">
+          <div className="absolute -bottom-5 text-xs text-gray-600" style={{ left: hrScale(0) }}>0</div>
+          <div className="absolute -bottom-5 text-xs text-gray-600" style={{ left: hrScale(1) }}>1</div>
+          <div className="absolute -bottom-5 text-xs text-gray-600" style={{ left: hrScale(2) }}>2</div>
+          <div className="absolute -bottom-5 text-xs text-gray-600" style={{ left: hrScale(3) }}>3</div>
+          <div className="absolute -bottom-5 text-xs text-gray-600" style={{ left: hrScale(4) }}>4</div>
+          <div className="absolute -bottom-10 text-sm text-gray-700" style={{ left: chartWidth / 2 - 50 }}>Hazard Ratio (HR)</div>
+        </div>
 
+        {/* Línea de referencia HR = 1 */}
+        <div className="absolute top-0 bottom-0 bg-red-400 opacity-50 w-px" style={{ left: 100 + hrScale(1) }}></div>
+        <div className="absolute -top-5 text-xs text-red-600" style={{ left: 100 + hrScale(1) - 20 }}>HR=1</div>
+
+        {/* Factores y sus intervalos */}
         {data.map((entry, index) => {
-          const yPos = nameToY(index, data.length * 50, data.length);
-          const hrColor = entry.lowerCI <= 1 && entry.upperCI >= 1 ? "#6b7280" : "#2563eb";
+          const yPos = (index * 40) + 20; // Posición vertical para cada factor
+          const hrColor = entry.lowerCI <= 1 && entry.upperCI >= 1 ? "#6b7280" : "#2563eb"; // Gris si cruza 1, azul si no
 
           return (
-            <g key={entry.name} transform={`translate(0, ${yPos})`}>
+            <div key={entry.name} className="absolute left-0 right-0" style={{ top: yPos }}>
               {/* Nombre del factor */}
-              <text x="10" y="0" alignmentBaseline="middle" fill="#1a1a1a">
+              <div className="absolute left-0 w-[90px] text-right pr-2 text-sm text-gray-800" style={{ top: -8 }}>
                 {entry.name}
-              </text>
+              </div>
               {/* Línea del intervalo de confianza */}
-              <line
-                x1={hrToX(entry.lowerCI, 600)}
-                y1="0"
-                x2={hrToX(entry.upperCI, 600)}
-                y2="0"
-                stroke={hrColor}
-                strokeWidth="2"
-              />
+              <div
+                className="absolute h-px bg-current"
+                style={{
+                  left: 100 + hrScale(entry.lowerCI),
+                  width: hrScale(entry.upperCI) - hrScale(entry.lowerCI),
+                  backgroundColor: hrColor,
+                  top: 0,
+                }}
+              ></div>
               {/* Punto del Hazard Ratio */}
-              <circle
-                cx={hrToX(entry.hr, 600)}
-                cy="0"
-                r="4"
-                fill={hrColor}
-              />
-            </g>
+              <div
+                className="absolute w-2 h-2 rounded-full bg-current"
+                style={{
+                  left: 100 + hrScale(entry.hr) - 4,
+                  top: -4,
+                  backgroundColor: hrColor,
+                }}
+              ></div>
+            </div>
           );
         })}
-      </svg>
-    </ResponsiveContainer>
+      </div>
+    </div>
   );
 };
 
 export default HazardRatioVisualizer;
+
 
