@@ -1,8 +1,7 @@
 
 'use client';
 
-import React from 'react';
-import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, ErrorBar } from 'recharts';
 
 interface HazardRatioData {
   name: string;
@@ -10,8 +9,6 @@ interface HazardRatioData {
   lowerCI: number;
   upperCI: number;
 }
-
-
 
 const HazardRatioVisualizer: React.FC = () => {
   const data: HazardRatioData[] = [
@@ -48,23 +45,8 @@ const HazardRatioVisualizer: React.FC = () => {
         />
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <ReferenceLine x={1} stroke="#dc2626" strokeDasharray="3 3" label="HR = 1 (No efecto)" />
-        {data.map((entry) => (
-          <React.Fragment key={entry.name}>
-            <ReferenceLine
-              x1={entry.lowerCI}
-              x2={entry.upperCI}
-              y={entry.name}
-              stroke={entry.lowerCI <= 1 && entry.upperCI >= 1 ? "#6b7280" : "#2563eb"} // Gris si cruza 1, azul si no
-              strokeWidth={2}
-            />
-            <Scatter
-              data={[{ x: entry.hr, y: entry.name }]}
-              fill={entry.lowerCI <= 1 && entry.upperCI >= 1 ? "#6b7280" : "#2563eb"} // Gris si cruza 1, azul si no
-              shape="circle"
-              r={4}
-            />
-          </React.Fragment>
-        ))}
+        <Scatter data={data} dataKey="hr" fill="#2563eb" />
+        <ErrorBar dataKey="hr" dataKeyLower="lowerCI" dataKeyUpper="upperCI" strokeWidth={2} stroke="#6b7280" />
       </ScatterChart>
     </ResponsiveContainer>
   );
