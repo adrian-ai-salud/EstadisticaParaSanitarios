@@ -5,6 +5,7 @@ import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
 import { MdScience, MdInfoOutline } from 'react-icons/md';
+import NormalDistributionCurveVisualizer from '@/components/NormalDistributionCurveVisualizer';
 
 export default function DistribucionNormalPage() {
   return (
