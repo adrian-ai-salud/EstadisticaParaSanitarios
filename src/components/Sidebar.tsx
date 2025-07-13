@@ -89,7 +89,7 @@ export default function Sidebar() {
                 onClick={() => handleClick(module.title)} 
                 className="w-full flex justify-between items-center p-2 rounded-md hover:bg-gray-700 transition-colors duration-200 text-left"
               >
-                <span className="font-semibold text-white">{module.title}</span>
+                <span className="font-semibold" style={{ color: `var(--module-color-${index + 1})` }}>{module.title}</span>
                 {open[module.title] ? <MdExpandLess size={20} /> : <MdExpandMore size={20} />}
               </button>
               {open[module.title] && (
