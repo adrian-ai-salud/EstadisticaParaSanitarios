@@ -55,9 +55,13 @@ export default function DistribucionNormalPage() {
         </p>
         <AlertBox icon={MdInfoOutline} title="Punto Clave">
           <p>
-            La puntuación Z es la base para entender los percentiles y para realizar muchas pruebas estadísticas. Nos permite transformar cualquier distribución normal en una <strong>Normal Estándar</strong> (media 0, desviación típica 1), facilitando los cálculos de probabilidad.
+            El HR es una medida relativa. Siempre debe interpretarse junto con su intervalo de confianza. Si el IC del HR incluye el 1, el efecto no es estadísticamente significativo.
           </p>
         </AlertBox>
+      </ContentCard>
+
+      <ContentCard title="Visualizador de Curva Normal">
+        <NormalDistributionCurveVisualizer />
       </ContentCard>
     </div>
   );
