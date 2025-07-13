@@ -33,8 +33,7 @@ export default function Home() {
         </ul>
       </ContentCard>
 
-      <ContentCard>
-        <h2 className="text-2xl font-semibold text-title-dark mb-4">La estadística al servicio de tu práctica clínica</h2>
+      <ContentCard title="La estadística al servicio de tu práctica clínica">
         <p className="mb-4">
           Nuestro objetivo es desmitificar la estadística, convirtiéndola en una herramienta poderosa y comprensible para todos los sanitarios. ¡Empieza a explorar y fortalece tus habilidades analíticas!
         </p>

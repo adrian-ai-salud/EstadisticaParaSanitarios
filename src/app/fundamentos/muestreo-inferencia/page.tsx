@@ -64,7 +64,7 @@ export default function MuestreoInferenciaPage() {
         </p>
       </ContentCard>
 
-      <AlertBox icon={MdInfoOutline} title="Punto Clave">
+      <AlertBox icon={MdInfoOutline} title="Punto Clave" type="info">
         <p>
           Un buen muestreo es la base de cualquier estudio fiable. Un tamaño de muestra adecuado y una técnica de muestreo probabilística son esenciales para poder confiar en tus conclusiones.
         </p>

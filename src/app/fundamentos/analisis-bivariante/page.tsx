@@ -37,7 +37,7 @@ export default function AnalisisBivariantePage() {
           <li>Cercano a -1: Correlación lineal negativa fuerte (a más horas de ejercicio, menos peso).</li>
           <li>Cercano a 0: No hay correlación lineal.</li>
         </ul>
-        <AlertBox icon={MdWarningAmber} title="¡Cuidado!">
+        <AlertBox icon={MdWarningAmber} title="¡Cuidado!" type="warning">
           <p>
             Correlación no implica causalidad. Que dos cosas estén relacionadas no significa que una cause la otra. Podría haber un tercer factor (una variable de confusión) que explique la relación.
           </p>
