@@ -13,9 +13,7 @@ interface HazardRatioData {
 
 // Componente personalizado para dibujar las líneas de los intervalos de confianza
 interface CustomIntervalLineProps {
-  x: number;
   y: number;
-  width: number;
   lowerCI: number;
   upperCI: number;
   hr: number;
@@ -23,7 +21,7 @@ interface CustomIntervalLineProps {
 }
 
 const CustomIntervalLine = (props: CustomIntervalLineProps) => {
-  const { x, y, width, lowerCI, upperCI, hr, color } = props;
+  const { y, lowerCI, upperCI, hr, color } = props;
 
   return (
     <g>
