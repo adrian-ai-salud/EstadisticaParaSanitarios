@@ -5,6 +5,7 @@ import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
 import { MdScience, MdInfoOutline } from 'react-icons/md';
+import CensoringVisualizer from '@/components/CensoringVisualizer';
 
 export default function ConceptosClaveSupervivenciaPage() {
   return (
@@ -54,6 +55,13 @@ export default function ConceptosClaveSupervivenciaPage() {
             Manejar la censura correctamente es crucial. Si simplemente ignoramos los pacientes censurados, subestimaríamos el tiempo de supervivencia.
           </p>
         </AlertBox>
+      </ContentCard>
+
+      <ContentCard title="Visualizador de Censura">
+        <CensoringVisualizer />
+        <p className="text-sm text-gray-600 mt-4">
+          Este gráfico ilustra el concepto de censura. Los puntos azules representan eventos (ej. fallecimiento), mientras que las cruces rojas indican observaciones censuradas (ej. paciente que se perdió en el seguimiento). Observa cómo la censura nos impide conocer el tiempo exacto del evento para algunos individuos.
+        </p>
       </ContentCard>
     </div>
   );
