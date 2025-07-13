@@ -3,6 +3,7 @@
 import React from 'react';
 import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
+import DataTypesVisualizer from '@/components/DataTypesVisualizer';
 
 export default function TiposDeVariablesPage() {
   return (
@@ -53,6 +54,13 @@ export default function TiposDeVariablesPage() {
         </p>
         <p className="text-sm text-gray-600">
           <strong>Ejemplos en tu estudio:</strong> Nivel de Glucosa en sangre (mg/dL), Tensión Arterial (mmHg), Edad, Peso (kg), Altura (cm).
+        </p>
+      </ContentCard>
+
+      <ContentCard title="Visualizador de Tipos de Datos">
+        <DataTypesVisualizer />
+        <p className="text-sm text-gray-600 mt-4">
+          Utiliza el selector para cambiar el tipo de dato y observa cómo se representa visualmente. Esto te ayuda a entender la naturaleza de cada variable y las implicaciones para su análisis.
         </p>
       </ContentCard>
     </div>
