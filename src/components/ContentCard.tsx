@@ -1,11 +1,9 @@
 
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
 
 interface ContentCardProps {
   title?: string;
-  children: string; // Cambiado a string para aceptar Markdown
+  children: React.ReactNode; // Revertido a React.ReactNode
   className?: string;
 }
 
@@ -18,7 +16,7 @@ const ContentCard: React.FC<ContentCardProps> = ({ title, children, className })
         </h2>
       )}
       <div className="prose max-w-none text-text-main">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{children}</ReactMarkdown>
+        {children}
       </div>
     </div>
   );
