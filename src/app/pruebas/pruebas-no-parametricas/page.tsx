@@ -78,6 +78,24 @@ export default function PruebasNoParametricasPage() {
         </p>
       </ContentCard>
 
+      <h4 className="text-lg font-semibold text-title-dark mt-4 mb-2">4. Pruebas No Paramétricas para Comparar Más de Dos Grupos</h4>
+
+      <h5 className="text-md font-semibold text-gray-700 mb-1">a) Prueba de Kruskal-Wallis</h5>
+      <p className="mb-2">
+        Es la alternativa no paramétrica al <strong>ANOVA de un factor</strong>. Se usa para comparar las medianas de tres o más grupos independientes cuando la variable dependiente es ordinal o cuantitativa no normal.
+      </p>
+      <p className="text-sm text-gray-600 mt-2 mb-4">
+        <strong>Ejemplo:</strong> Comparar el nivel de dolor (escala 1-10) entre pacientes que recibieron tres analgésicos diferentes.
+      </p>
+
+      <h5 className="text-md font-semibold text-gray-700 mb-1">b) Prueba de Friedman</h5>
+      <p className="mb-2">
+        Es la alternativa no paramétrica al <strong>ANOVA de medidas repetidas</strong>. Se usa cuando tienes tres o más mediciones del mismo sujeto en diferentes condiciones o momentos, y los datos no cumplen los supuestos de normalidad.
+      </p>
+      <p className="text-sm text-gray-600 mt-2">
+        <strong>Ejemplo:</strong> Evaluar la mejoría en la movilidad (escala ordinal) de pacientes en tres momentos diferentes después de una fisioterapia.
+      </p>
+
       <ContentCard title="Visualizador de Comparación de Medianas">
         <MedianComparisonVisualizer />
         <p className="text-sm text-gray-600 mt-4">
