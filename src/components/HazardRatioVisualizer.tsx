@@ -1,7 +1,7 @@
 
 'use client';
 
-import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine, ErrorBar } from 'recharts';
+import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine } from 'recharts';
 
 interface HazardRatioData {
   name: string;
@@ -20,36 +20,61 @@ const HazardRatioVisualizer: React.FC = () => {
     { name: 'Factor F', hr: 3.0, lowerCI: 2.5, upperCI: 3.5 },
   ];
 
+  // Función para mapear valores de HR a posiciones X en el SVG
+  const hrToX = (hr: number, width: number) => {
+    // Asumiendo un rango de HR de 0 a 4 para el gráfico
+    const minHr = 0;
+    const maxHr = 4;
+    return ((hr - minHr) / (maxHr - minHr)) * width;
+  };
+
+  // Función para mapear nombres de factores a posiciones Y en el SVG
+  const nameToY = (index: number, height: number, totalItems: number) => {
+    const itemHeight = height / totalItems;
+    return itemHeight * (index + 0.5); // Centrar en la mitad del espacio
+  };
+
   return (
     <ResponsiveContainer width="100%" height={data.length * 50 + 50}>
-      <ScatterChart
-        margin={{
-          top: 20,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis
-          type="number"
-          dataKey="hr"
-          domain={[0, 'auto']}
-          label={{ value: 'Hazard Ratio (HR)', position: 'insideBottom', offset: -5 }}
-          allowDecimals={true}
-        />
-        <YAxis
-          type="category"
-          dataKey="name"
-          label={{ value: 'Factor', angle: -90, position: 'insideLeft' }}
-        />
-        <Tooltip cursor={{ strokeDasharray: '3 3' }} />
-        <ReferenceLine x={1} stroke="#dc2626" strokeDasharray="3 3" label="HR = 1 (No efecto)" />
-        <Scatter data={data} dataKey="hr" fill="#2563eb" />
-        <ErrorBar dataKey="hr" dataKeyLower="lowerCI" dataKeyUpper="upperCI" strokeWidth={2} stroke="#6b7280" />
-      </ScatterChart>
+      <svg>
+        <rect x="0" y="0" width="100%" height="100%" fill="white" />
+        {/* Eje X y Y (simulados o con componentes de recharts si es posible) */}
+        {/* Línea de referencia HR = 1 */}
+        <line x1={hrToX(1, 600)} y1="0" x2={hrToX(1, 600)} y2="100%" stroke="#dc2626" strokeDasharray="3 3" />
+
+        {data.map((entry, index) => {
+          const yPos = nameToY(index, data.length * 50, data.length);
+          const hrColor = entry.lowerCI <= 1 && entry.upperCI >= 1 ? "#6b7280" : "#2563eb";
+
+          return (
+            <g key={entry.name} transform={`translate(0, ${yPos})`}>
+              {/* Nombre del factor */}
+              <text x="10" y="0" alignmentBaseline="middle" fill="#1a1a1a">
+                {entry.name}
+              </text>
+              {/* Línea del intervalo de confianza */}
+              <line
+                x1={hrToX(entry.lowerCI, 600)}
+                y1="0"
+                x2={hrToX(entry.upperCI, 600)}
+                y2="0"
+                stroke={hrColor}
+                strokeWidth="2"
+              />
+              {/* Punto del Hazard Ratio */}
+              <circle
+                cx={hrToX(entry.hr, 600)}
+                cy="0"
+                r="4"
+                fill={hrColor}
+              />
+            </g>
+          );
+        })}
+      </svg>
     </ResponsiveContainer>
   );
 };
 
 export default HazardRatioVisualizer;
+
