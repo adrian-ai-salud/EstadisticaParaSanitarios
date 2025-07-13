@@ -5,6 +5,7 @@ import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
 import { MdScience, MdInfoOutline } from 'react-icons/md';
+import InteractiveTimeSeriesChart from '@/components/InteractiveTimeSeriesChart';
 
 export default function ComponentesSeriesTemporalesPage() {
   return (
@@ -59,6 +60,13 @@ export default function ComponentesSeriesTemporalesPage() {
             Visualizar estos componentes (ej. con boxplots mensuales para la estacionalidad o medias móviles para la tendencia) es el primer paso para entender y modelar una serie temporal.
           </p>
         </AlertBox>
+      </ContentCard>
+
+      <ContentCard title="Gráfico Interactivo de Componentes de Series Temporales">
+        <InteractiveTimeSeriesChart />
+        <p className="text-sm text-gray-600 mt-4">
+          Utiliza el selector para aislar y visualizar cada componente de la serie temporal. Esto te ayudará a comprender cómo la tendencia, la estacionalidad y el residuo contribuyen a la forma general de la serie.
+        </p>
       </ContentCard>
     </div>
   );
