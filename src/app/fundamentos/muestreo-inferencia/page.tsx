@@ -41,6 +41,29 @@ export default function MuestreoInferenciaPage() {
         </p>
       </ContentCard>
 
+      <ContentCard title="Cálculo Muestral: ¿Cuántos Necesito?">
+        <p>
+          Una de las preguntas más frecuentes al diseñar un estudio es: "¿Cuántos pacientes necesito incluir?". El <strong>cálculo del tamaño muestral</strong> es crucial por varias razones:
+        </p>
+        <ul className="list-disc list-inside space-y-1 mt-2 mb-4">
+          <li><strong>Precisión:</strong> Una muestra demasiado pequeña puede no ser representativa y dar resultados imprecisos.</li>
+          <li><strong>Poder Estadístico:</strong> Una muestra adecuada asegura que el estudio tenga suficiente "poder" para detectar un efecto si realmente existe.</li>
+          <li><strong>Ética y Recursos:</strong> Incluir más participantes de los necesarios es poco ético (exponer a más personas a un riesgo) y un desperdicio de recursos.</li>
+        </ul>
+
+        <h4 className="text-lg font-semibold text-title-dark mb-2">Factores Clave para el Cálculo Muestral:</h4>
+        <ul className="list-disc list-inside space-y-1 mb-4">
+          <li><strong>Nivel de Confianza:</strong> La probabilidad de que el intervalo de confianza contenga el verdadero valor poblacional (ej. 95%).</li>
+          <li><strong>Margen de Error (Precisión):</strong> Cuánto estamos dispuestos a que nuestro estimado se desvíe del valor real de la población.</li>
+          <li><strong>Variabilidad de la Población:</strong> Cuánto varían los datos en la población (ej. desviación estándar).</li>
+          <li><strong>Poder Estadístico:</strong> La probabilidad de detectar una diferencia o efecto cuando realmente existe (ej. 80%).</li>
+          <li><strong>Tamaño del Efecto Esperado:</strong> La magnitud de la diferencia o asociación que esperamos encontrar.</li>
+        </ul>
+        <p className="text-sm text-gray-600">
+          Existen fórmulas específicas para calcular el tamaño muestral según el tipo de estudio (comparación de medias, proporciones, etc.) y el diseño. A menudo se utilizan calculadoras online o software estadístico para realizar estos cálculos.
+        </p>
+      </ContentCard>
+
       <AlertBox icon={MdInfoOutline} title="Punto Clave">
         <p>
           Un buen muestreo es la base de cualquier estudio fiable. Un tamaño de muestra adecuado y una técnica de muestreo probabilística son esenciales para poder confiar en tus conclusiones.
