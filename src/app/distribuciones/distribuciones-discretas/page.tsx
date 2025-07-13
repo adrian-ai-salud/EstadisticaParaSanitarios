@@ -64,6 +64,19 @@ export default function DistribucionesDiscretasPage() {
       <ContentCard title="Simulador de Distribución Binomial">
         <BinomialDistributionSimulator />
       </ContentCard>
+
+      <ContentCard title="Interpretando el Simulador de Distribución Binomial">
+        <p>
+          Este simulador te permite explorar cómo cambian las probabilidades de obtener un número determinado de éxitos (k) en una serie de ensayos (n), variando la probabilidad de éxito individual (p).
+        </p>
+        <ul className="list-disc list-inside space-y-2 mt-2">
+          <li><strong>Número de Ensayos (n):</strong> Representa el número total de veces que se repite un experimento (ej. número de pacientes en un estudio, número de lanzamientos de una moneda).</li>
+          <li><strong>Probabilidad de Éxito (p):</strong> Es la probabilidad de que el evento de interés ocurra en un solo ensayo (ej. probabilidad de que un paciente responda a un tratamiento, probabilidad de obtener &apos;cara&apos; en una moneda).</li>
+        </ul>
+        <p className="mt-4">
+          Observa cómo al cambiar &apos;n&apos; y &apos;p&apos;, la forma de la distribución cambia. Esto te ayuda a entender cómo la probabilidad de un evento discreto se distribuye en diferentes escenarios clínicos.
+        </p>
+      </ContentCard>
     </div>
   );
 }
