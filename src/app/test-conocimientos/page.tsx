@@ -125,7 +125,6 @@ export default function TestConocimientosPage() {
           ))}
         </div>
         <div className="text-right mt-6">
-          {console.log('respuestaSeleccionada:', respuestaSeleccionada)}
           <button
             onClick={handleSiguientePregunta}
             disabled={respuestaSeleccionada === null}
