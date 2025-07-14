@@ -128,7 +128,7 @@ export default function TestConocimientosPage() {
           <button
             onClick={handleSiguientePregunta}
             disabled={respuestaSeleccionada === null}
-            className="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-6 rounded-lg disabled:bg-gray-400 disabled:cursor-not-allowed"
+            className="bg-primary hover:bg-primary-dark text-white font-bold py-2 px-6 rounded-lg disabled:bg-blue-200 disabled:text-gray-700 disabled:cursor-not-allowed"
           >
             Siguiente
           </button>
