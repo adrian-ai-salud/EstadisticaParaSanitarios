@@ -60,7 +60,7 @@ export default function ModelosDeClasificacionPage() {
 
       <ContentCard title="Tipos de Modelos de Clasificación">
         <h4 className="text-lg font-semibold text-title-dark mb-2">1. Regresión Logística</h4>
-        <div className="mb-6">
+        <div className="mb-8">
           <p className="mb-2">
             <strong>Propósito:</strong> Predecir la probabilidad de que un evento binario (dos resultados posibles) ocurra, y clasificar observaciones en una de esas dos categorías. Es un modelo de clasificación, a pesar de su nombre &apos;regresión&apos;.
           </p>
@@ -93,7 +93,7 @@ export default function ModelosDeClasificacionPage() {
         </div>
 
         <h4 className="text-lg font-semibold text-title-dark mt-4 mb-2">2. Análisis Discriminante Lineal (LDA - Linear Discriminant Analysis)</h4>
-        <div className="mb-6">
+        <div className="mb-8">
           <p className="mb-2">
             <strong>Propósito:</strong> Clasificar observaciones en dos o más grupos (clases) basándose en un conjunto de variables predictoras. También puede ser utilizado para la reducción de la dimensionalidad, encontrando las combinaciones lineales de variables que mejor separan las clases.
           </p>
@@ -125,7 +125,7 @@ export default function ModelosDeClasificacionPage() {
         </div>
 
         <h4 className="text-lg font-semibold text-title-dark mt-4 mb-2">3. Random Forest</h4>
-        <div className="mb-6">
+        <div className="mb-8">
           <p className="mb-2">
             <strong>Propósito:</strong> Clasificación y regresión. Es un algoritmo de aprendizaje automático de tipo &apos;ensamble&apos; que combina la potencia de múltiples árboles de decisión para mejorar la precisión, la robustez y reducir el sobreajuste (overfitting).
           </p>
