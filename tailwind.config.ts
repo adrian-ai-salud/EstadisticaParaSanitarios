@@ -13,7 +13,7 @@ const config: Config = {
         background: '#f7f9fc',
         'text-main': '#1a1a1a',
         'title-dark': '#003366',
-        'highlight': '#f0f0f0',
+        'highlight': '#F5F5F5',
         'icon-blue': '#2563eb',
         'button-primary': '#0e7490',
         // Nuevos colores para la barra lateral y subcategorías
