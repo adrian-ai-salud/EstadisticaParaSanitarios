@@ -4,7 +4,7 @@ export interface Pregunta {
   pregunta: string;
   opciones: string[];
   respuestaCorrecta: number;
-  feedback?: string;
+  
 }
 
 export const bancoPreguntas: Pregunta[] = [
@@ -18,7 +18,7 @@ export const bancoPreguntas: Pregunta[] = [
       "La relación lineal entre dos variables numéricas"
     ],
     respuestaCorrecta: 1,
-    feedback: "La Regresión Logística es un modelo de clasificación que estima la probabilidad de un resultado binario."
+    
   },
   {
     id: 2,
@@ -30,7 +30,7 @@ export const bancoPreguntas: Pregunta[] = [
       "El grupo de pacientes con la enfermedad más avanzada"
     ],
     respuestaCorrecta: 2,
-    feedback: "El grupo control sirve como línea de base para comparar la efectividad del nuevo tratamiento."
+    
   },
   {
     id: 3,
@@ -42,7 +42,7 @@ export const bancoPreguntas: Pregunta[] = [
       "El tamaño del efecto del tratamiento"
     ],
     respuestaCorrecta: 1,
-    feedback: "Un valor p bajo (normalmente < 0.05) sugiere que es poco probable que los resultados observados se deban al azar, llevando a rechazar la hipótesis nula."
+    
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ export const bancoPreguntas: Pregunta[] = [
       "Se desconoce a qué grupo pertenece cada individuo y se quieren descubrir los grupos"
     ],
     respuestaCorrecta: 1,
-    feedback: "El objetivo principal de LDA es la clasificación y la separación de clases predefinidas."
+    
   },
   {
     id: 5,
@@ -66,7 +66,7 @@ export const bancoPreguntas: Pregunta[] = [
       "Solo funciona con variables de tipo categórico"
     ],
     respuestaCorrecta: 1,
-    feedback: "Al promediar las predicciones de muchos árboles, Random Forest reduce la varianza y el riesgo de sobreajuste."
+    
   },
   {
     id: 6,
@@ -78,7 +78,7 @@ export const bancoPreguntas: Pregunta[] = [
       "Que la media ha sido calculada incorrectamente"
     ],
     respuestaCorrecta: 2,
-    feedback: "La media es sensible a los valores extremos, mientras que la mediana no. Una gran diferencia entre ellas apunta a una distribución sesgada."
+    
   },
   {
     id: 7,
@@ -90,7 +90,7 @@ export const bancoPreguntas: Pregunta[] = [
       "La correlación entre dos variables independientes"
     ],
     respuestaCorrecta: 1,
-    feedback: "Un R² de 0.75 significa que el 75% de la variación en la variable de respuesta puede ser explicada por las variables predictoras del modelo."
+    
   },
   {
     id: 8,
@@ -102,7 +102,7 @@ export const bancoPreguntas: Pregunta[] = [
       "La gravedad de la enfermedad en la población"
     ],
     respuestaCorrecta: 2,
-    feedback: "La incidencia mide la velocidad a la que aparecen nuevos casos, reflejando el riesgo de contraer la enfermedad."
+    
   },
   {
     id: 9,
@@ -114,7 +114,7 @@ export const bancoPreguntas: Pregunta[] = [
       "El riesgo de desarrollar la enfermedad en el futuro"
     ],
     respuestaCorrecta: 1,
-    feedback: "La prevalencia es una 'foto' del estado de la enfermedad en un momento dado, útil para planificar recursos sanitarios."
+    
   },
   {
     id: 10,
@@ -126,7 +126,7 @@ export const bancoPreguntas: Pregunta[] = [
       "Hay un 5% de probabilidad de que el estudio contenga errores"
     ],
     respuestaCorrecta: 2,
-    feedback: "Esta es una interpretación sutil pero fundamental. El intervalo es el que varía de muestra a muestra, no la media poblacional (que es fija pero desconocida)."
+    
   },
   {
     id: 11,
@@ -138,7 +138,7 @@ export const bancoPreguntas: Pregunta[] = [
       "La probabilidad de que un resultado positivo sea realmente un verdadero positivo"
     ],
     respuestaCorrecta: 1,
-    feedback: "Alta sensibilidad significa pocos falsos negativos. Es crucial en enfermedades donde no detectar un caso es peligroso."
+    
   },
   {
     id: 12,
@@ -150,7 +150,7 @@ export const bancoPreguntas: Pregunta[] = [
       "La probabilidad de que un resultado negativo sea realmente un falso negativo"
     ],
     respuestaCorrecta: 0,
-    feedback: "Alta especificidad significa pocos falsos positivos. Es importante para evitar tratamientos, costes y ansiedad innecesarios."
+    
   },
   {
     id: 13,
@@ -162,7 +162,7 @@ export const bancoPreguntas: Pregunta[] = [
       "Tiene un R-cuadrado negativo"
     ],
     respuestaCorrecta: 1,
-    feedback: "El modelo se 'aprende de memoria' el ruido de los datos de entrenamiento en lugar de la señal general, perdiendo capacidad de generalización."
+    
   },
   {
     id: 14,
@@ -174,7 +174,7 @@ export const bancoPreguntas: Pregunta[] = [
       "Nivel de dolor en una escala del 1 al 10"
     ],
     respuestaCorrecta: 2,
-    feedback: "Nominal significa que las categorías no tienen un orden o jerarquía inherente. El grupo sanguíneo es un ejemplo perfecto."
+    
   },
   {
     id: 15,
@@ -186,7 +186,7 @@ export const bancoPreguntas: Pregunta[] = [
       "País de nacimiento"
     ],
     respuestaCorrecta: 2,
-    feedback: "Ordinal implica que las categorías tienen un orden lógico, pero la distancia entre ellas no es necesariamente uniforme."
+    
   },
   {
     id: 16,
@@ -198,7 +198,7 @@ export const bancoPreguntas: Pregunta[] = [
       "El tratamiento antiguo es mejor que el nuevo"
     ],
     respuestaCorrecta: 2,
-    feedback: "La investigación estadística parte de la suposición de que 'no pasa nada' (no hay efecto, no hay diferencia), y busca evidencia para refutarla."
+    
   },
   {
     id: 17,
@@ -210,7 +210,7 @@ export const bancoPreguntas: Pregunta[] = [
       "Un dato que se encuentra fuera del rango normal"
     ],
     respuestaCorrecta: 1,
-    feedback: "La censura es clave en el análisis de supervivencia. Sabemos que el paciente estuvo 'vivo' hasta cierto punto, pero no sabemos qué pasó después."
+    
   },
   {
     id: 18,
@@ -222,7 +222,7 @@ export const bancoPreguntas: Pregunta[] = [
       "La falta de normalidad en los residuos"
     ],
     respuestaCorrecta: 2,
-    feedback: "Un VIF alto (generalmente > 5 o 10) para una variable indica que está fuertemente correlacionada con otras predictoras, lo que puede desestabilizar el modelo."
+    
   },
   {
     id: 19,
@@ -234,7 +234,7 @@ export const bancoPreguntas: Pregunta[] = [
       "Que todas las variables predictoras deben ser categóricas"
     ],
     respuestaCorrecta: 3,
-    feedback: "La regresión lineal puede manejar perfectamente variables predictoras continuas (numéricas), de hecho, es lo más común."
+    
   },
   {
     id: 20,
@@ -246,6 +246,6 @@ export const bancoPreguntas: Pregunta[] = [
       "Los instrumentos de medida no están bien calibrados"
     ],
     respuestaCorrecta: 2,
-    feedback: "El sesgo de selección es una amenaza fundamental para la validez de un estudio, ya que los resultados podrían no ser generalizables."
+    
   }
 ];

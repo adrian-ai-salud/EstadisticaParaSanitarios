@@ -30,6 +30,11 @@ export default function TestConocimientosPage() {
   const [testFinalizado, setTestFinalizado] = useState(false);
 
   const iniciarTest = () => {
+    if (bancoPreguntas.length === 0) {
+      console.error("Error: El banco de preguntas está vacío.");
+      // Podrías mostrar un mensaje al usuario aquí si lo deseas
+      return;
+    }
     const preguntasMezcladas = shuffleArray([...bancoPreguntas]);
     setPreguntasTest(preguntasMezcladas.slice(0, NUMERO_DE_PREGUNTAS));
     setPreguntaActual(0);
