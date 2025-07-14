@@ -16,7 +16,7 @@ export default function DefinicionesAplicacionesPage() {
         </p>
       </ContentCard>
 
-      <ContentCard title="1. Definiciones Clave">
+      <ContentCard title="1. Definiciones Clave" variant="highlight">
         <h3 className="text-lg font-semibold mb-2">Tablas de Contingencia (Tablas 2x2)</h3>
         <p className="mb-4">Son la base para calcular las medidas de rendimiento de una prueba diagnóstica. Organizan los resultados de la prueba y el estado real de la enfermedad:</p>
         <div className="overflow-x-auto mb-4">
@@ -77,7 +77,7 @@ export default function DefinicionesAplicacionesPage() {
         <p className="mb-4">Fórmula: <strong>VPN = VN / (VN + FN)</strong></p>
       </ContentCard>
 
-      <ContentCard title="2. Aplicaciones y Caso Práctico Resuelto">
+      <ContentCard title="2. Aplicaciones y Caso Práctico Resuelto" variant="highlight">
         <p className="mb-4">Retomando nuestro caso de la prueba rápida de gripe. Supongamos que la prevalencia de gripe en la población es del 10% (0.10). Realizamos un estudio con 1,000 personas:</p>
         <ul className="list-disc list-inside mb-4">
           <li>100 personas tienen gripe (10% de 1,000).</li>
