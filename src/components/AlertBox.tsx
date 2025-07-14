@@ -16,9 +16,9 @@ const AlertBox: React.FC<AlertBoxProps> = ({ icon: Icon, title, children, type =
 
   switch (type) {
     case 'info':
-      bgColorClass = 'bg-blue-100';
-      textColorClass = 'text-blue-700';
-      iconColorClass = 'text-blue-500';
+      bgColorClass = 'bg-green-100';
+      textColorClass = 'text-green-700';
+      iconColorClass = 'text-green-500';
       break;
     case 'warning':
       bgColorClass = 'bg-yellow-100';
