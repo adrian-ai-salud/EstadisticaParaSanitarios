@@ -1,0 +1,251 @@
+
+export interface Pregunta {
+  id: number;
+  pregunta: string;
+  opciones: string[];
+  respuestaCorrecta: number;
+  feedback?: string;
+}
+
+export const bancoPreguntas: Pregunta[] = [
+  {
+    id: 1,
+    pregunta: "¿Qué tipo de variable predice principalmente la Regresión Logística?",
+    opciones: [
+      "Una variable numérica continua (ej. la tensión arterial)",
+      "La probabilidad de un evento con dos posibles resultados (ej. enfermo/sano)",
+      "El número de grupos o clusters en un conjunto de datos",
+      "La relación lineal entre dos variables numéricas"
+    ],
+    respuestaCorrecta: 1,
+    feedback: "La Regresión Logística es un modelo de clasificación que estima la probabilidad de un resultado binario."
+  },
+  {
+    id: 2,
+    pregunta: "En un ensayo clínico, ¿qué es el 'grupo control'?",
+    opciones: [
+      "El grupo que recibe el nuevo tratamiento que se está probando",
+      "El grupo de investigadores que supervisa el estudio",
+      "El grupo que recibe un placebo o el tratamiento estándar actual",
+      "El grupo de pacientes con la enfermedad más avanzada"
+    ],
+    respuestaCorrecta: 2,
+    feedback: "El grupo control sirve como línea de base para comparar la efectividad del nuevo tratamiento."
+  },
+  {
+    id: 3,
+    pregunta: "¿Qué representa el 'valor p' en una prueba de hipótesis?",
+    opciones: [
+      "La probabilidad de que la hipótesis nula sea cierta",
+      "La probabilidad de observar los datos obtenidos (o más extremos) si la hipótesis nula fuera cierta",
+      "La probabilidad de que la hipótesis alternativa sea cierta",
+      "El tamaño del efecto del tratamiento"
+    ],
+    respuestaCorrecta: 1,
+    feedback: "Un valor p bajo (normalmente < 0.05) sugiere que es poco probable que los resultados observados se deban al azar, llevando a rechazar la hipótesis nula."
+  },
+  {
+    id: 4,
+    pregunta: "El Análisis Discriminante Lineal (LDA) es más útil cuando...",
+    opciones: [
+      "Se quiere predecir un valor numérico como el colesterol",
+      "Se quiere encontrar la combinación de variables que mejor separa dos o más grupos definidos",
+      "Las relaciones entre variables son altamente no lineales",
+      "Se desconoce a qué grupo pertenece cada individuo y se quieren descubrir los grupos"
+    ],
+    respuestaCorrecta: 1,
+    feedback: "El objetivo principal de LDA es la clasificación y la separación de clases predefinidas."
+  },
+  {
+    id: 5,
+    pregunta: "Una de las principales ventajas de un modelo Random Forest es que...",
+    opciones: [
+      "Es muy fácil de interpretar y explicar a través de una fórmula simple",
+      "Es muy robusto contra el sobreajuste (overfitting) y suele tener alta precisión",
+      "Requiere muy pocos datos para ser entrenado eficazmente",
+      "Solo funciona con variables de tipo categórico"
+    ],
+    respuestaCorrecta: 1,
+    feedback: "Al promediar las predicciones de muchos árboles, Random Forest reduce la varianza y el riesgo de sobreajuste."
+  },
+  {
+    id: 6,
+    pregunta: "Si la media de un conjunto de datos es muy diferente de la mediana, ¿qué indica esto?",
+    opciones: [
+      "Que la distribución de los datos es perfectamente simétrica",
+      "Que no hay variabilidad en los datos",
+      "Que la distribución de los datos es asimétrica y probablemente contiene valores atípicos (outliers)",
+      "Que la media ha sido calculada incorrectamente"
+    ],
+    respuestaCorrecta: 2,
+    feedback: "La media es sensible a los valores extremos, mientras que la mediana no. Una gran diferencia entre ellas apunta a una distribución sesgada."
+  },
+  {
+    id: 7,
+    pregunta: "¿Qué mide el R-cuadrado (R²) en un modelo de regresión lineal?",
+    opciones: [
+      "La significancia estadística del modelo",
+      "La proporción de la variabilidad de la variable dependiente que es explicada por el modelo",
+      "El error promedio de las predicciones del modelo",
+      "La correlación entre dos variables independientes"
+    ],
+    respuestaCorrecta: 1,
+    feedback: "Un R² de 0.75 significa que el 75% de la variación en la variable de respuesta puede ser explicada por las variables predictoras del modelo."
+  },
+  {
+    id: 8,
+    pregunta: "En epidemiología, ¿qué es la 'incidencia' de una enfermedad?",
+    opciones: [
+      "El número total de casos existentes en un momento dado",
+      "La proporción de la población que tiene la enfermedad en un momento dado",
+      "El número de casos nuevos de una enfermedad en un período de tiempo determinado",
+      "La gravedad de la enfermedad en la población"
+    ],
+    respuestaCorrecta: 2,
+    feedback: "La incidencia mide la velocidad a la que aparecen nuevos casos, reflejando el riesgo de contraer la enfermedad."
+  },
+  {
+    id: 9,
+    pregunta: "¿Y qué es la 'prevalencia'?",
+    opciones: [
+      "El número de casos nuevos durante un año",
+      "El número total de casos (nuevos y antiguos) en una población en un punto específico en el tiempo",
+      "La tasa de mortalidad de la enfermedad",
+      "El riesgo de desarrollar la enfermedad en el futuro"
+    ],
+    respuestaCorrecta: 1,
+    feedback: "La prevalencia es una 'foto' del estado de la enfermedad en un momento dado, útil para planificar recursos sanitarios."
+  },
+  {
+    id: 10,
+    pregunta: "Un intervalo de confianza del 95% para una media significa que...",
+    opciones: [
+      "Hay un 95% de probabilidad de que la verdadera media de la población esté dentro de ese intervalo",
+      "El 95% de los datos de la muestra caen dentro de ese intervalo",
+      "Si repitiéramos el estudio muchas veces, el 95% de los intervalos de confianza calculados contendrían la verdadera media de la población",
+      "Hay un 5% de probabilidad de que el estudio contenga errores"
+    ],
+    respuestaCorrecta: 2,
+    feedback: "Esta es una interpretación sutil pero fundamental. El intervalo es el que varía de muestra a muestra, no la media poblacional (que es fija pero desconocida)."
+  },
+  {
+    id: 11,
+    pregunta: "En una prueba diagnóstica, la 'sensibilidad' se refiere a:",
+    opciones: [
+      "La capacidad de la prueba para detectar correctamente a los individuos que NO tienen la enfermedad",
+      "La capacidad de la prueba para detectar correctamente a los individuos que SÍ tienen la enfermedad",
+      "La precisión general de la prueba en cualquier individuo",
+      "La probabilidad de que un resultado positivo sea realmente un verdadero positivo"
+    ],
+    respuestaCorrecta: 1,
+    feedback: "Alta sensibilidad significa pocos falsos negativos. Es crucial en enfermedades donde no detectar un caso es peligroso."
+  },
+  {
+    id: 12,
+    pregunta: "Siguiendo con las pruebas diagnósticas, ¿qué es la 'especificidad'?",
+    opciones: [
+      "La capacidad de la prueba para identificar correctamente a los individuos sanos (verdaderos negativos)",
+      "La capacidad de la prueba para identificar correctamente a los individuos enfermos (verdaderos positivos)",
+      "La prevalencia de la enfermedad en la población de prueba",
+      "La probabilidad de que un resultado negativo sea realmente un falso negativo"
+    ],
+    respuestaCorrecta: 0,
+    feedback: "Alta especificidad significa pocos falsos positivos. Es importante para evitar tratamientos, costes y ansiedad innecesarios."
+  },
+  {
+    id: 13,
+    pregunta: "El sobreajuste (overfitting) ocurre cuando un modelo...",
+    opciones: [
+      "Es demasiado simple para capturar la estructura de los datos",
+      "Funciona muy bien con los datos de entrenamiento pero mal con datos nuevos no vistos",
+      "No logra converger durante el entrenamiento",
+      "Tiene un R-cuadrado negativo"
+    ],
+    respuestaCorrecta: 1,
+    feedback: "El modelo se 'aprende de memoria' el ruido de los datos de entrenamiento en lugar de la señal general, perdiendo capacidad de generalización."
+  },
+  {
+    id: 14,
+    pregunta: "¿Cuál de las siguientes es una variable categórica nominal?",
+    opciones: [
+      "Estadio de un tumor (I, II, III, IV)",
+      "Temperatura corporal en grados Celsius",
+      "Grupo sanguíneo (A, B, AB, O)",
+      "Nivel de dolor en una escala del 1 al 10"
+    ],
+    respuestaCorrecta: 2,
+    feedback: "Nominal significa que las categorías no tienen un orden o jerarquía inherente. El grupo sanguíneo es un ejemplo perfecto."
+  },
+  {
+    id: 15,
+    pregunta: "¿Y cuál es un ejemplo de variable categórica ordinal?",
+    opciones: [
+      "Sexo (Hombre, Mujer)",
+      "Tener o no tener HTA (Sí, No)",
+      "Nivel socioeconómico (Bajo, Medio, Alto)",
+      "País de nacimiento"
+    ],
+    respuestaCorrecta: 2,
+    feedback: "Ordinal implica que las categorías tienen un orden lógico, pero la distancia entre ellas no es necesariamente uniforme."
+  },
+  {
+    id: 16,
+    pregunta: "La hipótesis nula (H₀) en una comparación de dos tratamientos generalmente postula que...",
+    opciones: [
+      "El nuevo tratamiento es superior al antiguo",
+      "Existe una diferencia significativa entre los dos tratamientos",
+      "No hay diferencia en la efectividad entre los dos tratamientos",
+      "El tratamiento antiguo es mejor que el nuevo"
+    ],
+    respuestaCorrecta: 2,
+    feedback: "La investigación estadística parte de la suposición de que 'no pasa nada' (no hay efecto, no hay diferencia), y busca evidencia para refutarla."
+  },
+  {
+    id: 17,
+    pregunta: "En un estudio de supervivencia, ¿qué es un 'dato censurado'?",
+    opciones: [
+      "Un dato que fue eliminado del estudio por ser incorrecto",
+      "Un paciente que se retiró del estudio o del que se perdió el seguimiento antes de que ocurriera el evento de interés",
+      "El evento final del estudio (ej. fallecimiento)",
+      "Un dato que se encuentra fuera del rango normal"
+    ],
+    respuestaCorrecta: 1,
+    feedback: "La censura es clave en el análisis de supervivencia. Sabemos que el paciente estuvo 'vivo' hasta cierto punto, pero no sabemos qué pasó después."
+  },
+  {
+    id: 18,
+    pregunta: "El Factor de Inflación de la Varianza (VIF) se usa para detectar:",
+    opciones: [
+      "La falta de linealidad en los datos",
+      "La presencia de valores atípicos (outliers)",
+      "La multicolinealidad entre las variables predictoras en un modelo de regresión",
+      "La falta de normalidad en los residuos"
+    ],
+    respuestaCorrecta: 2,
+    feedback: "Un VIF alto (generalmente > 5 o 10) para una variable indica que está fuertemente correlacionada con otras predictoras, lo que puede desestabilizar el modelo."
+  },
+  {
+    id: 19,
+    pregunta: "¿Cuál de estos NO es un supuesto clave de la Regresión Lineal Múltiple?",
+    opciones: [
+      "Linealidad en la relación de las variables",
+      "Normalidad de los residuos",
+      "Ausencia de multicolinealidad",
+      "Que todas las variables predictoras deben ser categóricas"
+    ],
+    respuestaCorrecta: 3,
+    feedback: "La regresión lineal puede manejar perfectamente variables predictoras continuas (numéricas), de hecho, es lo más común."
+  },
+  {
+    id: 20,
+    pregunta: "El 'sesgo de selección' en un estudio ocurre cuando...",
+    opciones: [
+      "Los participantes no recuerdan correctamente eventos pasados",
+      "El efecto de una exposición sobre un resultado es modificado por otra variable",
+      "La muestra de estudio no es representativa de la población objetivo",
+      "Los instrumentos de medida no están bien calibrados"
+    ],
+    respuestaCorrecta: 2,
+    feedback: "El sesgo de selección es una amenaza fundamental para la validez de un estudio, ya que los resultados podrían no ser generalizables."
+  }
+];
