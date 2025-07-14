@@ -99,7 +99,7 @@ export default function Sidebar() {
         <ul>
           {modules.map((module, index) => (
             <li key={module.title} className="mb-1">
-              {module.basePath === '/' ? (
+              {module.basePath === '/' || module.subtopics.length === 0 ? (
                 <NextLink href={module.basePath} passHref>
                   <div className={`block p-2 rounded-md transition-colors duration-200 ${pathname === module.basePath ? 'bg-slate-700 text-slate-100' : 'hover:bg-slate-700 text-slate-300'}`}>
                     <span className="font-semibold" style={{ color: `var(--module-color-${index + 1})` }}>{module.title}</span>
