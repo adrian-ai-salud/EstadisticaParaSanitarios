@@ -80,6 +80,16 @@ const modules = [
     basePath: '/test-conocimientos',
     subtopics: [],
   },
+  {
+    title: '9. Pruebas Diagnósticas',
+    basePath: '/pruebas-diagnosticas',
+    subtopics: [
+      { title: 'Sensibilidad', path: '/sensibilidad' },
+      { title: 'Especificidad', path: '/especificidad' },
+      { title: 'Valores Predictivos', path: '/valores-predictivos' },
+      { title: 'Tablas de Contingencia', path: '/tablas-contingencia' },
+    ],
+  },
 ];
 
 export default function Sidebar() {
