@@ -75,6 +75,11 @@ const modules = [
       { title: 'Modelos ARIMA', path: '/modelos-arima' },
     ],
   },
+  {
+    title: '8. Test de Conocimientos',
+    basePath: '/test-conocimientos',
+    subtopics: [],
+  },
 ];
 
 export default function Sidebar() {
