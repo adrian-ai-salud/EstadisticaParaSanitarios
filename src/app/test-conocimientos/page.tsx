@@ -119,7 +119,7 @@ export default function TestConocimientosPage() {
             <button
               key={index}
               onClick={() => handleSeleccionarRespuesta(index)}
-              className={`w-full text-left p-4 rounded-lg border-2 transition-all duration-200 ${respuestaSeleccionada === index ? 'bg-blue-200 border-blue-500 font-bold' : 'bg-gray-50 hover:bg-gray-100 border-gray-200'}`}>
+              className={`w-full text-left p-4 rounded-lg border-2 transition-all duration-200 ${respuestaSeleccionada === index ? 'bg-blue-200 border-blue-500 font-bold text-black' : 'bg-white hover:bg-gray-100 border-gray-400 text-black'}`}>
               {opcion}
             </button>
           ))}
