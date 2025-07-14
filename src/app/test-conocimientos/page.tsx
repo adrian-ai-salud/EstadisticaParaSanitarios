@@ -75,7 +75,7 @@ export default function TestConocimientosPage() {
         )}
         <button
           onClick={iniciarTest}
-          className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-lg text-xl transition-transform transform hover:scale-105"
+          className="bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-lg text-xl transition-transform transform hover:scale-105"
           disabled={bancoPreguntas.length === 0}
         >
           Empezar Test
