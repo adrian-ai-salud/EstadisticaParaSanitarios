@@ -1,0 +1,1 @@
+feat(content): Añadir Box Plot, Regresión Lineal Simple, y mejorar explicaciones

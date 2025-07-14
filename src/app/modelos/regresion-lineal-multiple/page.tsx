@@ -4,7 +4,7 @@ import React from 'react';
 import PageTitle from '@/components/PageTitle';
 import ContentCard from '@/components/ContentCard';
 import AlertBox from '@/components/AlertBox';
-import { MdScience, MdWarningAmber } from 'react-icons/md';
+import { MdScience, MdWarningAmber, MdInfoOutline } from 'react-icons/md';
 
 export default function RegresionLinealMultiplePage() {
   return (
