@@ -44,7 +44,16 @@ Nuestra aplicación está estructurada en módulos temáticos, diseñados para g
     *   **Pruebas No Paramétricas:** alternativas para datos que no cumplen los supuestos paramétricos, incluyendo la U de Mann-Whitney, Wilcoxon, Kruskal-Wallis y correlación de Spearman.
 
 5.  **Modelos Avanzados y Regresión:**
-    *   Introducción a los modelos de clasificación.
+    *   **Tipos de Modelos de Clasificación:**
+        1.  **Regresión Logística:**
+            A pesar de su nombre, es un modelo de clasificación. Predice la probabilidad de que un evento binario (Sí/No, Enfermo/Sano) ocurra. Es muy utilizado para identificar factores de riesgo y predecir la probabilidad de una enfermedad.
+            *   Ejemplo: Predecir la probabilidad de desarrollar diabetes tipo 2 basándose en la edad, IMC, antecedentes familiares y nivel de glucosa.
+        2.  **Análisis Discriminante Lineal (LDA):**
+            Busca una combinación lineal de características que mejor separe dos o más clases de datos. Es útil para reducir la dimensionalidad y clasificar.
+            *   Ejemplo: Clasificar a pacientes en diferentes subtipos de una enfermedad basándose en biomarcadores.
+        3.  **Random Forest:**
+            Es un algoritmo de 'ensamble' que combina múltiples árboles de decisión para mejorar la precisión y reducir el overfitting. Es muy robusto y funciona bien con muchos tipos de datos.
+            *   Ejemplo: Predecir el riesgo de reingreso hospitalario basándose en un gran número de variables clínicas y demográficas.
     *   Regresión lineal simple y múltiple: cómo predecir una variable dependiente a partir de una o varias variables independientes.
     *   Regresión logística: para predecir resultados binarios.
 
