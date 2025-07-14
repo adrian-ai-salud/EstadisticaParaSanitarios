@@ -148,6 +148,12 @@ export default function Sidebar() {
             Adrián Vences Garrido
           </a>
         </p>
+        <p className="text-xs text-center text-slate-400 mt-2">
+          DOI: <a href="https://doi.org/10.5281/zenodo.15874374" target="_blank" rel="noopener" className="underline hover:text-white">10.5281/zenodo.15874374</a>
+        </p>
+        <p className="text-xs text-center text-slate-400">
+          Licencia: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener" className="underline hover:text-white">Creative Commons Attribution 4.0 International</a>
+        </p>
       </div>
     </aside>
   );
