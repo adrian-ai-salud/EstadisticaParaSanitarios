@@ -76,19 +76,16 @@ const modules = [
     ],
   },
   {
-    title: '8. Test de Conocimientos',
-    basePath: '/test-conocimientos',
-    subtopics: [],
-  },
-  {
-    title: '9. Pruebas Diagnósticas',
+    title: '8. Pruebas Diagnósticas',
     basePath: '/pruebas-diagnosticas',
     subtopics: [
-      { title: 'Sensibilidad', path: '/sensibilidad' },
-      { title: 'Especificidad', path: '/especificidad' },
-      { title: 'Valores Predictivos', path: '/valores-predictivos' },
-      { title: 'Tablas de Contingencia', path: '/tablas-contingencia' },
+      { title: 'Definiciones y Aplicaciones', path: '/definiciones-aplicaciones' },
     ],
+  },
+  {
+    title: '9. Test de Conocimientos',
+    basePath: '/test-conocimientos',
+    subtopics: [],
   },
 ];
 
