@@ -1,15 +1,15 @@
 
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { bancoPreguntas, Pregunta } from '@/data/bancoPreguntas';
 import PageTitle from '@/components/PageTitle';
-import { FaCheckCircle, FaTimesCircle, FaSyncAlt } from 'react-icons/fa';
+import { FaSyncAlt } from 'react-icons/fa';
 
 const NUMERO_DE_PREGUNTAS = 10;
 
 // Función para mezclar un array (algoritmo de Fisher-Yates)
-const shuffleArray = (array: any[]) => {
+const shuffleArray = (array: Pregunta[]) => {
   let currentIndex = array.length, randomIndex;
 
   while (currentIndex !== 0) {
@@ -25,7 +25,6 @@ export default function TestConocimientosPage() {
   const [preguntasTest, setPreguntasTest] = useState<Pregunta[]>([]);
   const [preguntaActual, setPreguntaActual] = useState(0);
   const [respuestaSeleccionada, setRespuestaSeleccionada] = useState<number | null>(null);
-  const [respuestasUsuario, setRespuestasUsuario] = useState<number[]>([]);
   const [puntuacion, setPuntuacion] = useState(0);
   const [testIniciado, setTestIniciado] = useState(false);
   const [testFinalizado, setTestFinalizado] = useState(false);
@@ -34,7 +33,6 @@ export default function TestConocimientosPage() {
     const preguntasMezcladas = shuffleArray([...bancoPreguntas]);
     setPreguntasTest(preguntasMezcladas.slice(0, NUMERO_DE_PREGUNTAS));
     setPreguntaActual(0);
-    setRespuestasUsuario([]);
     setRespuestaSeleccionada(null);
     setPuntuacion(0);
     setTestFinalizado(false);
@@ -52,8 +50,6 @@ export default function TestConocimientosPage() {
     if (esCorrecta) {
       setPuntuacion(puntuacion + 1);
     }
-
-    setRespuestasUsuario([...respuestasUsuario, respuestaSeleccionada]);
 
     if (preguntaActual < NUMERO_DE_PREGUNTAS - 1) {
       setPreguntaActual(preguntaActual + 1);
