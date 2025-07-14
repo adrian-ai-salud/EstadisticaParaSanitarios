@@ -68,10 +68,15 @@ export default function TestConocimientosPage() {
     return (
       <div className="text-center">
         <PageTitle title="Test de Conocimientos" />
-        <p className="mb-8 text-lg">Pon a prueba lo que has aprendido con este test de 10 preguntas aleatorias.</p>
+        {bancoPreguntas.length === 0 ? (
+          <p className="mb-8 text-lg text-red-500">Error: No se pudieron cargar las preguntas del test. Por favor, inténtalo de nuevo más tarde.</p>
+        ) : (
+          <p className="mb-8 text-lg">Pon a prueba lo que has aprendido con este test de 10 preguntas aleatorias.</p>
+        )}
         <button
           onClick={iniciarTest}
           className="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-lg text-xl transition-transform transform hover:scale-105"
+          disabled={bancoPreguntas.length === 0}
         >
           Empezar Test
         </button>

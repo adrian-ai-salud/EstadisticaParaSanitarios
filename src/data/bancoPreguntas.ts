@@ -245,7 +245,336 @@ export const bancoPreguntas: Pregunta[] = [
       "La muestra de estudio no es representativa de la población objetivo",
       "Los instrumentos de medida no están bien calibrados"
     ],
-    respuestaCorrecta: 2,
-    
+    respuestaCorrecta: 2
+  },
+  {
+    id: 21,
+    pregunta: "¿Qué es un 'factor de confusión' en un estudio epidemiológico?",
+    opciones: [
+      "Una variable que solo afecta al resultado, pero no a la exposición.",
+      "Una variable que está asociada tanto con la exposición como con el resultado, y no es un intermediario causal.",
+      "Una variable que es un resultado directo de la exposición.",
+      "Una variable que solo afecta a la exposición, pero no al resultado."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 22,
+    pregunta: "¿Cuál es la principal diferencia entre un estudio de cohortes y un estudio de casos y controles?",
+    opciones: [
+      "El estudio de cohortes es siempre prospectivo, mientras que el de casos y controles es siempre retrospectivo.",
+      "El estudio de cohortes parte de la exposición para observar el resultado, mientras que el de casos y controles parte del resultado para buscar la exposición.",
+      "El estudio de cohortes solo se usa para enfermedades raras, y el de casos y controles para enfermedades comunes.",
+      "El estudio de cohortes no tiene grupo control, mientras que el de casos y controles sí."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 23,
+    pregunta: "¿Qué es la 'aleatorización' en un ensayo clínico?",
+    opciones: [
+      "La selección de participantes de forma no probabilística.",
+      "La asignación de los participantes a los grupos de tratamiento o control al azar.",
+      "La medición de los resultados de forma aleatoria.",
+      "La elección de la hipótesis nula de forma aleatoria."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 24,
+    pregunta: "¿Qué tipo de gráfico es el más adecuado para visualizar la relación entre dos variables numéricas?",
+    opciones: [
+      "Gráfico de barras",
+      "Histograma",
+      "Diagrama de dispersión (scatter plot)",
+      "Gráfico de sectores (pie chart)"
+    ],
+    respuestaCorrecta: 2
+  },
+  {
+    id: 25,
+    pregunta: "¿Qué es la 'mediana' en estadística?",
+    opciones: [
+      "El valor que más se repite en un conjunto de datos.",
+      "La suma de todos los valores dividida por el número de valores.",
+      "El valor central en un conjunto de datos ordenado.",
+      "La diferencia entre el valor máximo y el mínimo."
+    ],
+    respuestaCorrecta: 2
+  },
+  {
+    id: 26,
+    pregunta: "¿Cuándo se utiliza una prueba t de Student para muestras independientes?",
+    opciones: [
+      "Para comparar las medias de dos grupos relacionados.",
+      "Para comparar las proporciones de dos grupos.",
+      "Para comparar las medias de dos grupos no relacionados.",
+      "Para comparar más de dos medias de grupo."
+    ],
+    respuestaCorrecta: 2
+  },
+  {
+    id: 27,
+    pregunta: "¿Qué es un 'falso positivo' en una prueba diagnóstica?",
+    opciones: [
+      "Un resultado negativo en una persona enferma.",
+      "Un resultado positivo en una persona sana.",
+      "Un resultado positivo en una persona enferma.",
+      "Un resultado negativo en una persona sana."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 28,
+    pregunta: "¿Qué es el 'intervalo intercuartílico' (IQR)?",
+    opciones: [
+      "La diferencia entre el valor máximo y el mínimo.",
+      "La diferencia entre el tercer cuartil (Q3) y el primer cuartil (Q1).",
+      "La suma de los valores de los cuartiles.",
+      "El rango de valores que contiene el 95% de los datos."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 29,
+    pregunta: "¿Qué tipo de error se comete al rechazar una hipótesis nula que en realidad es verdadera?",
+    opciones: [
+      "Error tipo II (beta)",
+      "Error tipo I (alfa)",
+      "Error de muestreo",
+      "Error de medición"
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 30,
+    pregunta: "¿Qué es la 'potencia estadística' de un estudio?",
+    opciones: [
+      "La probabilidad de cometer un error tipo I.",
+      "La probabilidad de cometer un error tipo II.",
+      "La probabilidad de detectar un efecto cuando realmente existe.",
+      "El tamaño del efecto que se espera encontrar."
+    ],
+    respuestaCorrecta: 2
+  },
+  {
+    id: 31,
+    pregunta: "¿Qué es un 'meta-análisis'?",
+    opciones: [
+      "Un estudio que analiza los datos de un solo ensayo clínico grande.",
+      "Un método estadístico que combina los resultados de múltiples estudios independientes para obtener una estimación global.",
+      "Un estudio que revisa la literatura sin realizar análisis estadísticos.",
+      "Un tipo de estudio observacional prospectivo."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 32,
+    pregunta: "¿Cuál de las siguientes NO es una medida de tendencia central?",
+    opciones: [
+      "Media",
+      "Mediana",
+      "Moda",
+      "Desviación estándar"
+    ],
+    respuestaCorrecta: 3
+  },
+  {
+    id: 33,
+    pregunta: "¿Qué es la 'correlación' entre dos variables?",
+    opciones: [
+      "Una relación causal entre ellas.",
+      "Una medida de la fuerza y dirección de la asociación lineal entre ellas.",
+      "La diferencia entre sus medias.",
+      "La probabilidad de que ocurran juntas."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 34,
+    pregunta: "¿Qué es un 'diagrama de caja y bigotes' (box plot)?",
+    opciones: [
+      "Un gráfico que muestra la frecuencia de cada categoría.",
+      "Un gráfico que resume la distribución de una variable numérica, mostrando mediana, cuartiles y valores atípicos.",
+      "Un gráfico que muestra la relación entre dos variables categóricas.",
+      "Un gráfico que representa la evolución de una variable a lo largo del tiempo."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 35,
+    pregunta: "¿Cuándo se utiliza la prueba de Chi-cuadrado (χ²)?",
+    opciones: [
+      "Para comparar medias de dos grupos.",
+      "Para evaluar la asociación entre dos variables categóricas.",
+      "Para predecir un resultado numérico.",
+      "Para analizar la supervivencia de pacientes."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 36,
+    pregunta: "¿Qué es la 'distribución normal' (o Gaussiana)?",
+    opciones: [
+      "Una distribución de datos con dos modas.",
+      "Una distribución de datos asimétrica.",
+      "Una distribución de datos en forma de campana, simétrica alrededor de la media.",
+      "Una distribución de datos donde todos los valores tienen la misma frecuencia."
+    ],
+    respuestaCorrecta: 2
+  },
+  {
+    id: 37,
+    pregunta: "¿Qué es un 'sesgo de publicación'?",
+    opciones: [
+      "Cuando los investigadores publican solo los resultados que apoyan su hipótesis.",
+      "Cuando un estudio se publica en una revista de bajo impacto.",
+      "Cuando los resultados de un estudio no son replicables.",
+      "Cuando un estudio no es revisado por pares antes de su publicación."
+    ],
+    respuestaCorrecta: 0
+  },
+  {
+    id: 38,
+    pregunta: "¿Qué es la 'regresión de Cox' en el análisis de supervivencia?",
+    opciones: [
+      "Un modelo que predice la probabilidad de un evento binario.",
+      "Un modelo que estima el tiempo hasta un evento, ajustando por múltiples covariables.",
+      "Un modelo que compara las medias de dos grupos.",
+      "Un modelo que analiza la relación entre dos variables numéricas."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 39,
+    pregunta: "¿Qué es un 'ensayo clínico aleatorizado y controlado' (ECA)?",
+    opciones: [
+      "Un estudio observacional donde los investigadores no intervienen.",
+      "El diseño de estudio más robusto para evaluar la eficacia de una intervención, con asignación aleatoria y grupo control.",
+      "Un estudio donde los participantes eligen su propio tratamiento.",
+      "Un estudio que solo se realiza en animales de laboratorio."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 40,
+    pregunta: "¿Qué es la 'variable dependiente' en un modelo de regresión?",
+    opciones: [
+      "La variable que se utiliza para predecir otra variable.",
+      "La variable que se predice o explica por otras variables.",
+      "Una variable que no tiene relación con otras variables.",
+      "Una variable que se mantiene constante en el estudio."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 41,
+    pregunta: "¿Qué es la 'variable independiente' en un modelo de regresión?",
+    opciones: [
+      "La variable que se predice o explica.",
+      "La variable que se utiliza para predecir o explicar otra variable.",
+      "Una variable que no tiene relación con otras variables.",
+      "Una variable que se mantiene constante en el estudio."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 42,
+    pregunta: "¿Qué es un 'histograma'?",
+    opciones: [
+      "Un gráfico de barras para variables categóricas.",
+      "Un gráfico que muestra la distribución de una variable numérica continua.",
+      "Un gráfico que compara dos variables numéricas.",
+      "Un gráfico que muestra la proporción de cada categoría en un total."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 43,
+    pregunta: "¿Qué es la 'varianza'?",
+    opciones: [
+      "La raíz cuadrada de la desviación estándar.",
+      "Una medida de la dispersión de los datos alrededor de la media.",
+      "La medida de tendencia central de los datos.",
+      "La diferencia entre el valor máximo y el mínimo."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 44,
+    pregunta: "¿Qué es la 'desviación estándar'?",
+    opciones: [
+      "La media de los datos.",
+      "La raíz cuadrada de la varianza, indicando la dispersión promedio de los datos respecto a la media.",
+      "El valor más frecuente en un conjunto de datos.",
+      "La diferencia entre el tercer y primer cuartil."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 45,
+    pregunta: "¿Qué es un 'percentil'?",
+    opciones: [
+      "Un valor que divide los datos en 100 partes iguales.",
+      "Un valor por debajo del cual cae un cierto porcentaje de observaciones.",
+      "La media de los datos.",
+      "El valor más alto en un conjunto de datos."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 46,
+    pregunta: "¿Qué es la 'sensibilidad' en una prueba diagnóstica?",
+    opciones: [
+      "La capacidad de la prueba para identificar correctamente a los individuos sanos.",
+      "La capacidad de la prueba para identificar correctamente a los individuos enfermos.",
+      "La probabilidad de que un resultado positivo sea un verdadero positivo.",
+      "La probabilidad de que un resultado negativo sea un verdadero negativo."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 47,
+    pregunta: "¿Qué es la 'especificidad' en una prueba diagnóstica?",
+    opciones: [
+      "La capacidad de la prueba para identificar correctamente a los individuos enfermos.",
+      "La capacidad de la prueba para identificar correctamente a los individuos sanos.",
+      "La probabilidad de que un resultado positivo sea un verdadero positivo.",
+      "La probabilidad de que un resultado negativo sea un verdadero negativo."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 48,
+    pregunta: "¿Qué es el 'valor predictivo positivo' (VPP)?",
+    opciones: [
+      "La probabilidad de tener la enfermedad dado un resultado negativo.",
+      "La probabilidad de tener la enfermedad dado un resultado positivo.",
+      "La probabilidad de no tener la enfermedad dado un resultado negativo.",
+      "La probabilidad de no tener la enfermedad dado un resultado positivo."
+    ],
+    respuestaCorrecta: 1
+  },
+  {
+    id: 49,
+    pregunta: "¿Qué es el 'valor predictivo negativo' (VPN)?",
+    opciones: [
+      "La probabilidad de no tener la enfermedad dado un resultado negativo.",
+      "La probabilidad de no tener la enfermedad dado un resultado positivo.",
+      "La probabilidad de tener la enfermedad dado un resultado negativo.",
+      "La probabilidad de tener la enfermedad dado un resultado positivo."
+    ],
+    respuestaCorrecta: 0
+  },
+  {
+    id: 50,
+    pregunta: "¿Qué es la 'razón de verosimilitud positiva' (LR+)?",
+    opciones: [
+      "Indica cuánto más probable es un resultado positivo en enfermos que en sanos.",
+      "Indica cuánto más probable es un resultado negativo en enfermos que en sanos.",
+      "La probabilidad de un verdadero positivo.",
+      "La probabilidad de un falso positivo."
+    ],
+    respuestaCorrecta: 0
   }
 ];
