@@ -59,102 +59,70 @@ export default function ModelosDeClasificacionPage() {
       </ContentCard>
 
       <ContentCard title="Tipos de Modelos de Clasificación">
-        <h4 className="text-lg font-semibold text-title-dark mb-2">1. Regresión Logística</h4>
-        <div className="mb-8">
-          <p className="mb-2">
-            <strong>Propósito:</strong> Predecir la probabilidad de que un evento binario (dos resultados posibles) ocurra, y clasificar observaciones en una de esas dos categorías. Es un modelo de clasificación, a pesar de su nombre &apos;regresión&apos;.
-          </p>
-          <p className="mb-2">
-            <strong>Funcionamiento:</strong> Utiliza una función logística (o sigmoide) para transformar la combinación lineal de las variables predictoras en una probabilidad entre 0 y 1. Esta probabilidad se compara con un umbral (comúnmente 0.5) para asignar la observación a una clase. Los coeficientes del modelo se interpretan en términos de <em>Odds Ratios</em>, lo que facilita entender la magnitud y dirección de la asociación entre las variables predictoras y la probabilidad del evento.
-          </p>
-          <p className="mb-2">
-            <strong>Supuestos Clave:</strong>
-          </p>
-          <ul className="list-disc list-inside ml-4 mb-2 space-y-1">
-            <li><strong>Variable dependiente binaria:</strong> La variable de resultado debe ser dicotómica (ej., sí/no, 0/1, enfermo/sano).</li>
-            <li><strong>Independencia de las observaciones:</strong> Las observaciones deben ser independientes entre sí.</li>
-            <li><strong>Ausencia de multicolinealidad severa:</strong> Las variables predictoras no deben estar altamente correlacionadas entre sí.</li>
-            <li><strong>Linealidad de la relación entre las variables predictoras y el logit de la probabilidad:</strong> La relación entre las variables predictoras continuas y el logaritmo de las odds (logit) debe ser lineal. Esto se puede verificar con gráficos de dispersión o pruebas estadísticas.</li>
-            <li><strong>Tamaño de muestra adecuado:</strong> Se requiere un número suficiente de eventos por variable predictora (generalmente 10-20 eventos por variable).</li>
-          </ul>
-          <p className="mb-2">
-            <strong>Cuándo y Cómo Usar:</strong>
-          </p>
-          <ul className="list-disc list-inside ml-4 mb-2 space-y-1">
-            <li><strong>Cuándo:</strong> Cuando el objetivo es predecir la probabilidad de un evento binario o clasificar observaciones en dos grupos. Es excelente para identificar factores de riesgo y cuantificar su impacto.</li>
-            <li><strong>Cómo:</strong> Se ajusta el modelo a los datos de entrenamiento, se evalúa su rendimiento (ej., sensibilidad, especificidad, AUC-ROC) y se interpretan los coeficientes (Odds Ratios) para entender la influencia de cada predictor.</li>
-          </ul>
-          <p className="mb-2">
-            <strong>Importancia en Sanidad:</strong> Es fundamental para la epidemiología, la investigación clínica y la toma de decisiones. Permite construir modelos predictivos de riesgo de enfermedades, evaluar la eficacia de tratamientos (éxito/fracaso), predecir la mortalidad, o identificar pacientes con mayor probabilidad de responder a una terapia específica. Su interpretabilidad a través de los Odds Ratios es una gran ventaja para la comunicación de resultados a clínicos y pacientes.
-          </p>
-          <p className="mb-2">
-            <strong>Ejemplo Detallado:</strong> Un estudio busca identificar los factores de riesgo para el desarrollo de enfermedad cardiovascular (ECV) en una población. Se recopilan datos de pacientes, incluyendo edad, sexo, índice de masa corporal (IMC), niveles de colesterol (LDL, HDL), presión arterial (sistólica, diastólica), historial de tabaquismo, diabetes y antecedentes familiares de ECV. La variable de resultado es binaria: desarrollo de ECV en los próximos 10 años (Sí/No). La regresión logística se utiliza para modelar la probabilidad de desarrollar ECV en función de estas variables. Los resultados pueden mostrar que, por ejemplo, por cada aumento de 1 unidad en el IMC, el riesgo de ECV aumenta en un X% (ajustado por otras variables), o que los fumadores tienen un riesgo Y veces mayor que los no fumadores. Esto permite a los médicos identificar a los pacientes con mayor riesgo y recomendar intervenciones preventivas personalizadas.
-          </p>
-        </div>
+        <p className="mb-4">Los modelos de clasificación son herramientas esenciales en el análisis de datos sanitarios, permitiendo predecir categorías o grupos discretos (por ejemplo, enfermo/sano, tipo de enfermedad, respuesta a tratamiento). A continuación, exploramos algunos de los más relevantes:</p>
+      </ContentCard>
 
-        <h4 className="text-lg font-semibold text-title-dark mt-4 mb-2">2. Análisis Discriminante Lineal (LDA - Linear Discriminant Analysis)</h4>
-        <div className="mb-8">
-          <p className="mb-2">
-            <strong>Propósito:</strong> Clasificar observaciones en dos o más grupos (clases) basándose en un conjunto de variables predictoras. También puede ser utilizado para la reducción de la dimensionalidad, encontrando las combinaciones lineales de variables que mejor separan las clases.
-          </p>
-          <p className="mb-2">
-            <strong>Funcionamiento:</strong> LDA busca crear una o más funciones discriminantes lineales que maximicen la separación entre las medias de las clases y minimicen la varianza dentro de cada clase. Estas funciones son combinaciones lineales de las variables predictoras. Una vez que se encuentran estas funciones, se utilizan para clasificar nuevas observaciones asignándolas a la clase cuya media está más cerca en el espacio discriminante.
-          </p>
-          <p className="mb-2">
-            <strong>Supuestos Clave:</strong>
-          </p>
-          <ul className="list-disc list-inside ml-4 mb-2 space-y-1">
-            <li><strong>Normalidad multivariante:</strong> Las variables predictoras deben seguir una distribución normal multivariante dentro de cada clase.</li>
-            <li><strong>Homocedasticidad (igualdad de varianzas/covarianzas):</strong> Las matrices de covarianza de las variables predictoras deben ser iguales en todas las clases. Si este supuesto no se cumple, se puede considerar el Análisis Discriminante Cuadrático (QDA).</li>
-            <li><strong>Independencia de las observaciones:</strong> Las observaciones deben ser independientes.</li>
-            <li><strong>Ausencia de multicolinealidad severa:</strong> Las variables predictoras no deben estar altamente correlacionadas.</li>
-          </ul>
-          <p className="mb-2">
-            <strong>Cuándo y Cómo Usar:</strong>
-          </p>
-          <ul className="list-disc list-inside ml-4 mb-2 space-y-1">
-            <li><strong>Cuándo:</strong> Ideal para problemas de clasificación con dos o más clases cuando los datos cumplen los supuestos de normalidad y homocedasticidad. Es particularmente efectivo cuando las clases están bien separadas.</li>
-            <li><strong>Cómo:</strong> Se entrena el modelo con los datos, se calculan las funciones discriminantes y se utilizan para predecir la clase de nuevas observaciones. Se evalúa el rendimiento del modelo (ej., precisión, matriz de confusión).</li>
-          </ul>
-          <p className="mb-2">
-            <strong>Importancia en Sanidad:</strong> Muy útil en diagnóstico diferencial, subtipificación de enfermedades, y en la identificación de grupos de pacientes con características clínicas o biológicas distintas. Permite desarrollar herramientas de apoyo a la decisión clínica para clasificar pacientes en categorías relevantes para el tratamiento o pronóstico.
-          </p>
-          <p className="mb-2">
-            <strong>Ejemplo Detallado:</strong> Un equipo de neurólogos está investigando tres tipos de demencia (Alzheimer, Demencia Vascular, Demencia con Cuerpos de Lewy) y ha recopilado datos de resonancias magnéticas (volúmenes de diferentes regiones cerebrales), resultados de pruebas neuropsicológicas y biomarcadores en líquido cefalorraquídeo para un grupo de pacientes con diagnóstico confirmado. El objetivo es desarrollar un modelo que pueda clasificar a nuevos pacientes en uno de estos tres tipos de demencia basándose en estas mediciones. LDA puede construir funciones discriminantes que combinen estas variables de manera óptima para diferenciar entre los tres tipos de demencia. Esto podría llevar a un diagnóstico más rápido y preciso, permitiendo iniciar tratamientos específicos o intervenciones de apoyo de manera más temprana.
-          </p>
-        </div>
+      <ContentCard title="1. Regresión Logística" variant="highlight">
+        <p className="mb-2">
+          <strong>Propósito:</strong> Predice la probabilidad de un evento binario (Sí/No) y clasifica observaciones.
+        </p>
+        <p className="mb-2">
+          <strong>Funcionamiento:</strong> Utiliza una función sigmoide para transformar predictores en probabilidades (0-1). Coeficientes interpretados como <em>Odds Ratios</em>.
+        </p>
+        <p className="mb-2">
+          <strong>Supuestos Clave:</strong> Variable dependiente binaria, independencia, no multicolinealidad severa, linealidad del logit, tamaño de muestra adecuado.
+        </p>
+        <p className="mb-2">
+          <strong>Uso:</strong> Identificar factores de riesgo, predecir probabilidad de enfermedad, evaluar tratamientos.
+        </p>
+        <p className="mb-2">
+          <strong>Importancia en Sanidad:</strong> Fundamental en epidemiología y clínica por su interpretabilidad y cuantificación de riesgo.
+        </p>
+        <p>
+          <strong>Ejemplo:</strong> Predecir el riesgo de enfermedad cardiovascular (ECV) basándose en edad, IMC, colesterol, etc., para identificar pacientes de alto riesgo y recomendar intervenciones preventivas.
+        </p>
+      </ContentCard>
 
-        <h4 className="text-lg font-semibold text-title-dark mt-4 mb-2">3. Random Forest</h4>
-        <div className="mb-8">
-          <p className="mb-2">
-            <strong>Propósito:</strong> Clasificación y regresión. Es un algoritmo de aprendizaje automático de tipo &apos;ensamble&apos; que combina la potencia de múltiples árboles de decisión para mejorar la precisión, la robustez y reducir el sobreajuste (overfitting).
-          </p>
-          <p className="mb-2">
-            <strong>Funcionamiento:</strong> Construye un &quot;bosque&quot; de árboles de decisión. Cada árbol se entrena con una submuestra aleatoria de los datos de entrenamiento (muestreo con reemplazo, conocido como <em>bootstrap aggregating</em> o <em>bagging</em>). Además, en cada nodo de cada árbol, solo se considera un subconjunto aleatorio de las variables predictoras para la división. Para la clasificación, la predicción final se determina por la &quot;votación&quot; de la mayoría de los árboles; para la regresión, se promedian las predicciones de los árboles.
-          </p>
-          <p className="mb-2">
-            <strong>Supuestos Clave:</strong> Random Forest es un algoritmo no paramétrico y tiene menos supuestos formales que la regresión logística o LDA.
-          </p>
-          <ul className="list-disc list-inside ml-4 mb-2 space-y-1">
-            <li><strong>Independencia de las observaciones:</strong> Las observaciones deben ser independientes.</li>
-            <li><strong>No requiere normalidad ni linealidad:</strong> No asume una distribución específica de los datos ni relaciones lineales entre variables.</li>
-            <li><strong>Maneja bien la multicolinealidad:</strong> Es menos sensible a la multicolinealidad entre las variables predictoras.</li>
-            <li><strong>Maneja datos faltantes y atípicos:</strong> Es robusto frente a estos problemas, aunque el preprocesamiento siempre es recomendable.</li>
-          </ul>
-          <p className="mb-2">
-            <strong>Cuándo y Cómo Usar:</strong>
-          </p>
-          <ul className="list-disc list-inside ml-4 mb-2 space-y-1">
-            <li><strong>Cuándo:</strong> Es una opción excelente para una amplia gama de problemas de clasificación y regresión, especialmente cuando se tienen conjuntos de datos grandes, complejos, con muchas variables, o cuando las relaciones entre las variables no son lineales. Es muy popular por su alta precisión y su capacidad para manejar diferentes tipos de datos.</li>
-            <li><strong>Cómo:</strong> Se entrena el modelo especificando el número de árboles y el número de variables a considerar en cada división. Se evalúa su rendimiento utilizando métricas como la precisión, recall, F1-score, AUC-ROC (para clasificación) o R-cuadrado, RMSE (para regresión). Además, Random Forest puede proporcionar la &quot;importancia de las características&quot;, indicando qué variables son más influyentes en la predicción.</li>
-          </ul>
-          <p className="mb-2">
-            <strong>Importancia en Sanidad:</strong> Su robustez y alta precisión lo hacen ideal para la medicina de precisión, la predicción de resultados complejos, la identificación de biomarcadores, y la estratificación de riesgo en poblaciones grandes. Puede descubrir patrones complejos en datos clínicos, genómicos, de imágenes o de estilo de vida que otros modelos más simples podrían pasar por alto.
-          </p>
-          <p className="mb-2">
-            <strong>Ejemplo Detallado:</strong> Un centro de investigación oncológica está desarrollando un modelo para predecir la respuesta de pacientes con un tipo específico de cáncer a una nueva terapia (Respuesta Completa/Respuesta Parcial/No Respuesta). Se dispone de un conjunto de datos muy grande que incluye información clínica (estadio del cáncer, edad, comorbilidades), datos genómicos (expresión de miles de genes), datos de patología (características histológicas del tumor) y datos de imagen (características extraídas de tomografías). Dada la complejidad y el alto número de variables, Random Forest es una opción ideal. El modelo puede identificar qué combinaciones de genes, características tumorales y datos clínicos son los más predictivos de la respuesta al tratamiento. Esto no solo ayuda a predecir la respuesta en nuevos pacientes, sino que también puede revelar nuevos biomarcadores o vías biológicas relevantes para la enfermedad, guiando el desarrollo de terapias más dirigidas y personalizadas.
-          </p>
-        </div>
+      <ContentCard title="2. Análisis Discriminante Lineal (LDA)" >
+        <p className="mb-2">
+          <strong>Propósito:</strong> Clasificar observaciones en dos o más grupos, o reducir la dimensionalidad.
+        </p>
+        <p className="mb-2">
+          <strong>Funcionamiento:</strong> Crea funciones lineales que maximizan la separación entre clases, asumiendo normalidad y varianzas iguales.
+        </p>
+        <p className="mb-2">
+          <strong>Supuestos Clave:</strong> Normalidad multivariante, homocedasticidad, independencia, no multicolinealidad severa.
+        </p>
+        <p className="mb-2">
+          <strong>Uso:</strong> Diagnóstico diferencial, subtipificación de enfermedades.
+        </p>
+        <p className="mb-2">
+          <strong>Importancia en Sanidad:</strong> Valioso para clasificar pacientes en categorías relevantes para el tratamiento o pronóstico.
+        </p>
+        <p>
+          <strong>Ejemplo:</strong> Clasificar tipos de demencia (Alzheimer, Vascular, Cuerpos de Lewy) basándose en biomarcadores para diagnóstico preciso.
+        </p>
+      </ContentCard>
+
+      <ContentCard title="3. Random Forest" variant="highlight">
+        <p className="mb-2">
+          <strong>Propósito:</strong> Clasificación y regresión robusta, reduciendo el sobreajuste (overfitting).
+        </p>
+        <p className="mb-2">
+          <strong>Funcionamiento:</strong> Ensambla múltiples árboles de decisión, entrenados con submuestras aleatorias de datos y características. La predicción final se obtiene por votación (clasificación) o promedio (regresión).
+        </p>
+        <p className="mb-2">
+          <strong>Supuestos Clave:</strong> No paramétrico, independencia, no requiere normalidad/linealidad, maneja bien la multicolinealidad, y es robusto frente a datos faltantes o atípicos.
+        </p>
+        <p className="mb-2">
+          <strong>Uso:</strong> Problemas complejos con muchos datos y variables, o cuando las relaciones no son lineales.
+        </p>
+        <p className="mb-2">
+          <strong>Importancia en Sanidad:</strong> Ideal para medicina de precisión, predicción de resultados complejos, e identificación de biomarcadores.
+        </p>
+        <p>
+          <strong>Ejemplo:</strong> Predecir el riesgo de reingreso hospitalario de pacientes con insuficiencia cardíaca, o la respuesta a una terapia oncológica, utilizando un gran volumen de datos clínicos, genómicos y de imagen.
+        </p>
       </ContentCard>
 
       <AlertBox icon={MdWarningAmber} title="¡Advertencia!">
