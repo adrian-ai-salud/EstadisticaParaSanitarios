@@ -6,6 +6,8 @@ import NextLink from 'next/link';
 import { MdExpandMore, MdExpandLess } from 'react-icons/md';
 import { usePathname } from 'next/navigation';
 
+const APP_BASE_PATH = '/EstadisticaParaSanitarios';
+
 const modules = [
   {
     title: '0. Portada',
@@ -107,7 +109,7 @@ export default function Sidebar() {
           {modules.map((module, index) => (
             <li key={module.title} className="mb-1">
               {module.basePath === '/' || module.subtopics.length === 0 ? (
-                <NextLink href={module.basePath} passHref>
+                <NextLink href={`${APP_BASE_PATH}${module.basePath}`} passHref>
                   <div className={`block p-2 rounded-md transition-colors duration-200 ${pathname === module.basePath ? 'bg-slate-700 text-slate-100' : 'hover:bg-slate-700 text-slate-300'}`}>
                     <span className="font-semibold" style={{ color: `var(--module-color-${index + 1})` }}>{module.title}</span>
                   </div>
@@ -124,10 +126,10 @@ export default function Sidebar() {
               {module.subtopics.length > 0 && open[module.title] && (
                 <ul className="pl-4 mt-1">
                   {module.subtopics.map((subtopic) => {
-                    const isActive = pathname === (module.basePath + subtopic.path);
+                    const isActive = pathname === (`${APP_BASE_PATH}${module.basePath}${subtopic.path}`);
                     return (
                       <li key={subtopic.title}>
-                        <NextLink href={module.basePath + subtopic.path} passHref>
+                        <NextLink href={`${APP_BASE_PATH}${module.basePath}${subtopic.path}`} passHref>
                           <div className={`block p-2 rounded-md transition-colors duration-200 ${isActive ? 'bg-slate-700 text-slate-100' : 'hover:bg-slate-700 text-slate-300'}`}>
                             {subtopic.title}
                           </div>
