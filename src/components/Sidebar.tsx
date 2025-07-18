@@ -3,10 +3,8 @@
 
 import * as React from 'react';
 import NextLink from 'next/link';
-import { MdExpandMore, MdExpandLess } from 'react-icons/md';
+import { MdExpandMore, MdExpandLess, MdClose } from 'react-icons/md';
 import { usePathname } from 'next/navigation';
-
-const APP_BASE_PATH = '/EstadisticaParaSanitarios';
 
 const modules = [
   {
@@ -91,7 +89,7 @@ const modules = [
   },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ showSidebar, onClose }: { showSidebar: boolean; onClose: () => void }) {
   const [open, setOpen] = React.useState<{ [key: string]: boolean }>({ '1. Fundamentos': true });
   const pathname = usePathname();
 
@@ -100,16 +98,19 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-[280px] flex-shrink-0 bg-gradient-to-b from-slate-900 to-slate-700 text-slate-100 h-screen flex flex-col">
-      <div className="p-4 border-b border-slate-700">
+    <aside className={`fixed inset-y-0 left-0 z-40 w-[280px] flex-shrink-0 bg-gradient-to-b from-slate-900 to-slate-700 text-slate-100 h-screen flex flex-col transform ${showSidebar ? 'translate-x-0' : '-translate-x-full'} md:relative md:translate-x-0 transition-transform duration-300 ease-in-out`}>
+      <div className="p-4 border-b border-slate-700 flex justify-between items-center">
         <h1 className="text-xl font-bold text-white">Bioestadística Para Sanitarios</h1>
+        <button className="md:hidden text-white" onClick={onClose}>
+          <MdClose size={24} />
+        </button>
       </div>
       <nav className="flex-grow overflow-y-auto p-2">
         <ul>
           {modules.map((module, index) => (
             <li key={module.title} className="mb-1">
               {module.basePath === '/' || module.subtopics.length === 0 ? (
-                <NextLink href={`${APP_BASE_PATH}${module.basePath}`} passHref>
+                <NextLink href={module.basePath} passHref>
                   <div className={`block p-2 rounded-md transition-colors duration-200 ${pathname === module.basePath ? 'bg-slate-700 text-slate-100' : 'hover:bg-slate-700 text-slate-300'}`}>
                     <span className="font-semibold" style={{ color: `var(--module-color-${index + 1})` }}>{module.title}</span>
                   </div>
@@ -126,10 +127,10 @@ export default function Sidebar() {
               {module.subtopics.length > 0 && open[module.title] && (
                 <ul className="pl-4 mt-1">
                   {module.subtopics.map((subtopic) => {
-                    const isActive = pathname === (`${APP_BASE_PATH}${module.basePath}${subtopic.path}`);
+                    const isActive = pathname === (module.basePath + subtopic.path);
                     return (
                       <li key={subtopic.title}>
-                        <NextLink href={`${APP_BASE_PATH}${module.basePath}${subtopic.path}`} passHref>
+                        <NextLink href={module.basePath + subtopic.path} passHref>
                           <div className={`block p-2 rounded-md transition-colors duration-200 ${isActive ? 'bg-slate-700 text-slate-100' : 'hover:bg-slate-700 text-slate-300'}`}>
                             {subtopic.title}
                           </div>
