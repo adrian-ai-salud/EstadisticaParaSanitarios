@@ -1,0 +1,75 @@
+<ClinicalCase title="Escalas de dolor y muestras pequeñas">
+
+Estudias el efecto de un analgésico medido con una escala de dolor del 0 al 10. O tienes un estudio piloto con muy pocos pacientes y tus variables no siguen una distribución normal. En estos casos la t de Student y el ANOVA no son adecuados porque no se cumplen sus supuestos.
+
+Las **pruebas no paramétricas** no exigen que los datos sigan una distribución concreta y son resistentes a los valores atípicos. En lugar de las medias, trabajan con los **rangos** (el orden de los datos).
+
+</ClinicalCase>
+
+## Cuándo usarlas
+
+<Terms columns={3}>
+<Term name="Datos no normales">
+
+Cuando la variable no sigue una distribución normal y la muestra es pequeña. Con muestras grandes, las pruebas paramétricas toleran mejor la falta de normalidad.
+
+</Term>
+<Term name="Variables ordinales">
+
+Cuando el resultado es ordinal: grado de satisfacción, nivel de dependencia, escala de mejoría.
+
+</Term>
+<Term name="Valores atípicos">
+
+Cuando hay valores extremos que distorsionan la media y la desviación típica.
+
+</Term>
+</Terms>
+
+<Callout>
+
+Su flexibilidad tiene un precio: si los datos sí cumplen los supuestos, las pruebas no paramétricas tienen algo menos de **potencia** que sus equivalentes paramétricas y necesitan diferencias algo mayores o más pacientes para alcanzar la significación.
+
+</Callout>
+
+<MeanMedianVisualizer />
+
+## Las pruebas más habituales
+
+<Terms>
+<Term name="U de Mann-Whitney">
+
+Alternativa a la **t de Student para muestras independientes**. Compara dos grupos independientes con una variable ordinal o cuantitativa no normal.
+
+**Ejemplo:** comparar el dolor (0-10) entre pacientes con placebo y con un nuevo analgésico.
+
+</Term>
+<Term name="Wilcoxon para muestras relacionadas">
+
+Alternativa a la **t de Student pareada**. Compara dos mediciones de los mismos sujetos (antes y después).
+
+**Ejemplo:** valorar la movilidad (escala ordinal) antes y después de un programa de fisioterapia.
+
+</Term>
+<Term name="Kruskal-Wallis">
+
+Alternativa al **ANOVA de un factor**. Compara tres o más grupos independientes.
+
+**Ejemplo:** comparar el dolor entre pacientes que reciben tres analgésicos distintos.
+
+</Term>
+<Term name="Friedman">
+
+Alternativa al **ANOVA de medidas repetidas**. Compara tres o más mediciones de los mismos sujetos.
+
+**Ejemplo:** valorar la movilidad en tres momentos tras la fisioterapia.
+
+</Term>
+<Term name="Correlación de Spearman">
+
+Alternativa a la **correlación de Pearson**. Mide la fuerza y la dirección de una relación monótona entre dos variables ordinales o cuantitativas no normales, a partir de sus rangos.
+
+**Ejemplo:** relacionar el estrés percibido (escala ordinal) con las horas de sueño.
+
+</Term>
+</Terms>

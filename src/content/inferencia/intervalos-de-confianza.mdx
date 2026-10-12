@@ -1,0 +1,58 @@
+<ClinicalCase title="La tensión arterial media de tu ciudad">
+
+Quieres conocer la tensión sistólica media de los adultos de tu ciudad. No puedes medir a todos, así que mides a 100 personas y obtienes una media de 125 mmHg.
+
+¿Es 125 mmHg exactamente la media de toda la ciudad? Casi seguro que no: otra muestra daría otro valor. El **intervalo de confianza** (IC) ofrece un rango de valores plausibles para el verdadero valor de la población.
+
+</ClinicalCase>
+
+## Qué es un intervalo de confianza
+
+<Terms>
+<Term name="Nivel de confianza">
+
+Habitualmente el 95 % o el 99 %. Significa que, si repitiéramos el estudio muchas veces y calculáramos un intervalo en cada ocasión, el 95 % (o el 99 %) de esos intervalos contendría el valor real de la población.
+
+</Term>
+<Term name="Precisión">
+
+Cuanto más estrecho es el intervalo, más precisa es la estimación. Un intervalo muy amplio aporta poca información.
+
+</Term>
+</Terms>
+
+Para una media, con muestras suficientemente grandes:
+
+$$
+\text{IC}_{95\%} = \bar{x} \pm 1{,}96 \cdot \frac{s}{\sqrt{n}}
+$$
+
+El cociente *s*/√*n* es el **error estándar**: mide cuánto variaría la media de una muestra a otra.
+
+<ConfidenceIntervalSimulator />
+
+## Interpretación en la práctica clínica
+
+Un estudio informa de que un fármaco reduce la tensión arterial 10 mmHg (IC 95 %: 8 a 12). Los datos son compatibles con una reducción real de entre 8 y 12 mmHg en la población, y el procedimiento usado para construir el intervalo acierta 95 de cada 100 veces. Es mucho más informativo que decir solo «10 mmHg».
+
+<Callout>
+
+El intervalo de confianza informa de la magnitud del efecto y de su precisión, algo que el valor p no hace. Si el IC 95 % de una **diferencia** incluye el 0, o el de un **cociente** (riesgo relativo, odds ratio, hazard ratio) incluye el 1, el resultado no es estadísticamente significativo con α = 0,05.
+
+</Callout>
+
+## Intervalos anchos: qué significan
+
+Un intervalo muy amplio (por ejemplo, una reducción de la tensión de −5 a +25 mmHg) indica una estimación poco precisa. Las causas habituales son:
+
+- **Muestra pequeña:** con menos datos hay más incertidumbre.
+- **Mucha variabilidad:** si los datos están muy dispersos, el intervalo se ensancha.
+- **Más confianza:** pasar del 95 % al 99 % ensancha el intervalo.
+
+Un intervalo demasiado ancho puede hacer que un estudio sea poco útil para decidir, aunque el valor p sea significativo: el efecto real podría ser trivial o enorme.
+
+<Callout type="danger">
+
+Un IC 95 % no quiere decir que el 95 % de los pacientes tenga valores dentro del intervalo. Eso lo describe la desviación típica, no el intervalo de confianza de la media.
+
+</Callout>

@@ -1,0 +1,59 @@
+<ClinicalCase title="La talla de la población adulta">
+
+Si mides la talla de miles de personas elegidas al azar, la mayoría se agrupará alrededor de un valor medio y habrá cada vez menos personas cuanto más te alejes de él, por arriba o por abajo. Este patrón es tan frecuente que tiene nombre propio: la **distribución normal** o **campana de Gauss**.
+
+Muchas variables biológicas y clínicas se aproximan a ella (talla, tensión arterial, glucemia basal en población sana). Conocerla permite saber si un valor individual es habitual o inusual.
+
+</ClinicalCase>
+
+## Características
+
+<Terms columns={3}>
+<Term name="Simétrica">
+
+Hay tantos datos a un lado de la media como al otro. Media, mediana y moda coinciden en el centro.
+
+</Term>
+<Term name="Forma de campana">
+
+Los valores más frecuentes están en el centro y la frecuencia disminuye al alejarse de la media.
+
+</Term>
+<Term name="Dos parámetros">
+
+La media (μ), que fija el centro, y la desviación típica (σ), que fija la anchura de la campana.
+
+</Term>
+</Terms>
+
+### La regla 68-95-99,7
+
+En una distribución normal, aproximadamente:
+
+- el **68 %** de los datos está a menos de 1 desviación típica de la media (μ ± 1σ);
+- el **95 %**, a menos de 2 (exactamente, μ ± 1,96σ);
+- el **99,7 %**, a menos de 3.
+
+## La puntuación Z
+
+Un paciente tiene una tensión sistólica de 150 mmHg. ¿Es mucho? Depende de la media y de la desviación típica de su población de referencia. La **puntuación Z** expresa a cuántas desviaciones típicas está un valor de la media:
+
+$$
+z = \frac{x - \mu}{\sigma}
+$$
+
+Una Z de 0 corresponde exactamente a la media; una Z de +1, a una desviación típica por encima; una de −2, a dos por debajo. Al tipificar, cualquier normal se convierte en la **normal estándar** (media 0, desviación típica 1), y con ella se calculan percentiles y probabilidades.
+
+<NormalExplorer />
+
+## Cómo leer el explorador
+
+- La **media** desplaza la campana a la izquierda o a la derecha sin cambiar su forma.
+- La **desviación típica** cambia su anchura: con σ pequeña la campana es alta y estrecha (datos muy agrupados); con σ grande, baja y ancha (datos dispersos).
+- El área bajo la curva entre dos valores es la proporción de la población que está entre ellos. El área total es 1.
+
+<Callout>
+
+La puntuación Z es la base de los percentiles de las gráficas de crecimiento, de los intervalos de confianza y de muchas pruebas estadísticas.
+
+</Callout>

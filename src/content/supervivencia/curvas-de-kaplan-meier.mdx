@@ -1,0 +1,55 @@
+<ClinicalCase title="Supervivencia tras el diagnóstico">
+
+Sigues a un grupo de pacientes con un tipo de cáncer para ver cuánto tiempo viven tras el diagnóstico. Algunos fallecen, otros siguen vivos al terminar el estudio y otros se pierden en el seguimiento. ¿Cómo representar todo eso?
+
+Las **curvas de Kaplan-Meier** son el método de referencia para estimar y representar la probabilidad de supervivencia a lo largo del tiempo aprovechando la información de los pacientes censurados.
+
+</ClinicalCase>
+
+## Cómo se construye
+
+La curva es una función escalonada que **baja cada vez que ocurre un evento**. En cada uno de esos momentos se calcula la proporción de pacientes en riesgo que sobrevive, y la supervivencia acumulada es el producto de todas esas proporciones:
+
+$$
+\hat{S}(t) = \prod_{t_i \le t} \left(1 - \frac{d_i}{n_i}\right)
+$$
+
+donde *dᵢ* es el número de eventos en el tiempo *tᵢ* y *nᵢ* el número de pacientes en riesgo justo antes.
+
+<Terms columns={3}>
+<Term name="Eje horizontal">
+
+Tiempo desde el inicio del seguimiento (por ejemplo, meses desde el diagnóstico).
+
+</Term>
+<Term name="Eje vertical">
+
+Probabilidad de seguir libre del evento, de 1 (100 %) a 0. Cada escalón es un evento.
+
+</Term>
+<Term name="Marcas de censura">
+
+Pequeñas marcas verticales sobre la curva: pacientes cuyo seguimiento terminó sin el evento. No hacen bajar la curva, pero reducen el número en riesgo.
+
+</Term>
+</Terms>
+
+<KaplanMeierSimulator />
+
+<Callout>
+
+Kaplan-Meier es un método **no paramétrico**: no supone ninguna forma concreta para la distribución de los tiempos. La **mediana de supervivencia** es el tiempo en que la curva cruza el 50 %. Al final de la curva quedan pocos pacientes en riesgo y la estimación es menos fiable: por eso se acompaña de la tabla de pacientes en riesgo.
+
+</Callout>
+
+## Comparar curvas: la prueba de log-rank
+
+Para saber si la supervivencia difiere entre dos o más grupos (tratamiento A frente a B), la prueba más utilizada es la de **log-rank**. Compara, en cada momento en que hay un evento, los eventos observados en cada grupo con los que se esperarían si la supervivencia fuera igual.
+
+Un p bajo indica que las curvas son significativamente distintas.
+
+<Callout type="warning">
+
+La prueba de log-rank da el mismo peso a todos los momentos del seguimiento y es más potente cuando el efecto se mantiene constante en el tiempo. Si las curvas se cruzan, puede no detectar diferencias reales. Además, no informa de la **magnitud** del efecto: para eso está el hazard ratio del modelo de Cox.
+
+</Callout>

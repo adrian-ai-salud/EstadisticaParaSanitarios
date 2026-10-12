@@ -1,0 +1,46 @@
+<ClinicalCase title="La edad de los pacientes de un estudio">
+
+Analizas la edad de los participantes en un estudio y quieres ver de un vistazo no solo la edad típica, sino también cómo se reparten los datos, dónde se concentra la mayoría y si hay edades inusualmente bajas o altas.
+
+El **diagrama de caja** (*box plot*) resume la distribución de una variable cuantitativa con cinco valores y es muy útil para comparar grupos.
+
+</ClinicalCase>
+
+## Las partes de un diagrama de caja
+
+<Terms>
+<Term name="Mediana (línea central)">
+
+Valor que deja por debajo la mitad de los datos y por encima la otra mitad. Divide la caja en dos partes.
+
+</Term>
+<Term name="Caja">
+
+Va del primer cuartil (Q1) al tercero (Q3), así que contiene el 50 % central de los datos. Su longitud es el **rango intercuartílico** (RIC).
+
+</Term>
+<Term name="Bigotes">
+
+Se extienden desde la caja hasta el dato más extremo que no se considera atípico. Por convención, como máximo hasta 1,5 veces el RIC por debajo de Q1 y por encima de Q3.
+
+</Term>
+<Term name="Valores atípicos">
+
+Puntos que quedan fuera de los bigotes. Son valores extremos que conviene revisar: pueden ser errores de registro o casos reales poco frecuentes.
+
+</Term>
+</Terms>
+
+<BoxPlotBuilder />
+
+## Para qué sirve
+
+- **Resumen rápido.** Muestra a la vez el centro, la dispersión y la asimetría de los datos.
+- **Detección de atípicos.** Los valores extremos saltan a la vista.
+- **Comparación de grupos.** Varias cajas en paralelo permiten comparar, por ejemplo, la edad de pacientes con y sin una enfermedad.
+
+<Callout>
+
+Si la mediana no está en el centro de la caja o un bigote es mucho más largo que el otro, la distribución es asimétrica. Es una pista para elegir pruebas no paramétricas o describir con mediana y RIC.
+
+</Callout>

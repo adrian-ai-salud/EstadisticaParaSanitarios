@@ -1,0 +1,21 @@
+Elegir la prueba estadística depende de tres preguntas: **qué tipo de variable** quieres analizar, **cuántos grupos** comparas y si las mediciones son **independientes o relacionadas** (los mismos pacientes medidos varias veces). Responde a las preguntas del asistente y te propondrá la prueba más habitual para tu caso.
+
+<TestSelector />
+
+## La tabla resumen
+
+| Objetivo | Variable de resultado | Paramétrica | No paramétrica |
+|---|---|---|---|
+| Comparar 2 grupos independientes | Cuantitativa | t de Student | U de Mann-Whitney |
+| Comparar 2 mediciones relacionadas | Cuantitativa | t de Student para datos pareados | Wilcoxon |
+| Comparar 3 o más grupos independientes | Cuantitativa | ANOVA de un factor | Kruskal-Wallis |
+| Comparar 3 o más mediciones relacionadas | Cuantitativa | ANOVA de medidas repetidas | Friedman |
+| Relación entre dos variables | Cuantitativas | Correlación de Pearson | Correlación de Spearman |
+| Comparar proporciones, grupos independientes | Cualitativa | — | Chi-cuadrado (Fisher si hay frecuencias esperadas < 5) |
+| Comparar proporciones, datos pareados | Cualitativa dicotómica | — | McNemar |
+
+<Callout type="warning" title="Un punto de partida, no una receta">
+
+El asistente cubre las situaciones más habituales. Diseños con varios factores, variables de confusión, medidas repetidas complejas o datos censurados requieren modelos de regresión o análisis de supervivencia. Ante la duda, consulta con un profesional de la estadística antes de recoger los datos, no después.
+
+</Callout>

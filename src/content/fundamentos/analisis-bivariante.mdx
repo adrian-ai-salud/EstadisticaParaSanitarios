@@ -1,0 +1,40 @@
+<ClinicalCase title="Tensión arterial y edad">
+
+En tu consulta tienes la impresión de que las personas mayores tienen la tensión arterial más alta. ¿Es solo una impresión o existe una relación real? El **análisis bivariante** estudia la relación entre **dos variables** a la vez.
+
+</ClinicalCase>
+
+## Dos variables cuantitativas
+
+### Diagrama de dispersión
+
+Es la mejor forma de empezar. Una variable va en el eje horizontal (por ejemplo, la edad) y la otra en el vertical (la tensión arterial sistólica). Cada paciente es un punto.
+
+La nube de puntos sugiere si hay relación: si suben juntas (relación positiva), si una sube mientras la otra baja (relación negativa) o si no hay un patrón claro.
+
+### Coeficiente de correlación de Pearson (r)
+
+Mide con un número la **fuerza y la dirección de una relación lineal**.
+
+- Va de −1 a +1.
+- Cerca de +1: relación lineal positiva fuerte (a más edad, más tensión).
+- Cerca de −1: relación lineal negativa fuerte (a más actividad física, menos peso).
+- Cerca de 0: no hay relación lineal, aunque puede haber otro tipo de relación.
+
+<CorrelationExplorer />
+
+<Callout type="warning" title="Correlación no implica causalidad">
+
+Que dos variables estén relacionadas no significa que una cause la otra. Puede haber una tercera variable (de confusión) que explique la asociación.
+
+</Callout>
+
+## Dos variables cualitativas
+
+### Tablas de contingencia
+
+Para variables como «fumador» (sí/no) y «enfermedad pulmonar» (sí/no) se construye una tabla con el número de pacientes en cada combinación de categorías: fumadores con enfermedad, fumadores sin enfermedad, etc.
+
+### Prueba de chi-cuadrado (χ²)
+
+Se aplica a la tabla de contingencia para saber si la asociación observada es estadísticamente significativa o podría deberse al azar. Si alguna frecuencia esperada es menor de 5, se usa la prueba exacta de Fisher.

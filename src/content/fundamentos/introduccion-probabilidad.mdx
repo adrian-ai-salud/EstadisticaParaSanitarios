@@ -1,0 +1,49 @@
+<ClinicalCase title="El resultado de una prueba diagnóstica">
+
+Un paciente llega con síntomas que te hacen sospechar una enfermedad y le haces una prueba. El resultado puede ser positivo o negativo. La **probabilidad** permite cuantificar la incertidumbre de ese resultado y tomar mejores decisiones.
+
+Toda la estadística descansa sobre la probabilidad: es lo que nos permite pasar de la intuición a la estimación.
+
+</ClinicalCase>
+
+## Conceptos fundamentales
+
+<Terms columns={3}>
+<Term name="Experimento aleatorio">
+
+Proceso cuyo resultado no puede predecirse con certeza. Por ejemplo, la glucemia de un paciente elegido al azar.
+
+</Term>
+<Term name="Espacio muestral (Ω)">
+
+Conjunto de todos los resultados posibles. Para una prueba de embarazo, Ω = \{positivo, negativo\}.
+
+</Term>
+<Term name="Suceso">
+
+Cualquier subconjunto del espacio muestral. Que un paciente sea del grupo sanguíneo A es un suceso.
+
+</Term>
+</Terms>
+
+La probabilidad de un suceso es un número entre 0 (imposible) y 1 (seguro). Si todos los resultados son igual de probables:
+
+$$
+P(A) = \frac{\text{casos favorables}}{\text{casos posibles}}
+$$
+
+## La ley de los grandes números
+
+Si repites un experimento muchas veces, la frecuencia relativa con la que ocurre un suceso se acerca a su probabilidad teórica. Con pocas repeticiones, el azar domina; con muchas, el resultado se estabiliza.
+
+<CoinSimulator />
+
+## El teorema de Bayes
+
+Es uno de los resultados más útiles en clínica: permite **actualizar la probabilidad** de que un paciente tenga una enfermedad cuando conocemos el resultado de una prueba. Responde a la pregunta: si la prueba ha dado positivo, ¿qué probabilidad hay de que mi paciente esté realmente enfermo?
+
+$$
+P(E \mid +) = \frac{P(+ \mid E)\,P(E)}{P(+)}
+$$
+
+Las pruebas no son perfectas, así que la respuesta depende tanto de la calidad de la prueba como de lo frecuente que sea la enfermedad (la probabilidad previa). Lo verás en detalle, con una calculadora, en el tema de [pruebas diagnósticas](/pruebas-diagnosticas/definiciones-aplicaciones).

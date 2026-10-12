@@ -1,0 +1,59 @@
+<ClinicalCase title="Prever la demanda hospitalaria">
+
+Como responsable de una unidad, necesitas prever cuántas camas harán falta la semana que viene o cuántas enfermeras necesitará urgencias el mes próximo. Los **modelos ARIMA** son una de las herramientas clásicas para hacer predicciones con series temporales.
+
+ARIMA viene del inglés *AutoRegressive Integrated Moving Average*: combina la dependencia de los valores pasados, la diferenciación y los errores de predicción anteriores.
+
+</ClinicalCase>
+
+## Estacionariedad
+
+Muchos modelos de series temporales necesitan que la serie sea **estacionaria**: que su media, su varianza y su autocorrelación no cambien con el tiempo.
+
+<Terms>
+<Term name="Por qué importa">
+
+Si la serie no es estacionaria, los patrones del pasado no se mantienen en el futuro y las predicciones dejan de ser válidas.
+
+</Term>
+<Term name="Prueba de Dickey-Fuller aumentada">
+
+Contrasta si la serie tiene una raíz unitaria (no estacionaria). Un p < 0,05 apoya la estacionariedad.
+
+</Term>
+<Term name="Diferenciación">
+
+Restar a cada valor el anterior elimina la tendencia. Para eliminar la estacionalidad se usa la diferencia estacional (por ejemplo, restar el valor del mismo mes del año anterior).
+
+</Term>
+</Terms>
+
+<DifferencingSimulator />
+
+## Los parámetros (p, d, q)
+
+<Terms columns={3}>
+<Term name="p: autorregresivo">
+
+Cuántos valores pasados de la propia serie se usan para predecir el actual.
+
+</Term>
+<Term name="d: integrado">
+
+Cuántas veces se ha diferenciado la serie para hacerla estacionaria. Con d = 0, ya lo era.
+
+</Term>
+<Term name="q: media móvil">
+
+Cuántos errores de predicción pasados se incluyen en el modelo.
+
+</Term>
+</Terms>
+
+Cuando hay estacionalidad se usa la extensión **SARIMA**, que añade parámetros estacionales (P, D, Q) con su periodo (12 para datos mensuales).
+
+<Callout type="warning">
+
+Elegir p, d y q exige analizar los gráficos de autocorrelación (ACF) y autocorrelación parcial (PACF) y comparar modelos con criterios como el AIC. Valida siempre las predicciones con datos que el modelo no haya usado.
+
+</Callout>

@@ -1,0 +1,127 @@
+<ClinicalCase title="Detectar precozmente una enfermedad">
+
+Tienes datos de muchos pacientes (edad, síntomas, analíticas) y quieres predecir si un paciente nuevo tiene o no una enfermedad. Los **modelos de clasificación** asignan cada observación a una categoría (enfermo o sano, tipo de enfermedad, respuesta al tratamiento).
+
+Aprenden de datos históricos y se usan para el diagnóstico, la estratificación del riesgo y el apoyo a la toma de decisiones.
+
+</ClinicalCase>
+
+## Conceptos clave
+
+<Terms>
+<Term name="Aprendizaje automático">
+
+El modelo aprende patrones a partir de los datos. Se separan los datos en un conjunto de **entrenamiento** (para que aprenda) y otro de **prueba** (para evaluarlo con datos que no ha visto).
+
+</Term>
+<Term name="Sobreajuste (overfitting)">
+
+El modelo aprende demasiado bien los datos de entrenamiento, ruido incluido, y luego falla con datos nuevos. Es memorizar en lugar de entender.
+
+</Term>
+<Term name="Matriz de confusión">
+
+Tabla que cruza la predicción con la realidad: verdaderos positivos (VP), falsos positivos (FP), verdaderos negativos (VN) y falsos negativos (FN). Es la misma tabla 2×2 de las [pruebas diagnósticas](/pruebas-diagnosticas/definiciones-aplicaciones).
+
+</Term>
+</Terms>
+
+### Métricas de evaluación
+
+| Métrica | Pregunta que responde | Cálculo |
+|---|---|---|
+| Sensibilidad (*recall*) | De los que tienen la enfermedad, ¿cuántos detecta? | VP / (VP + FN) |
+| Especificidad | De los que no la tienen, ¿cuántos descarta? | VN / (VN + FP) |
+| Precisión (VPP) | De los que clasifica como positivos, ¿cuántos lo son? | VP / (VP + FP) |
+| F1 | Equilibrio entre precisión y sensibilidad (media armónica) | 2 · P · S / (P + S) |
+| Índice de Youden | Rendimiento global combinando sensibilidad y especificidad | S + E − 1 |
+| AUC-ROC | Capacidad de discriminar entre clases para todos los umbrales | Área bajo la curva ROC (0,5 = azar, 1 = perfecta) |
+
+<Callout type="warning" title="La exactitud engaña con clases desbalanceadas">
+
+Si solo el 2 % de los pacientes tiene la enfermedad, un modelo que diga siempre «sano» acierta el 98 % de las veces y no sirve para nada. Usa sensibilidad, especificidad, F1 o AUC.
+
+</Callout>
+
+## Modelos más utilizados
+
+### Regresión logística
+
+<Terms>
+<Term name="Para qué sirve">
+
+Estima la probabilidad de un resultado binario (sí/no) y, con un umbral, clasifica.
+
+</Term>
+<Term name="Cómo funciona">
+
+Transforma una combinación lineal de los predictores en una probabilidad entre 0 y 1 mediante la función logística (sigmoide). Los coeficientes se interpretan como **odds ratio**.
+
+</Term>
+<Term name="Supuestos">
+
+Resultado binario, observaciones independientes, ausencia de multicolinealidad grave, relación lineal entre los predictores cuantitativos y el logit, y suficientes eventos por variable (orientativamente, 10 o más).
+
+</Term>
+<Term name="En salud">
+
+Es el modelo de referencia en epidemiología por su interpretabilidad: identificar factores de riesgo y construir escalas de riesgo. **Ejemplo:** estimar el riesgo de enfermedad cardiovascular a partir de la edad, el IMC, el colesterol y el tabaquismo.
+
+</Term>
+</Terms>
+
+### Análisis discriminante lineal (LDA)
+
+<Terms>
+<Term name="Para qué sirve">
+
+Clasifica observaciones en dos o más grupos conocidos y reduce la dimensionalidad.
+
+</Term>
+<Term name="Cómo funciona">
+
+Busca combinaciones lineales de los predictores que separen al máximo las medias de los grupos y minimicen la variabilidad dentro de cada uno.
+
+</Term>
+<Term name="Supuestos">
+
+Normalidad multivariante, matrices de covarianza iguales entre grupos, independencia y ausencia de multicolinealidad grave.
+
+</Term>
+<Term name="En salud">
+
+Diagnóstico diferencial y subclasificación de enfermedades. **Ejemplo:** distinguir tipos de demencia (Alzheimer, vascular, por cuerpos de Lewy) a partir de neuroimagen y biomarcadores.
+
+</Term>
+</Terms>
+
+### Random forest
+
+<Terms>
+<Term name="Para qué sirve">
+
+Clasificación y regresión con relaciones complejas o no lineales.
+
+</Term>
+<Term name="Cómo funciona">
+
+Combina cientos de árboles de decisión, cada uno entrenado con una submuestra aleatoria de pacientes y de variables. La predicción final es la votación mayoritaria (o el promedio, en regresión). Promediar muchos árboles reduce el sobreajuste de un árbol individual.
+
+</Term>
+<Term name="Supuestos">
+
+No exige normalidad ni linealidad y tolera bien la multicolinealidad. Sí necesita observaciones independientes y un volumen de datos suficiente. Es menos interpretable que la regresión logística, aunque informa de la importancia de cada variable.
+
+</Term>
+<Term name="En salud">
+
+Predicción con muchas variables: reingreso hospitalario en insuficiencia cardiaca, respuesta a un tratamiento a partir de datos clínicos, genómicos y de imagen.
+
+</Term>
+</Terms>
+
+<Callout type="warning">
+
+El modelo se elige según los datos y la pregunta. Antes de usar un modelo predictivo en la práctica clínica, debe validarse con datos externos y valorarse su calibración, no solo su capacidad de discriminación.
+
+</Callout>

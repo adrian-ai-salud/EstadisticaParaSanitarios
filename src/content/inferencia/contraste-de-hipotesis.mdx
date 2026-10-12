@@ -1,0 +1,75 @@
+<ClinicalCase title="¿Funciona el nuevo hipolipemiante?">
+
+Un laboratorio afirma que su nuevo fármaco reduce el colesterol más que el tratamiento actual. ¿Cómo saber si la diferencia observada en un estudio es real o fruto del azar? Con un **contraste de hipótesis**.
+
+Es un procedimiento formal para decidir si los datos aportan evidencia suficiente para rechazar una afirmación de partida (la hipótesis nula) sobre la población.
+
+</ClinicalCase>
+
+## Hipótesis nula y alternativa
+
+<Terms>
+<Term name="Hipótesis nula (H₀)">
+
+Afirma que no hay efecto, diferencia ni relación. Se da por cierta mientras los datos no aporten evidencia en contra.
+
+**Ejemplo:** el nuevo fármaco no reduce el colesterol más que el actual.
+
+</Term>
+<Term name="Hipótesis alternativa (H₁)">
+
+Afirma que sí hay efecto, diferencia o relación. Es lo que el estudio quiere demostrar.
+
+**Ejemplo:** el nuevo fármaco reduce el colesterol más que el actual.
+
+</Term>
+</Terms>
+
+<Callout>
+
+El contraste intenta **rechazar H₀**. No rechazarla no demuestra que sea cierta: solo indica que no hay evidencia suficiente en su contra. «Ausencia de evidencia no es evidencia de ausencia».
+
+</Callout>
+
+## El valor p
+
+Es la probabilidad de obtener un resultado como el observado, o más extremo, **si la hipótesis nula fuera cierta**.
+
+- Si p < α (habitualmente 0,05), el resultado es **estadísticamente significativo** y se rechaza H₀.
+- Si p ≥ α, no hay evidencia suficiente para rechazar H₀.
+
+<Callout type="danger" title="Lo que el valor p no es">
+
+El valor p **no** es la probabilidad de que H₀ sea cierta ni la probabilidad de que el resultado se deba al azar. Tampoco mide la magnitud del efecto: un p muy pequeño puede acompañar a un efecto clínicamente irrelevante si la muestra es enorme. Interprétalo siempre junto al tamaño del efecto y su intervalo de confianza.
+
+</Callout>
+
+## Errores de tipo I y de tipo II
+
+Al decidir siempre existe la posibilidad de equivocarse:
+
+| Decisión | H₀ es cierta | H₀ es falsa |
+|---|---|---|
+| **Se rechaza H₀** | Error de tipo I (α), falso positivo | Decisión correcta (potencia, 1 − β) |
+| **No se rechaza H₀** | Decisión correcta | Error de tipo II (β), falso negativo |
+
+<Terms>
+<Term name="Error de tipo I (α)">
+
+Rechazar H₀ cuando es cierta: concluir que hay efecto cuando no lo hay. El nivel de significación α es la probabilidad máxima de cometerlo que estamos dispuestos a aceptar.
+
+</Term>
+<Term name="Error de tipo II (β)">
+
+No rechazar H₀ cuando es falsa: no detectar un efecto que existe. La **potencia** (1 − β) es la probabilidad de detectarlo; se suele exigir al menos un 80 %.
+
+</Term>
+</Terms>
+
+<PowerSimulator />
+
+<Callout type="warning" title="Un equilibrio que depende de la pregunta">
+
+Con el mismo tamaño de muestra, reducir α aumenta β. Qué error es más grave depende del contexto: en el cribado de una enfermedad grave y tratable preocupa más el falso negativo; al aprobar un fármaco con efectos adversos, el falso positivo. La forma de reducir ambos a la vez es aumentar el tamaño de la muestra.
+
+</Callout>

@@ -1,0 +1,104 @@
+<ClinicalCase title="Predecir el peso al nacer con varios factores">
+
+El peso al nacer no depende solo de la edad gestacional: también influyen la edad materna, el tabaquismo, la nutrición… La **regresión lineal múltiple** usa varias variables independientes a la vez para predecir una variable dependiente cuantitativa.
+
+Amplía la regresión simple y tiene una ventaja clave: estima el efecto de cada variable **ajustado por las demás**, lo que permite controlar la confusión.
+
+</ClinicalCase>
+
+<Callout type="info" title="Antes de seguir">
+
+Si aún no lo has hecho, repasa la [regresión lineal simple](/modelos/regresion-lineal-simple): aquí se dan por conocidos sus conceptos.
+
+</Callout>
+
+## El modelo
+
+$$
+Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p + \varepsilon
+$$
+
+<Terms>
+<Term name="Y">
+
+Variable dependiente (peso al nacer).
+
+</Term>
+<Term name="X₁ … Xₚ">
+
+Variables independientes o predictoras (edad gestacional, edad materna, tabaquismo…).
+
+</Term>
+<Term name="β₀">
+
+Constante: valor de Y cuando todas las X valen cero.
+
+</Term>
+<Term name="β₁ … βₚ">
+
+Coeficientes de regresión: cuánto cambia Y por cada unidad que aumenta una X **manteniendo constantes las demás**.
+
+</Term>
+</Terms>
+
+<Example>
+
+Si el coeficiente del tabaquismo materno es −180 g, los hijos de madres fumadoras pesan de media 180 g menos que los de madres no fumadoras **con la misma edad gestacional y la misma edad materna**.
+
+</Example>
+
+## Supuestos
+
+<Terms>
+<Term name="Linealidad">
+
+Cada predictor cuantitativo se relaciona linealmente con Y.
+
+</Term>
+<Term name="Independencia de los residuos">
+
+Los errores no están correlacionados. Con datos ordenados en el tiempo se comprueba con la prueba de Durbin-Watson.
+
+</Term>
+<Term name="Homocedasticidad">
+
+La varianza de los residuos es constante. Se comprueba con el gráfico de residuos frente a valores predichos.
+
+</Term>
+<Term name="Normalidad de los residuos">
+
+Se comprueba con un histograma o un gráfico Q-Q de los residuos.
+
+</Term>
+<Term name="Ausencia de multicolinealidad">
+
+Los predictores no deben estar muy correlacionados entre sí. Se valora con el factor de inflación de la varianza (VIF): valores por encima de 5-10 indican un problema.
+
+</Term>
+</Terms>
+
+## Bondad de ajuste
+
+<Terms columns={3}>
+<Term name="R²">
+
+Proporción de la variabilidad de Y que explica el modelo. Un R² de 0,70 significa que el modelo explica el 70 % de la variación del peso al nacer.
+
+</Term>
+<Term name="R² ajustado">
+
+Versión del R² que penaliza añadir predictores que aportan poco. Es la que se usa para comparar modelos con distinto número de variables.
+
+</Term>
+<Term name="RMSE">
+
+Raíz del error cuadrático medio: tamaño típico del error de predicción, en las unidades de Y. Cuanto menor, más precisas las predicciones.
+
+</Term>
+</Terms>
+
+<Callout type="warning">
+
+Un R² alto no garantiza un buen modelo. Hay que comprobar los supuestos, evitar incluir demasiadas variables para el tamaño de la muestra (como orientación, al menos 10-15 observaciones por predictor) y valorar si el modelo tiene sentido clínico.
+
+</Callout>

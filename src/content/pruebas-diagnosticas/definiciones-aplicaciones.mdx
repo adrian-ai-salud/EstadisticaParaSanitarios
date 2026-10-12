@@ -1,0 +1,116 @@
+<ClinicalCase title="La prueba rápida de gripe">
+
+En plena temporada de gripe llega a tu centro de salud un paciente con síntomas compatibles y le haces una prueba rápida. ¿Hasta qué punto es fiable? ¿Qué significa para este paciente un resultado positivo o negativo?
+
+Para responder hay que entender cómo se evalúa una prueba diagnóstica.
+
+</ClinicalCase>
+
+## La tabla 2×2
+
+Es la base de todos los cálculos: cruza el resultado de la prueba con el estado real de la enfermedad, determinado por una prueba de referencia (*gold standard*).
+
+| Resultado de la prueba | Enfermedad presente | Enfermedad ausente | Total |
+|---|---|---|---|
+| **Prueba positiva** | Verdaderos positivos (VP) | Falsos positivos (FP) | VP + FP |
+| **Prueba negativa** | Falsos negativos (FN) | Verdaderos negativos (VN) | FN + VN |
+| **Total** | VP + FN | FP + VN | N |
+
+## Validez de la prueba: sensibilidad y especificidad
+
+Son propiedades de la prueba y **no dependen de la prevalencia**.
+
+<Terms>
+<Term name="Sensibilidad">
+
+Proporción de enfermos que dan positivo. Capacidad de la prueba para **detectar** la enfermedad.
+
+$$
+S = \frac{VP}{VP + FN}
+$$
+
+</Term>
+<Term name="Especificidad">
+
+Proporción de sanos que dan negativo. Capacidad para **descartar** la enfermedad.
+
+$$
+E = \frac{VN}{VN + FP}
+$$
+
+</Term>
+</Terms>
+
+<Callout title="Una regla para recordarlo">
+
+Una prueba muy **sensible**, si da **negativo**, descarta la enfermedad (útil para cribado). Una prueba muy **específica**, si da **positivo**, la confirma (útil para confirmar un diagnóstico).
+
+</Callout>
+
+## Seguridad de la prueba: valores predictivos
+
+Responden a la pregunta que se hace el paciente: con este resultado, ¿qué probabilidad tengo de estar enfermo? **Dependen de la prevalencia** de la enfermedad en la población donde se usa la prueba.
+
+<Terms>
+<Term name="Valor predictivo positivo (VPP)">
+
+Probabilidad de tener la enfermedad si la prueba es positiva.
+
+$$
+VPP = \frac{VP}{VP + FP}
+$$
+
+</Term>
+<Term name="Valor predictivo negativo (VPN)">
+
+Probabilidad de no tenerla si la prueba es negativa.
+
+$$
+VPN = \frac{VN}{VN + FN}
+$$
+
+</Term>
+</Terms>
+
+## Razones de verosimilitud
+
+Combinan sensibilidad y especificidad y no dependen de la prevalencia. Indican cuánto cambia un resultado la probabilidad de enfermedad.
+
+<Terms>
+<Term name="Razón de verosimilitud positiva (RV+)">
+
+Cuántas veces es más probable un resultado positivo en un enfermo que en un sano: S / (1 − E). Por encima de 10, un positivo aumenta mucho la probabilidad de enfermedad.
+
+</Term>
+<Term name="Razón de verosimilitud negativa (RV−)">
+
+Cuántas veces es más probable un negativo en un enfermo que en un sano: (1 − S) / E. Por debajo de 0,1, un negativo reduce mucho la probabilidad de enfermedad.
+
+</Term>
+</Terms>
+
+## Caso resuelto
+
+En la población donde se usa la prueba rápida, la prevalencia de gripe es del 10 %. Se estudian 1000 personas: 100 tienen gripe y 900 no.
+
+- De las 100 con gripe, 85 dan positivo (VP = 85) y 15 negativo (FN = 15).
+- De las 900 sin gripe, 855 dan negativo (VN = 855) y 45 positivo (FP = 45).
+
+| Medida | Cálculo | Resultado |
+|---|---|---|
+| Sensibilidad | 85 / (85 + 15) | 85 % |
+| Especificidad | 855 / (855 + 45) | 95 % |
+| VPP | 85 / (85 + 45) | 65,4 % |
+| VPN | 855 / (855 + 15) | 98,3 % |
+| RV+ | 0,85 / 0,05 | 17 |
+| RV− | 0,15 / 0,95 | 0,16 |
+
+**Interpretación.** La prueba detecta al 85 % de las personas con gripe y descarta correctamente al 95 % de las que no la tienen. Aun así, si da positivo, la probabilidad de que el paciente tenga gripe es del 65,4 %: uno de cada tres positivos es falso. Si da negativo, la probabilidad de no tener gripe es del 98,3 %.
+
+<DiagnosticCalculator />
+
+<Callout type="warning" title="El efecto de la prevalencia">
+
+Con la misma sensibilidad y especificidad, el VPP cae cuando la enfermedad es poco frecuente. Prueba en la calculadora a bajar la prevalencia al 1 %: la mayoría de los positivos serán falsos. Por eso una prueba excelente en el hospital puede rendir mal como cribado en la población general.
+
+</Callout>

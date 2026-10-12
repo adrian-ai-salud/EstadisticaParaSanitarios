@@ -1,0 +1,48 @@
+<ClinicalCase title="La gripe y la presión asistencial">
+
+En el servicio de epidemiología quieres prever los casos de gripe de la próxima temporada o las consultas diarias en urgencias. Son **series temporales**: datos recogidos en momentos sucesivos y ordenados en el tiempo.
+
+Su análisis es fundamental en salud pública para detectar brotes, planificar recursos y entender cómo evolucionan las enfermedades.
+
+</ClinicalCase>
+
+## Componentes de una serie temporal
+
+Una serie puede descomponerse en partes que ayudan a entender su comportamiento:
+
+<Terms>
+<Term name="Tendencia">
+
+Movimiento general a largo plazo: ¿la serie sube, baja o se mantiene? **Ejemplo:** el aumento progresivo de la prevalencia de diabetes.
+
+</Term>
+<Term name="Estacionalidad">
+
+Patrones que se repiten con un periodo fijo y conocido (diario, semanal, anual). **Ejemplo:** los picos de gripe en invierno o de alergias en primavera.
+
+</Term>
+<Term name="Ciclos">
+
+Oscilaciones sin periodo fijo, normalmente de más de un año, ligadas a factores económicos, sociales o inmunitarios. **Ejemplo:** las epidemias de sarampión cada varios años en poblaciones con baja cobertura vacunal.
+
+</Term>
+<Term name="Componente irregular o ruido">
+
+La variación aleatoria que queda tras eliminar tendencia, estacionalidad y ciclos.
+
+</Term>
+</Terms>
+
+En el modelo **aditivo**, la serie es la suma de sus componentes:
+
+$$
+Y_t = T_t + S_t + \varepsilon_t
+$$
+
+<SeriesDecomposition />
+
+<Callout>
+
+Representar los componentes (por ejemplo, medias móviles para la tendencia o diagramas de caja por mes para la estacionalidad) es el primer paso para entender y modelizar una serie temporal.
+
+</Callout>

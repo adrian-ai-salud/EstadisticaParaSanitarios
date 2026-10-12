@@ -1,0 +1,97 @@
+<ClinicalCase title="Comparar dos tratamientos antihipertensivos">
+
+Tienes dos grupos de pacientes con hipertensión: uno recibe el tratamiento A y otro el B. ¿Es distinta la reducción media de la tensión arterial entre ambos? O bien tienes tres dietas y quieres saber cuál consigue más pérdida de peso.
+
+Las **pruebas paramétricas** comparan medias, pero exigen que los datos cumplan ciertas condiciones (supuestos). Cuando se cumplen, son las pruebas más **potentes**: detectan diferencias reales con menos pacientes.
+
+</ClinicalCase>
+
+## La t de Student: comparar dos medias
+
+Es la prueba más usada para comparar las medias de dos grupos. ¿Es distinta la tensión media entre hombres y mujeres? ¿Cambia la glucemia media antes y después de una intervención?
+
+<Terms>
+<Term name="Para muestras independientes">
+
+Los grupos no están relacionados entre sí: hombres frente a mujeres, tratamiento A frente a tratamiento B.
+
+</Term>
+<Term name="Para muestras pareadas o relacionadas">
+
+Los mismos sujetos se miden dos veces: antes y después de un tratamiento, o en un diseño cruzado.
+
+</Term>
+</Terms>
+
+### Supuestos
+
+<Terms columns={3}>
+<Term name="Normalidad">
+
+La variable sigue una distribución normal en cada grupo (en la t pareada, las diferencias). Con muestras grandes (más de 30 por grupo), la prueba tolera bien desviaciones moderadas.
+
+</Term>
+<Term name="Homocedasticidad">
+
+Solo para muestras independientes: las varianzas de los grupos son similares (prueba de Levene). Si no lo son, se usa la corrección de Welch.
+
+</Term>
+<Term name="Independencia">
+
+Las observaciones son independientes entre sí, salvo el emparejamiento previsto en la t pareada.
+
+</Term>
+</Terms>
+
+## ANOVA: comparar tres o más medias
+
+Para comparar tres o más grupos no se deben hacer varias t de Student, porque se dispara la probabilidad de encontrar alguna diferencia por azar. Se usa el **análisis de la varianza** (ANOVA).
+
+El ANOVA indica si hay alguna diferencia entre las medias, pero no **entre qué grupos**. Para eso están las pruebas post hoc.
+
+<Terms columns={3}>
+<Term name="ANOVA de un factor">
+
+Compara tres o más grupos definidos por una sola variable categórica (por ejemplo, tres dosis de un fármaco).
+
+</Term>
+<Term name="ANOVA de dos factores">
+
+Estudia el efecto de dos variables categóricas y de su interacción (por ejemplo, el fármaco y el sexo del paciente).
+
+</Term>
+<Term name="ANOVA de medidas repetidas">
+
+Los mismos sujetos se miden en tres o más momentos o condiciones (tensión arterial en los meses 1, 3 y 6).
+
+</Term>
+</Terms>
+
+Sus supuestos son los mismos que los de la t de Student: normalidad en cada grupo, homogeneidad de varianzas e independencia (salvo en medidas repetidas, que además exige esfericidad).
+
+**Pruebas post hoc.** Si el ANOVA es significativo, pruebas como la de Tukey o la corrección de Bonferroni indican qué pares de grupos difieren (por ejemplo, la dieta A es mejor que la B, pero no distinta de la C).
+
+**Tamaño del efecto (η²).** Indica qué proporción de la variabilidad del resultado explica la variable de agrupación. Un p significativo con un η² pequeño puede no tener relevancia clínica.
+
+## Comprobar la normalidad
+
+<Terms>
+<Term name="Métodos gráficos">
+
+**Histograma:** busca una forma de campana simétrica. **Gráfico Q-Q:** los puntos deben seguir aproximadamente la diagonal.
+
+</Term>
+<Term name="Pruebas formales">
+
+**Shapiro-Wilk**, la más recomendada, sobre todo con muestras pequeñas. **Kolmogorov-Smirnov con corrección de Lilliefors**, tradicionalmente usada con muestras mayores de 50. En ambas, p < 0,05 indica que los datos se apartan de la normalidad.
+
+</Term>
+</Terms>
+
+<AssumptionsVisualizer />
+
+<Callout>
+
+Las pruebas de normalidad tienen poca potencia con muestras pequeñas y detectan desviaciones irrelevantes con muestras muy grandes. Combina siempre la prueba formal con el histograma y el gráfico Q-Q. Si los datos no son normales, valora transformarlos o usar una prueba no paramétrica.
+
+</Callout>

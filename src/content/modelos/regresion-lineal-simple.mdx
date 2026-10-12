@@ -1,0 +1,78 @@
+<ClinicalCase title="Peso al nacer y edad gestacional">
+
+Quieres predecir el peso al nacer de un recién nacido a partir de la edad gestacional. La **regresión lineal simple** modela la relación entre una variable dependiente cuantitativa (el resultado que quieres predecir, el peso) y una única variable independiente (el predictor, la edad gestacional).
+
+El objetivo es encontrar la recta que mejor se ajusta a los datos para poder predecir el resultado a partir del predictor.
+
+</ClinicalCase>
+
+## El modelo: la ecuación de la recta
+
+$$
+Y = \beta_0 + \beta_1 X + \varepsilon
+$$
+
+<Terms>
+<Term name="Y">
+
+Variable dependiente que queremos predecir (peso al nacer).
+
+</Term>
+<Term name="X">
+
+Variable independiente o predictora (edad gestacional).
+
+</Term>
+<Term name="β₀ (constante u ordenada en el origen)">
+
+Valor de Y cuando X vale cero: el punto donde la recta corta el eje vertical. A menudo no tiene interpretación clínica (nadie nace con 0 semanas).
+
+</Term>
+<Term name="β₁ (pendiente)">
+
+Cuánto cambia Y, en promedio, por cada unidad que aumenta X. Es el coeficiente que interesa.
+
+</Term>
+<Term name="ε (error o residuo)">
+
+La parte de Y que el modelo no explica: la distancia vertical de cada punto a la recta.
+
+</Term>
+</Terms>
+
+La recta se calcula por **mínimos cuadrados**: es la que hace mínima la suma de los residuos al cuadrado.
+
+<RegressionExplorer />
+
+## Supuestos
+
+Para que las estimaciones y los intervalos de confianza sean válidos:
+
+<Terms>
+<Term name="Linealidad">
+
+La relación entre X e Y es aproximadamente lineal. Compruébalo con el diagrama de dispersión.
+
+</Term>
+<Term name="Independencia de los residuos">
+
+Los residuos no están relacionados entre sí (cada observación es de un paciente distinto).
+
+</Term>
+<Term name="Homocedasticidad">
+
+La dispersión de los residuos es similar a lo largo de todos los valores de X.
+
+</Term>
+<Term name="Normalidad de los residuos">
+
+Los residuos se distribuyen de forma aproximadamente normal.
+
+</Term>
+</Terms>
+
+<Callout>
+
+Una predicción solo es fiable dentro del rango de valores de X observados. Extrapolar fuera de él (predecir el peso con 50 semanas de gestación) puede dar resultados absurdos.
+
+</Callout>

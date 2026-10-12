@@ -1,0 +1,93 @@
+<ClinicalCase title="El dilema del investigador">
+
+Quieres conocer la prevalencia de hipertensión en todos los adultos de tu comunidad (la **población**). Es imposible medirlos a todos, así que eliges un grupo más pequeño y manejable (la **muestra**) y lo estudias.
+
+La **inferencia estadística** usa los resultados de la muestra para hacer afirmaciones sobre la población. Para que funcione, la muestra tiene que ser representativa.
+
+</ClinicalCase>
+
+## Técnicas de muestreo
+
+### Muestreo probabilístico
+
+Cada persona de la población tiene una probabilidad conocida y distinta de cero de ser seleccionada. Es la referencia en investigación porque reduce el sesgo de selección y permite generalizar.
+
+<Terms>
+<Term name="Aleatorio simple">
+
+Como un sorteo: cada persona tiene la misma probabilidad de ser elegida.
+
+</Term>
+<Term name="Estratificado">
+
+Se divide la población en grupos relevantes (por edad, sexo…) y se muestrea al azar dentro de cada uno. Garantiza que todos los estratos estén representados.
+
+</Term>
+<Term name="Sistemático">
+
+Se elige un punto de partida al azar y después a cada k-ésima persona de una lista.
+
+</Term>
+<Term name="Por conglomerados">
+
+Se divide la población en grupos naturales (centros de salud, colegios, municipios) y se seleccionan grupos enteros al azar.
+
+</Term>
+</Terms>
+
+### Muestreo no probabilístico
+
+La selección no es aleatoria. Es más fácil y barato, pero tiene un alto riesgo de sesgo y sus resultados no se pueden generalizar con seguridad. Se usa en estudios exploratorios o cualitativos.
+
+<Example>
+
+Muestreo de conveniencia: encuestar a los pacientes que acuden a tu consulta un lunes por la mañana.
+
+</Example>
+
+## Cálculo del tamaño muestral
+
+«¿Cuántos pacientes necesito?» es una de las preguntas más frecuentes al diseñar un estudio. Calcularlo bien importa por tres razones:
+
+- **Precisión:** una muestra demasiado pequeña da estimaciones imprecisas.
+- **Potencia:** una muestra adecuada permite detectar un efecto si realmente existe.
+- **Ética y recursos:** incluir más participantes de los necesarios expone a más personas a riesgos y malgasta recursos; incluir menos hace que el estudio no pueda responder a su pregunta.
+
+### De qué depende
+
+<Terms>
+<Term name="Nivel de confianza">
+
+Habitualmente el 95 %. Cuanto mayor, más muestra se necesita.
+
+</Term>
+<Term name="Precisión o margen de error">
+
+Cuánto aceptamos que la estimación se aleje del valor real. Cuanto más precisa la queremos, más muestra.
+
+</Term>
+<Term name="Variabilidad">
+
+Cuánto varían los datos en la población (desviación típica, o la proporción esperada). Más variabilidad exige más muestra.
+
+</Term>
+<Term name="Potencia y tamaño del efecto">
+
+En estudios que comparan grupos: la probabilidad de detectar el efecto (habitualmente el 80 %) y la magnitud mínima de diferencia que se considera relevante. Efectos pequeños requieren muestras grandes.
+
+</Term>
+</Terms>
+
+Por ejemplo, para estimar una proporción con un nivel de confianza del 95 %:
+
+$$
+n = \frac{z_{1-\alpha/2}^{2}\; p\,(1-p)}{e^{2}}
+$$
+
+donde *p* es la proporción esperada y *e* el margen de error. Con *p* = 0,5 y *e* = 0,05 salen 385 personas. Hay que añadir las pérdidas previstas. Para otros diseños existen fórmulas específicas y programas como G\*Power, Epidat o los paquetes de R.
+
+<Callout>
+
+Una técnica de muestreo probabilística y un tamaño de muestra bien calculado son la base para poder confiar en las conclusiones de un estudio.
+
+</Callout>

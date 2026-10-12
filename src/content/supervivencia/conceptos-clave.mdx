@@ -1,0 +1,52 @@
+<ClinicalCase title="No solo si ocurre, sino cuándo">
+
+En oncología no basta con saber si un tratamiento funciona: interesa **cuánto tiempo** vive el paciente o cuánto tarda en progresar la enfermedad. El **análisis de supervivencia** estudia el tiempo que transcurre hasta que ocurre un suceso de interés.
+
+No se limita a la muerte. Sirve para cualquier suceso que ocurre en el tiempo: el alta hospitalaria, la aparición de una úlcera por presión, el abandono de la lactancia materna o la recaída en el tabaquismo.
+
+</ClinicalCase>
+
+## Conceptos fundamentales
+
+<Terms>
+<Term name="Tiempo hasta el evento">
+
+La variable principal: el tiempo desde un punto de inicio (diagnóstico, inicio del tratamiento, inclusión en el estudio) hasta que ocurre el evento.
+
+</Term>
+<Term name="Evento">
+
+El suceso de interés que marca el final del seguimiento para ese individuo (muerte, recaída, alta, curación).
+
+</Term>
+</Terms>
+
+## La censura
+
+Es lo que distingue al análisis de supervivencia. Hay **censura** cuando no conocemos el tiempo exacto hasta el evento de algunos participantes.
+
+<Terms columns={3}>
+<Term name="Por la derecha">
+
+La más frecuente. El paciente sigue sin el evento al terminar el estudio, se pierde en el seguimiento o se retira. Sabemos que el evento, si ocurre, será **después** de su último contacto.
+
+</Term>
+<Term name="Por la izquierda">
+
+El evento ocurrió **antes** de un momento conocido, pero no sabemos cuándo.
+
+</Term>
+<Term name="Por intervalo">
+
+Sabemos que el evento ocurrió **entre** dos revisiones, pero no el momento exacto.
+
+</Term>
+</Terms>
+
+<FollowUpDiagram />
+
+<Callout>
+
+La censura debe tratarse correctamente. Si se eliminan los pacientes censurados o se trata su último contacto como si fuera el evento, se **subestima** el tiempo de supervivencia. Los métodos de supervivencia aprovechan la información de cada paciente mientras estuvo en seguimiento.
+
+</Callout>

@@ -1,0 +1,63 @@
+<ClinicalCase title="¿Cuántos pacientes responderán al tratamiento?">
+
+Pruebas un tratamiento y quieres saber cuántos pacientes responderán. O cuántos casos de una enfermedad poco frecuente aparecerán en un mes en tu área. Para contar sucesos se usan las **distribuciones discretas**.
+
+A diferencia de las variables continuas, las discretas solo toman valores enteros (0, 1, 2, 3…). Estas distribuciones dan la probabilidad de observar un número concreto de sucesos.
+
+</ClinicalCase>
+
+## Distribución binomial: éxito o fracaso
+
+En un ensayo, cada paciente, de forma independiente, se cura (éxito) o no se cura (fracaso). La binomial da la probabilidad de obtener *k* éxitos en *n* intentos.
+
+**Condiciones:**
+
+- Número fijo de ensayos (*n*).
+- Cada ensayo tiene solo dos resultados posibles.
+- La probabilidad de éxito (*p*) es la misma en todos los ensayos.
+- Los ensayos son independientes entre sí.
+
+$$
+P(X = k) = \binom{n}{k}\, p^{k}\,(1-p)^{n-k} \qquad \text{media} = np
+$$
+
+<Example>
+
+Si la probabilidad de respuesta a un fármaco es del 60 %, la probabilidad de que respondan exactamente 7 de 10 pacientes es del 21,5 %. Compruébalo en el simulador con *n* = 10 y *p* = 0,6.
+
+</Example>
+
+## Distribución de Poisson: sucesos poco frecuentes
+
+Modela el número de veces que ocurre un suceso en un intervalo de tiempo o de espacio: errores de medicación en una unidad por semana, casos de una enfermedad rara por año en una región.
+
+**Condiciones:**
+
+- Los sucesos ocurren de forma independiente.
+- La tasa media (λ) es constante en el intervalo.
+- Dos sucesos no pueden ocurrir exactamente a la vez.
+
+$$
+P(X = k) = \frac{\lambda^{k}\, e^{-\lambda}}{k!} \qquad \text{media} = \text{varianza} = \lambda
+$$
+
+<Example>
+
+Si la media es de 1,5 ingresos al día por una patología concreta, la probabilidad de que un día haya exactamente 3 ingresos es del 12,6 %.
+
+</Example>
+
+<DiscreteExplorer />
+
+## Cómo leer el simulador
+
+- **n** es el número total de ensayos (pacientes tratados); **p**, la probabilidad de éxito en cada uno.
+- Con *p* = 0,5 la binomial es simétrica; con *p* cercana a 0 o a 1 se vuelve asimétrica.
+- Con *n* grande, la binomial se parece cada vez más a una normal.
+- En la Poisson, al aumentar λ la distribución se desplaza a la derecha y se vuelve más simétrica.
+
+<Callout type="info">
+
+La distribución hipergeométrica se parece a la binomial, pero se usa cuando el muestreo es **sin reposición** y la probabilidad cambia en cada extracción. Es menos frecuente en aplicaciones clínicas.
+
+</Callout>

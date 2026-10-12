@@ -1,0 +1,58 @@
+<ClinicalCase title="Aislar el efecto del tratamiento">
+
+Sabes que los pacientes que reciben un tratamiento nuevo viven más. Pero ¿y si además son más jóvenes o tienen menos comorbilidad? ¿Cómo separar el efecto del tratamiento del de esos otros factores?
+
+El **modelo de riesgos proporcionales de Cox** es el más utilizado para estudiar a la vez la relación entre la supervivencia y varias variables (covariables). Es una regresión diseñada para datos de supervivencia con censura.
+
+</ClinicalCase>
+
+## Cómo funciona
+
+A diferencia de Kaplan-Meier, que compara grupos, el modelo de Cox evalúa el efecto de varias variables (edad, sexo, estadio, tratamiento) sobre el riesgo de que ocurra el evento, **ajustando cada una por las demás**.
+
+<Terms>
+<Term name="Riesgo instantáneo (hazard)">
+
+Tasa a la que ocurre el evento en un momento dado entre quienes aún no lo han presentado. El modelo de Cox modela su logaritmo como una combinación lineal de las covariables.
+
+</Term>
+<Term name="Riesgos proporcionales">
+
+El supuesto clave: el efecto de cada variable sobre el riesgo es **constante en el tiempo**. Si un factor duplica el riesgo al principio, lo duplica en cualquier momento posterior. Debe comprobarse, por ejemplo con los residuos de Schoenfeld.
+
+</Term>
+</Terms>
+
+$$
+h(t \mid X) = h_0(t)\, e^{\beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p}
+$$
+
+## El hazard ratio (HR)
+
+Es el resultado principal del modelo: el cociente entre el riesgo instantáneo de dos grupos, o el cambio en el riesgo por cada unidad que aumenta una variable continua, ajustado por el resto de covariables. Se obtiene como HR = e^β.
+
+<Terms columns={3}>
+<Term name="HR = 1">
+
+No hay diferencia de riesgo.
+
+</Term>
+<Term name="HR > 1">
+
+Mayor riesgo del evento. Un HR de 1,5 indica un riesgo instantáneo un 50 % mayor.
+
+</Term>
+<Term name="HR < 1">
+
+Menor riesgo: efecto protector. Un HR de 0,7 indica un riesgo un 30 % menor.
+
+</Term>
+</Terms>
+
+<ForestPlot />
+
+<Callout>
+
+El HR es una medida **relativa**: no dice cuántos pacientes se benefician en términos absolutos. Interprétalo siempre con su intervalo de confianza. Si el IC 95 % incluye el 1, el efecto no es estadísticamente significativo.
+
+</Callout>
