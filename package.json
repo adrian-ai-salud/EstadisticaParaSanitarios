@@ -1,6 +1,6 @@
 {
   "name": "estadistica-para-sanitarios",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Bioestadística aplicada a la práctica clínica, con simuladores interactivos y test de autoevaluación.",
   "license": "MIT",

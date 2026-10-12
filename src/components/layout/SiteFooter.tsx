@@ -16,8 +16,8 @@ export function SiteFooter() {
           , enfermero especialista en Enfermería Familiar y Comunitaria.
         </p>
         <p className="flex flex-wrap gap-x-4 gap-y-1">
-          <a href="https://doi.org/10.5281/zenodo.15874374" className="hover:text-fg-2">
-            DOI 10.5281/zenodo.15874374
+          <a href="https://doi.org/10.5281/zenodo.15874324" className="hover:text-fg-2">
+            DOI 10.5281/zenodo.15874324
           </a>
           <a href="https://creativecommons.org/licenses/by/4.0/deed.es" className="hover:text-fg-2">
             Contenidos CC BY 4.0

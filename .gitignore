@@ -6,3 +6,7 @@ next-env.d.ts
 .DS_Store
 .env*
 npm-debug.log*
+
+# Copias locales para subir por FTP y paquetes de git
+/subir-a-mi-web/
+*.bundle

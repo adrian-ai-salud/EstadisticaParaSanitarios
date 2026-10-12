@@ -3,6 +3,14 @@
 Todos los cambios relevantes de este proyecto se documentan aquí.
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/) y el proyecto usa [versionado semántico](https://semver.org/lang/es/).
 
+## [1.0.1] - 2026-10-12
+
+### Corregido
+
+- Cada página se exporta como carpeta con su `index.html`, para que las direcciones sin `.html` funcionen en cualquier servidor estático, incluido el de adrianvencesgarrido.com.
+- Se incluye un `.htaccess` que muestra la página 404 propia en servidores Apache.
+- Las citas usan el DOI de Zenodo que agrupa todas las versiones (10.5281/zenodo.15874324).
+
 ## [1.0.0] - 2026-10-12
 
 Primera versión estable. Rediseño completo de la interfaz y de los simuladores.
@@ -41,4 +49,5 @@ Primera versión estable. Rediseño completo de la interfaz y de los simuladores
 
 Las versiones 0.0.1 a 0.0.4 (julio de 2025) corresponden al prototipo inicial.
 
+[1.0.1]: https://github.com/adrian-ai-salud/EstadisticaParaSanitarios/releases/tag/v1.0.1
 [1.0.0]: https://github.com/adrian-ai-salud/EstadisticaParaSanitarios/releases/tag/v1.0.0

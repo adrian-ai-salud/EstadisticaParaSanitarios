@@ -3,10 +3,10 @@
 Recurso docente abierto de bioestadística aplicada a la práctica clínica, para enfermeras, médicos y estudiantes de ciencias de la salud. Cada tema parte de un caso de consulta y se acompaña de un simulador interactivo.
 
 [![CI](https://github.com/adrian-ai-salud/EstadisticaParaSanitarios/actions/workflows/ci.yml/badge.svg)](https://github.com/adrian-ai-salud/EstadisticaParaSanitarios/actions/workflows/ci.yml)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15874374.svg)](https://doi.org/10.5281/zenodo.15874374)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15874324.svg)](https://doi.org/10.5281/zenodo.15874324)
 [![Contenidos: CC BY 4.0](https://img.shields.io/badge/contenidos-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/deed.es)
 
-**Abrir la aplicación:** https://adrian-ai-salud.github.io/EstadisticaParaSanitarios/
+**Abrir la aplicación:** https://adrianvencesgarrido.com/EstadisticaParaSanitarios/ (copia en [GitHub Pages](https://adrian-ai-salud.github.io/EstadisticaParaSanitarios/))
 
 ![Página de inicio de Estadística para Sanitarios](docs/captura.png)
 
@@ -49,11 +49,15 @@ Los textos de cada tema están en `src/content/<bloque>/<tema>.mdx` y se pueden 
 
 Cada cambio en la rama `master` se publica automáticamente en GitHub Pages.
 
+### Publicar en adrianvencesgarrido.com
+
+`npm run build` genera la web estática en `out/`. Su contenido se sube por FTP a la carpeta `EstadisticaParaSanitarios` del servidor, sustituyendo la versión anterior. La ruta base `/EstadisticaParaSanitarios` está fijada en `next.config.ts`.
+
 ## Cómo citar
 
 Usa el botón «Cite this repository» de GitHub o los datos de [CITATION.cff](CITATION.cff):
 
-> Vences Garrido A. Estadística para Sanitarios [Internet]. Zenodo; 2025. doi:10.5281/zenodo.15874374
+> Vences Garrido A. Estadística para Sanitarios [Internet]. Zenodo; 2025. doi:10.5281/zenodo.15874324
 
 ## Licencia y autoría
 

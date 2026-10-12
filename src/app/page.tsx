@@ -171,10 +171,10 @@ export default function Home() {
           <p className="mt-2 text-sm leading-relaxed text-fg-2">
             Vences Garrido A. Estadística para Sanitarios [Internet]. Zenodo; 2025.{" "}
             <a
-              href="https://doi.org/10.5281/zenodo.15874374"
+              href="https://doi.org/10.5281/zenodo.15874324"
               className="font-medium text-accent-strong underline-offset-4 hover:underline"
             >
-              doi:10.5281/zenodo.15874374
+              doi:10.5281/zenodo.15874324
             </a>
           </p>
         </div>

@@ -4,6 +4,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: "export",
   basePath: "/EstadisticaParaSanitarios",
+  trailingSlash: true,
   pageExtensions: ["ts", "tsx", "mdx"],
   images: { unoptimized: true },
 };

@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { themeInitScript } from "@/lib/theme-script";
 import "./globals.css";
 
-const siteUrl = "https://adrian-ai-salud.github.io/EstadisticaParaSanitarios";
+const siteUrl = "https://adrianvencesgarrido.com/EstadisticaParaSanitarios/";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

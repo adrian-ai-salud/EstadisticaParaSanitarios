@@ -51,7 +51,7 @@ export default function AboutPage() {
         <h2 id="citar">Cómo citar</h2>
         <p>
           Vences Garrido A. Estadística para Sanitarios [Internet]. Zenodo; 2025.{" "}
-          <a href="https://doi.org/10.5281/zenodo.15874374">doi:10.5281/zenodo.15874374</a>
+          <a href="https://doi.org/10.5281/zenodo.15874324">doi:10.5281/zenodo.15874324</a>
         </p>
 
         <h2 id="licencia">Licencia</h2>

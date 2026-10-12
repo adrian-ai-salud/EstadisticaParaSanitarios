@@ -3,14 +3,14 @@ message: "Si utilizas este recurso, cítalo con estos metadatos."
 type: software
 title: "Estadística para Sanitarios"
 abstract: "Recurso docente abierto de bioestadística aplicada a la práctica clínica, con casos, simuladores interactivos y test de autoevaluación."
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-10-12"
 license: MIT
 repository-code: "https://github.com/adrian-ai-salud/EstadisticaParaSanitarios"
-url: "https://adrian-ai-salud.github.io/EstadisticaParaSanitarios/"
+url: "https://adrianvencesgarrido.com/EstadisticaParaSanitarios/"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.15874374"
+    value: "10.5281/zenodo.15874324"
 keywords:
   - bioestadística
   - estadística sanitaria
